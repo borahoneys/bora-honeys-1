@@ -4,12 +4,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { logout } from '@/app/actions/auth'
-import { LayoutDashboard, ImageIcon, Package, Users, LogOut } from 'lucide-react'
+import { LayoutDashboard, ImageIcon, Package, Users, LogOut, Tag, Layers } from 'lucide-react'
 
 const navItems = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard, exact: true },
   { href: '/admin/settings', label: 'Homepage', icon: ImageIcon, exact: false },
-  { href: '/admin/products', label: 'Products', icon: Package, exact: false, disabled: true },
+  { href: '/admin/products', label: 'Products', icon: Package, exact: false },
+  { href: '/admin/categories', label: 'Categories', icon: Tag, exact: false },
+  { href: '/admin/collections', label: 'Collections', icon: Layers, exact: false },
   { href: '/admin/customers', label: 'Customers', icon: Users, exact: false, disabled: true },
 ]
 

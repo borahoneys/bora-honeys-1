@@ -11,11 +11,11 @@ const quickLinks = [
     available: true,
   },
   {
-    href: '#',
+    href: '/admin/products',
     label: 'Products',
     description: 'Add, edit, and organise your catalogue',
     icon: Package,
-    available: false,
+    available: true,
   },
   {
     href: '#',
