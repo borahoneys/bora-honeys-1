@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { verifyAdminSession } from '@/app/lib/dal'
 import { getHomepageConfig } from '@/app/actions/homepage'
 import HomepageEditor from './_components/HomepageEditor'

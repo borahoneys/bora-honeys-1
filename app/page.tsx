@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/footer/footer'
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 interface ImageAsset { url: string; publicId: string }
 interface CTAButton { label: string; href: string }
