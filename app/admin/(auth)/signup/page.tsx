@@ -99,7 +99,7 @@ export default function AdminSignupPage() {
               type="email"
               autoComplete="email"
               required
-              placeholder="admin@borahoneys.com"
+              placeholder="admin@borahoneys.in"
               className="w-full bg-background border border-border rounded px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors"
             />
             {state?.errors?.email && (

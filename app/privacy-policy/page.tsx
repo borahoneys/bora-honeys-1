@@ -16,11 +16,11 @@ const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
     <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
     <p><span className="text-white/60">Registered Address:</span> SCO 404, Second Floor, Mugal Canal, Karnal, Haryana 132001, India</p>
-    <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.com</p>
+    <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
-      <span className="text-white/60">Email:</span> orders@borahoneys.com &nbsp;|&nbsp;
-      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.com &nbsp;|&nbsp;
-      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.com &nbsp;|&nbsp;
+      <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.in &nbsp;|&nbsp;
       <span className="text-white/60"> Phone:</span> +91 8570873934
     </p>
   </div>
@@ -132,10 +132,10 @@ export default function PrivacyPolicyPage() {
 
               <h3>4. Data Retention</h3>
               <p>4.1 Personal information is retained for as long as necessary to fulfil the purposes for which it was collected, and in any event for a minimum of seven years from the date of the relevant transaction, as required under applicable Indian tax and financial laws, unless a longer retention period is required by applicable law.</p>
-              <p>4.2 You may request deletion of your account and personal information by writing to privacy@borahoneys.com. Requests will be processed within 30 days, subject to any legal retention obligations.</p>
+              <p>4.2 You may request deletion of your account and personal information by writing to privacy@borahoneys.in. Requests will be processed within 30 days, subject to any legal retention obligations.</p>
 
               <h3>5. Your Rights</h3>
-              <p>5.1 Subject to applicable law, you have the right to: access the personal information we hold about you; request correction of inaccurate information; request deletion subject to legal retention requirements; and withdraw consent at any time, without affecting prior lawful processing. Requests should be submitted to privacy@borahoneys.com.</p>
+              <p>5.1 Subject to applicable law, you have the right to: access the personal information we hold about you; request correction of inaccurate information; request deletion subject to legal retention requirements; and withdraw consent at any time, without affecting prior lawful processing. Requests should be submitted to privacy@borahoneys.in.</p>
 
               <h3>6. Data Security</h3>
               <p>6.1 We implement commercially reasonable technical and organisational security measures, including SSL/TLS encryption, access controls, and password hashing. To the maximum extent permissible under applicable law, no electronic transmission or storage is completely secure and we do not guarantee absolute security. We will notify affected Users and relevant authorities in the event of a reportable data breach.</p>
@@ -152,11 +152,11 @@ export default function PrivacyPolicyPage() {
                 <li>Cross-border data transfer compliance in accordance with the restrictions and conditions notified under the DPDP Act.</li>
                 <li>A dedicated DPDP Notice setting out the basis and purpose of each category of data processing once the applicable rules are notified.</li>
               </ul>
-              <p>8.2 In the interim, we process personal data in accordance with the IT Act, 2000 and the SPDI Rules, 2011. Users who wish to access, correct, or request deletion of their personal data may contact us at privacy@borahoneys.com and we will respond within 30 days.</p>
+              <p>8.2 In the interim, we process personal data in accordance with the IT Act, 2000 and the SPDI Rules, 2011. Users who wish to access, correct, or request deletion of their personal data may contact us at privacy@borahoneys.in and we will respond within 30 days.</p>
               <p>8.3 We will update this Privacy Policy as and when material changes are required to reflect compliance with the DPDP Act rules upon their notification.</p>
 
               <h3>9. Modifications and Contact</h3>
-              <p>9.1 We reserve the right to amend this Policy. Continued use of the Website following any amendment constitutes acceptance. Grievances: Honey Nanda, Grievance Officer, grievance@borahoneys.com. Governing law: India. Jurisdiction: New Delhi.</p>
+              <p>9.1 We reserve the right to amend this Policy. Continued use of the Website following any amendment constitutes acceptance. Grievances: Honey Nanda, Grievance Officer, grievance@borahoneys.in. Governing law: India. Jurisdiction: New Delhi.</p>
             </div>
 
             <LegalFooter />

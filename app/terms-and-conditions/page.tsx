@@ -21,11 +21,11 @@ const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
     <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
     <p><span className="text-white/60">Registered Address:</span> SCO 404, Second Floor, Mugal Canal, Karnal, Haryana 132001, India</p>
-    <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.com</p>
+    <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
-      <span className="text-white/60">Email:</span> orders@borahoneys.com &nbsp;|&nbsp;
-      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.com &nbsp;|&nbsp;
-      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.com &nbsp;|&nbsp;
+      <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.in &nbsp;|&nbsp;
       <span className="text-white/60"> Phone:</span> +91 8570873934
     </p>
   </div>
@@ -96,7 +96,7 @@ export default function TermsAndConditionsPage() {
               <p>
                 This Terms of Use (&ldquo;Policy&rdquo;) is published by SUPERLATIVE GROUP, a company incorporated under the
                 Companies Act, 2013 and registered under the laws of India, operating the luxury couture label
-                &ldquo;Bora Honey&apos;s&rdquo; through its website at www.borahoneys.com (&ldquo;Website&rdquo;). This Policy forms part of
+                &ldquo;Bora Honey&apos;s&rdquo; through its website at www.borahoneys.in (&ldquo;Website&rdquo;). This Policy forms part of
                 the integrated legal framework governing your access to and use of the Website and the purchase of
                 Products offered thereon.
               </p>
@@ -113,7 +113,7 @@ export default function TermsAndConditionsPage() {
               </p>
 
               <h3>1. Definitions</h3>
-              <p>1.1 &ldquo;Website&rdquo; means the digital platform operated by Bora Honey&apos;s at www.borahoneys.com, including all pages, sub-domains, and mobile-optimised versions.</p>
+              <p>1.1 &ldquo;Website&rdquo; means the digital platform operated by Bora Honey&apos;s at www.borahoneys.in, including all pages, sub-domains, and mobile-optimised versions.</p>
               <p>1.2 &ldquo;Products&rdquo; means all luxury couture garments, accessories, bridal wear, made-to-order pieces, and any other items offered for sale through the Website.</p>
               <p>1.3 &ldquo;Services&rdquo; means all features and functionalities made available through the Website, including browsing, account creation, purchasing, and customer support.</p>
               <p>1.4 &ldquo;User&rdquo; means any natural person who accesses or uses the Website, whether or not a purchase is made.</p>
@@ -127,7 +127,7 @@ export default function TermsAndConditionsPage() {
 
               <h3>3. Account Registration</h3>
               <p>3.1 You agree to provide accurate, complete, and current information during account registration and to keep your account information updated. You are solely responsible for maintaining the confidentiality of your login credentials and for all activity conducted through your account.</p>
-              <p>3.2 You must immediately notify us at orders@borahoneys.com if you become aware of any unauthorised access to your account. We reserve the right to suspend or terminate any user account in the event of suspected fraud, breach of these Terms, or conduct harmful to the Website.</p>
+              <p>3.2 You must immediately notify us at orders@borahoneys.in if you become aware of any unauthorised access to your account. We reserve the right to suspend or terminate any user account in the event of suspected fraud, breach of these Terms, or conduct harmful to the Website.</p>
               <p>3.3 Each person may maintain only one account. Multiple accounts created to circumvent restrictions, obtain duplicate benefits, or facilitate fraud are prohibited.</p>
 
               <h3>4. Permitted Use</h3>
@@ -136,7 +136,7 @@ export default function TermsAndConditionsPage() {
 
               <h3>5. Communications Consent</h3>
               <p>5.1 By registering an account or placing an Order, you expressly consent to receive transactional communications from Bora Honey&apos;s via email, SMS, and WhatsApp, including Order confirmations, dispatch notifications, delivery updates, payment receipts, and care instructions. Transactional communications are mandatory and cannot be opted out of while an Order is active.</p>
-              <p>5.2 Marketing communications, including information about new collections, promotional offers, and editorial content, are optional. You may opt out of marketing communications at any time by following the unsubscribe instructions in any such communication, or by writing to orders@borahoneys.com.</p>
+              <p>5.2 Marketing communications, including information about new collections, promotional offers, and editorial content, are optional. You may opt out of marketing communications at any time by following the unsubscribe instructions in any such communication, or by writing to orders@borahoneys.in.</p>
 
               <h3>6. Right to Refuse Service</h3>
               <p>6.1 Bora Honey&apos;s reserves the right, at its sole discretion and without assigning reasons, to refuse service to any User, decline to accept any Order, cancel a confirmed Order, terminate a consultation, or decline to undertake a custom project, in the following circumstances:</p>
@@ -164,8 +164,8 @@ export default function TermsAndConditionsPage() {
               <p>11.1 These Terms are governed by the laws of India. Subject to the Dispute Resolution and Arbitration Policy, any dispute shall be subject to the exclusive jurisdiction of the courts of New Delhi.</p>
 
               <h3>12. Grievance Officer</h3>
-              <p>12.1 Name: Honey Nanda &nbsp;|&nbsp; Designation: Grievance Officer &nbsp;|&nbsp; Email: grievance@borahoneys.com. Grievances will be acknowledged within 48 hours and resolved within 30 days of receipt, in accordance with the Consumer Protection (E-Commerce) Rules, 2020.</p>
-              <p>12.2 For formal legal notices, cease and desist communications, and all formal legal correspondence, please write to: notices@borahoneys.com. Communications sent to any other address will not constitute valid legal notice to Bora Honey&apos;s.</p>
+              <p>12.1 Name: Honey Nanda &nbsp;|&nbsp; Designation: Grievance Officer &nbsp;|&nbsp; Email: grievance@borahoneys.in. Grievances will be acknowledged within 48 hours and resolved within 30 days of receipt, in accordance with the Consumer Protection (E-Commerce) Rules, 2020.</p>
+              <p>12.2 For formal legal notices, cease and desist communications, and all formal legal correspondence, please write to: notices@borahoneys.in. Communications sent to any other address will not constitute valid legal notice to Bora Honey&apos;s.</p>
 
               <h3>13. Modifications, Severability, and Entire Agreement</h3>
               <p>13.1 We may amend these Terms at any time. Updated Terms take effect upon publication on the Website. Your continued use of the Website constitutes acceptance.</p>
@@ -203,16 +203,16 @@ export default function TermsAndConditionsPage() {
 
               <h3>4. Order Confirmation and Contract Formation</h3>
               <p>4.1 A binding contract of sale is formed when we issue a written Order Confirmation to your registered email address, setting out the Product(s), price, and estimated dispatch timeline.</p>
-              <p>4.2 If you do not receive an Order Confirmation within 24 hours of payment, please contact orders@borahoneys.com as this may indicate a payment processing issue.</p>
+              <p>4.2 If you do not receive an Order Confirmation within 24 hours of payment, please contact orders@borahoneys.in as this may indicate a payment processing issue.</p>
 
               <h3>5. GST and Invoicing</h3>
               <p>5.1 A GST-compliant tax invoice will be issued for every Order and sent to your registered email at the time of dispatch, bearing: the registered business name SUPERLATIVE GROUP; registered address SCO 404, Second Floor, Mugal Canal, Karnal, Haryana 132001, India; GSTIN 06AIOPN2893G1ZU; HSN Code 6204; Product description, quantity, unit price, GST rate and amount, and total consideration.</p>
-              <p>5.2 Invoice correction requests must be submitted within 48 hours of receipt to orders@borahoneys.com.</p>
+              <p>5.2 Invoice correction requests must be submitted within 48 hours of receipt to orders@borahoneys.in.</p>
               <p>5.3 Interstate supplies attract IGST. Intrastate supplies attract CGST and SGST, as applicable under the GST Act, 2017.</p>
 
               <h3>6. Luxury Authentication</h3>
               <p>6.1 Bora Honey&apos;s guarantees the authenticity of all Products sold through the Website and any other officially authorised sales channel expressly communicated by Bora Honey&apos;s (including authorised trunk shows, exhibitions, pop-up events, or offline appointments confirmed in writing by Bora Honey&apos;s). We do not authenticate, warrant, or assume any responsibility for Products purchased through unauthorised resellers, multi-brand marketplaces, second-hand platforms, or any channel not expressly authorised by us.</p>
-              <p>6.2 Authentic Bora Honey&apos;s Products are available only through the Website and officially authorised channels confirmed in writing by Bora Honey&apos;s. If you encounter Bora Honey&apos;s Products listed on any unauthorised third-party platform or marketplace, please report this to legal@borahoneys.com.</p>
+              <p>6.2 Authentic Bora Honey&apos;s Products are available only through the Website and officially authorised channels confirmed in writing by Bora Honey&apos;s. If you encounter Bora Honey&apos;s Products listed on any unauthorised third-party platform or marketplace, please report this to legal@borahoneys.in.</p>
 
               <h3>7. Anti-Reseller and Personal Use</h3>
               <p>7.1 All Products are for the personal, non-commercial use of the purchasing User. Purchase for resale, commercial use, or arbitrage is strictly prohibited and may result in cancellation of the Order and blacklisting of the account.</p>
@@ -376,7 +376,7 @@ export default function TermsAndConditionsPage() {
               <h3>3. Size and Fit</h3>
               <p>3.1 Size guides are indicative references. Bora Honey&apos;s garments are designed with specific couture proportions that may differ from standard ready-to-wear sizing. Fit is influenced by individual body proportions that cannot be fully accounted for in a size guide.</p>
               <p>3.2 Slight dimensional deviations of up to 1 to 2 centimetres are within standard tolerance for handcrafted production and are not defects.</p>
-              <p>3.3 Pre-Order sizing consultations are available at orders@borahoneys.com. Incorrect size selection is the User&apos;s responsibility and does not constitute grounds for any return, exchange, or refund.</p>
+              <p>3.3 Pre-Order sizing consultations are available at orders@borahoneys.in. Incorrect size selection is the User&apos;s responsibility and does not constitute grounds for any return, exchange, or refund.</p>
 
               <h3>4. Storage and Condition</h3>
               <p>4.1 Luxury couture garments require careful storage. We recommend storing in breathable garment bags away from direct sunlight, humidity, and chemical exposure; avoiding prolonged compression or folding of heavily embellished garments; and keeping garments away from perfume, hairspray, and chemical solvents, which may damage embellishments, dyes, and delicate fabrics.</p>

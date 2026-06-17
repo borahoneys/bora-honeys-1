@@ -21,11 +21,11 @@ const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
     <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
     <p><span className="text-white/60">Registered Address:</span> SCO 404, Second Floor, Mugal Canal, Karnal, Haryana 132001, India</p>
-    <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.com</p>
+    <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
-      <span className="text-white/60">Email:</span> orders@borahoneys.com &nbsp;|&nbsp;
-      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.com &nbsp;|&nbsp;
-      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.com &nbsp;|&nbsp;
+      <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.in &nbsp;|&nbsp;
       <span className="text-white/60"> Phone:</span> +91 8570873934
     </p>
   </div>
@@ -105,7 +105,7 @@ export default function PaymentsShippingRefundsPage() {
               <p>3.1 For Orders exceeding INR 1,00,000, we may require OTP verification, government-issued identity documentation, verification calls, and address cross-referencing. Failure to complete verification within 48 hours may result in Order cancellation and refund.</p>
 
               <h3>4. Failed and Declined Transactions</h3>
-              <p>4.1 We are not liable for payment failures arising from your bank, card issuer, or payment gateway. If payment is debited but no Order Confirmation is received within 24 hours, please contact orders@borahoneys.com immediately.</p>
+              <p>4.1 We are not liable for payment failures arising from your bank, card issuer, or payment gateway. If payment is debited but no Order Confirmation is received within 24 hours, please contact orders@borahoneys.in immediately.</p>
 
               <h3>5. Chargebacks and Payment Reversals</h3>
               <p>5.1 You agree not to initiate a chargeback or payment reversal for any legitimate transaction unless you have first raised the matter with us and we have failed to respond within a reasonable period.</p>
@@ -143,7 +143,7 @@ export default function PaymentsShippingRefundsPage() {
                 <li>Re-routing or address changes after dispatch are not permitted.</li>
                 <li>The User must record a complete, unedited unboxing video at the time of delivery, documenting the condition of the outer packaging and the Product as it is opened. Recording an unboxing video is strongly recommended and will be required to substantiate any claim relating to transit damage or incorrect Product delivery. Claims submitted without contemporaneous unboxing video evidence may not be considered.</li>
               </ul>
-              <p>2.2 We advise Users not to accept delivery of any parcel that appears visibly damaged, tampered with, or improperly sealed. In such cases, the User should refuse delivery and contact us immediately at orders@borahoneys.com.</p>
+              <p>2.2 We advise Users not to accept delivery of any parcel that appears visibly damaged, tampered with, or improperly sealed. In such cases, the User should refuse delivery and contact us immediately at orders@borahoneys.in.</p>
 
               <h3>3. Risk Transfer</h3>
               <p>3.1 Risk of loss, damage, or destruction transfers from Bora Honey&apos;s to the User upon physical delivery of the Product and execution of the OTP confirmation or signed delivery acknowledgement. Following such confirmation, Bora Honey&apos;s bears no liability for loss, theft, or damage to the Product.</p>
@@ -183,7 +183,7 @@ export default function PaymentsShippingRefundsPage() {
               <h3>2. User-Initiated Cancellation</h3>
               <p>2.1 A cancellation request may only be considered if all of the following conditions are satisfied:</p>
               <ul>
-                <li>The request is submitted in writing to orders@borahoneys.com within 2 (two) hours of placing the Order.</li>
+                <li>The request is submitted in writing to orders@borahoneys.in within 2 (two) hours of placing the Order.</li>
                 <li>The Order is for a finished, in-stock Product (not a made-to-order, custom, or bespoke piece).</li>
                 <li>Production, packaging, or dispatch preparation has not yet commenced at the time the request is received.</li>
               </ul>
@@ -229,7 +229,7 @@ export default function PaymentsShippingRefundsPage() {
               </ul>
               <p>2.2 Claims under Clause 2.1 are subject to all of the following mandatory conditions:</p>
               <ul>
-                <li>Written notification to orders@borahoneys.com within 24 hours of delivery.</li>
+                <li>Written notification to orders@borahoneys.in within 24 hours of delivery.</li>
                 <li>Where available, a clear and unedited unboxing video showing the outer packaging and the Product as it is opened. Such evidence may materially assist the investigation. Where this is not available, claims will be reviewed on the basis of all other supporting evidence submitted, including photographs, courier documentation, and written correspondence.</li>
                 <li>The Product must be unused, unworn, unaltered, and in original condition with all tags, packaging, and accessories intact.</li>
               </ul>
@@ -241,7 +241,7 @@ export default function PaymentsShippingRefundsPage() {
               <p>3.3 Payment gateway transaction fees may be deducted from the refund amount where applicable.</p>
 
               <h3>4. Consumer Protection Act, 2019</h3>
-              <p>4.1 Nothing in this Policy is intended to override or exclude any remedy to which a consumer is entitled under the Consumer Protection Act, 2019 in the event of a defective product or proven deficiency in service. If you believe you have such a right, please contact our Grievance Officer at grievance@borahoneys.com.</p>
+              <p>4.1 Nothing in this Policy is intended to override or exclude any remedy to which a consumer is entitled under the Consumer Protection Act, 2019 in the event of a defective product or proven deficiency in service. If you believe you have such a right, please contact our Grievance Officer at grievance@borahoneys.in.</p>
             </div>
 
             <LegalFooter />
@@ -266,14 +266,14 @@ export default function PaymentsShippingRefundsPage() {
 
               <h3>2. No Exchange Policy</h3>
               <p>2.1 Exchanges are not offered for a different size, colour, Product, or value equivalent, subject always to applicable consumer protection law, including the Consumer Protection Act, 2019.</p>
-              <p>2.2 We strongly encourage Users to review the Product description, size guide, and Disclaimer before placing an Order. Pre-Order sizing consultations are available at orders@borahoneys.com. Size selection errors by the User do not constitute grounds for any remedy.</p>
+              <p>2.2 We strongly encourage Users to review the Product description, size guide, and Disclaimer before placing an Order. Pre-Order sizing consultations are available at orders@borahoneys.in. Size selection errors by the User do not constitute grounds for any remedy.</p>
               <p>2.3 In exceptional circumstances, and at our discretion, we may agree to an exchange arrangement. Any such arrangement will be confirmed in writing and subject to separate agreed terms. No exchange right shall be inferred from any communication unless confirmed in writing by Bora Honey&apos;s.</p>
 
               <h3>3. Defective or Incorrect Product</h3>
               <p>3.1 Where a Product is defective in a manner constituting a deficiency in service under the Consumer Protection Act, 2019, or where an incorrect Product has been delivered, the User may raise a claim under our Refund Policy above. Such claims are governed exclusively by the Refund Policy.</p>
 
               <h3>4. Consumer Rights</h3>
-              <p>4.1 Nothing in this Policy restricts a consumer&apos;s statutory rights under the Consumer Protection Act, 2019. Users who believe their statutory rights have not been met may contact our Grievance Officer at grievance@borahoneys.com or approach the relevant Consumer Disputes Redressal Commission.</p>
+              <p>4.1 Nothing in this Policy restricts a consumer&apos;s statutory rights under the Consumer Protection Act, 2019. Users who believe their statutory rights have not been met may contact our Grievance Officer at grievance@borahoneys.in or approach the relevant Consumer Disputes Redressal Commission.</p>
             </div>
 
             <LegalFooter />
