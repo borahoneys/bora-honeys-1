@@ -438,7 +438,7 @@ const Navigation = () => {
               {item.submenuItems && item.submenuItems.length > 0 ? (
                 <div>
                   <button
-                    className="w-full flex items-center text-background text-lg justify-between py-4 uppercase transition-opacity duration-200 hover:opacity-60"
+                    className="w-full flex items-center text-background text-base justify-between py-4 uppercase transition-opacity duration-200 hover:opacity-60"
                     onClick={() => setOpenAccordion(openAccordion === item.name ? null : item.name)}
                   >
                     <span>{item.name}</span>
@@ -469,7 +469,7 @@ const Navigation = () => {
               ) : (
                 <Link
                   href={item.href}
-                  className="block py-4 text-background text-xl uppercase transition-opacity duration-200 hover:opacity-60"
+                  className="block py-4 text-background text-lg uppercase transition-opacity duration-200 hover:opacity-60"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
