@@ -74,7 +74,7 @@ const Footer = () => {
                     href={href}
                     className="flex items-center gap-3 text-sm font-light text-white/80 hover:text-primary transition-colors duration-300 uppercase tracking-wider"
                   >
-                    {icon}
+                    <span className="text-primary shrink-0">{icon}</span>
                     {label}
                   </a>
                 </li>
@@ -95,9 +95,10 @@ const Footer = () => {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="inline-block text-sm font-light text-white/80 hover:text-primary hover:translate-x-1 transition-all duration-300"
+                    className="group inline-flex items-center gap-2 text-sm font-light text-white/80 hover:text-primary transition-all duration-300"
                   >
-                    {label}
+                    <span className="text-primary/50 group-hover:text-primary transition-colors duration-300">—</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{label}</span>
                   </Link>
                 </li>
               ))}
