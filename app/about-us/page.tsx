@@ -1,5 +1,6 @@
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
+import FounderCarousel from './_components/FounderCarousel'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -67,12 +68,9 @@ export default function AboutUsPage() {
       <div className="max-w-6xl mx-auto px-6 pt-20 pb-0">
         <div className="grid md:grid-cols-2 gap-0 border border-primary/15">
 
-          {/* Image column */}
+          {/* Image column — carousel */}
           <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px] bg-card overflow-hidden">
-            {/* Placeholder — replace src with real founder image */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 border-2 border-dashed border-primary/25">
-              <img src="https://res.cloudinary.com/dguabhsld/image/upload/v1781712421/bora-honeys/products/atjxgj9mbwwazbrlrese.jpg" alt="" />
-            </div>
+            <FounderCarousel />
           </div>
 
           {/* Text column */}
