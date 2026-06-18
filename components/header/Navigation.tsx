@@ -98,7 +98,7 @@ const Navigation = () => {
   ];
 
   const navItems = [
-        {
+    {
       name: "Home",
       href: "/",
       submenuItems: [],
@@ -111,15 +111,9 @@ const Navigation = () => {
       images: [],
     },
     {
-      name: "Collection",
-      href: "/collection",
-      submenuItems: [
-        { name: "Collection 2022", href: "/collection/2022" },
-        { name: "Collection 2023", href: "/collection/2023" },
-        { name: "Collection 2024", href: "/collection/2024" },
-        { name: "Collection 2025", href: "/collection/2025" },
-        { name: "Collection 2026", href: "/collection/2026" },
-      ],
+      name: "Women",
+      href: "/women",
+      submenuItems: [],
       images: [],
     },
     {
@@ -127,20 +121,20 @@ const Navigation = () => {
       href: "/categories",
       submenuItems: [
         {
-          name: "Flared Lehenga Sets",
-          href: "/categories/flared-lehenga-sets",
+          name: "Flaired Lehngas Sets",
+          href: "/categories/flaired-lehngas-sets",
         },
         {
-          name: "Mermaid Lehenga Sets",
-          href: "/categories/mermaid-lehenga-sets",
+          name: "Mermaid Lehngas Sets",
+          href: "/categories/mermaid-lehngas-sets",
         },
         {
-          name: "Fish Cut Lehenga Sets",
-          href: "/categories/fish-cut-lehenga-sets",
+          name: "Fish Cut Lehnga Sets",
+          href: "/categories/fish-cut-lehnga-sets",
         },
         {
-          name: "Straight Cut Lehenga Sets",
-          href: "/categories/straight-cut-lehenga-sets",
+          name: "Straight Cut Lehnga Sets",
+          href: "/categories/straight-cut-lehnga-sets",
         },
         {
           name: "Gowns",
@@ -154,20 +148,38 @@ const Navigation = () => {
       images: [],
     },
     {
+      name: "Men",
+      href: "/men",
+      submenuItems: [],
+      images: [],
+    },
+    {
+      name: "Collections",
+      href: "/collections",
+      submenuItems: [
+        { name: "Collection 2022", href: "/collections/2022" },
+        { name: "Collection 2023", href: "/collections/2023" },
+        { name: "Collection 2024", href: "/collections/2024" },
+        { name: "Collection 2025", href: "/collections/2025" },
+        { name: "Collection 2026", href: "/collections/2026" },
+      ],
+      images: [],
+    },
+    {
       name: "Contact Us / Payment",
-      href: "/contact",
+      href: "/contact-us",
       submenuItems: [
         {
           name: "Client Information Form",
-          href: "/contact/client-information",
+          href: "/contact-us#form",
         },
         {
           name: "Phone Number",
-          href: "/contact/phone",
+          href: "/contact-us#phone",
         },
         {
           name: "Email",
-          href: "/contact/email",
+          href: "/contact-us#email",
         },
       ],
       images: [],
