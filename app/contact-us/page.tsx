@@ -27,7 +27,7 @@ const FORMSPRESS_ENDPOINT = 'https://api.formspress.com/v1/YOUR_FORM_ID/submit'
 
 export default function ContactUsPage() {
     const [subject, setSubject] = useState<'enquire' | 'appointment'>('enquire')
-    const [countryCode, setCountryCode] = useState('+971')
+    const [countryCode, setCountryCode] = useState('+91')
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
