@@ -19,10 +19,13 @@ interface ProductData {
   compareAtPrice: string
   stock: string
   sku: string
-  material: string
-  dimensions: string
-  weight: string
-  editorsNote: string
+  color: string
+  styleCode: string
+  numberOfPieces: string
+  composition: string
+  keyFeatures: string
+  careInstructions: string
+  deliveryTimeline: string
   images: ImageAsset[]
   categories: string[]
   tags: string
@@ -37,8 +40,10 @@ function toSlug(name: string) {
 
 const empty: ProductData = {
   name: '', description: '', price: '', compareAtPrice: '', stock: '0', sku: '',
-  material: '', dimensions: '', weight: '', editorsNote: '', images: [], categories: [],
-  tags: '', isActive: true, isFeatured: false, seo: { title: '', description: '' },
+  color: '', styleCode: '', numberOfPieces: '', composition: '',
+  keyFeatures: '', careInstructions: '', deliveryTimeline: '',
+  images: [], categories: [], tags: '', isActive: true, isFeatured: false,
+  seo: { title: '', description: '' },
 }
 
 function fromApi(p: Record<string, unknown>): ProductData {
@@ -51,10 +56,13 @@ function fromApi(p: Record<string, unknown>): ProductData {
     compareAtPrice: p.compareAtPrice ? String(p.compareAtPrice) : '',
     stock: String(p.stock ?? 0),
     sku: String(p.sku ?? ''),
-    material: String(p.material ?? ''),
-    dimensions: String(p.dimensions ?? ''),
-    weight: String(p.weight ?? ''),
-    editorsNote: String(p.editorsNote ?? ''),
+    color: String(p.color ?? ''),
+    styleCode: String(p.styleCode ?? ''),
+    numberOfPieces: p.numberOfPieces ? String(p.numberOfPieces) : '',
+    composition: String(p.composition ?? ''),
+    keyFeatures: String(p.keyFeatures ?? ''),
+    careInstructions: String(p.careInstructions ?? ''),
+    deliveryTimeline: String(p.deliveryTimeline ?? ''),
     images: (p.images as ImageAsset[]) ?? [],
     categories: ((p.categories as Array<{ _id: string } | string>) ?? []).map(c =>
       typeof c === 'string' ? c : c._id
@@ -149,10 +157,13 @@ export default function ProductForm({ productId }: { productId?: string }) {
         compareAtPrice: data.compareAtPrice ? parseFloat(data.compareAtPrice) : undefined,
         stock: parseInt(data.stock) || 0,
         sku: data.sku.trim() || undefined,
-        material: data.material.trim() || undefined,
-        dimensions: data.dimensions.trim() || undefined,
-        weight: data.weight.trim() || undefined,
-        editorsNote: data.editorsNote.trim() || undefined,
+        color: data.color.trim() || undefined,
+        styleCode: data.styleCode.trim() || undefined,
+        numberOfPieces: data.numberOfPieces ? parseInt(data.numberOfPieces) : undefined,
+        composition: data.composition.trim() || undefined,
+        keyFeatures: data.keyFeatures.trim() || undefined,
+        careInstructions: data.careInstructions.trim() || undefined,
+        deliveryTimeline: data.deliveryTimeline.trim() || undefined,
         images: data.images,
         categories: data.categories,
         tags: data.tags.split(',').map(t => t.trim()).filter(Boolean),
@@ -199,7 +210,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
                   set('name', e.target.value)
                   if (!productId) set('slug', toSlug(e.target.value) as never)
                 }}
-                placeholder="e.g. Pantheon Earrings"
+                placeholder="e.g. Coffee Flared Lehenga Set"
                 className={inputCls}
               />
             </Field>
@@ -218,7 +229,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
                 value={data.description}
                 onChange={e => set('description', e.target.value)}
                 placeholder="Describe this piece…"
-                rows={4}
+                rows={5}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />
             </Field>
@@ -229,7 +240,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
             <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Pricing & Inventory</p>
 
             <div className="grid grid-cols-2 gap-4">
-              <Field label="Price (€) *">
+              <Field label="Price (₹) *">
                 <input
                   type="number"
                   min={0}
@@ -240,7 +251,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
                   className={inputCls}
                 />
               </Field>
-              <Field label="Compare at Price (€)">
+              <Field label="Compare at Price (₹)">
                 <input
                   type="number"
                   min={0}
@@ -264,7 +275,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
                 <input
                   value={data.sku}
                   onChange={e => set('sku', e.target.value)}
-                  placeholder="BH-001"
+                  placeholder="BH-16.01"
                   className={inputCls}
                 />
               </Field>
@@ -275,26 +286,54 @@ export default function ProductForm({ productId }: { productId?: string }) {
           <section className="border border-border p-6 space-y-4">
             <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Product Details</p>
 
-            <Field label="Material">
-              <input value={data.material} onChange={e => set('material', e.target.value)} placeholder="18k Gold Plated Sterling Silver" className={inputCls} />
+            <div className="grid grid-cols-2 gap-4">
+              <Field label="Style Code">
+                <input value={data.styleCode} onChange={e => set('styleCode', e.target.value)} placeholder="BH-16.01" className={inputCls} />
+              </Field>
+              <Field label="Colour">
+                <input value={data.color} onChange={e => set('color', e.target.value)} placeholder="Coffee" className={inputCls} />
+              </Field>
+              <Field label="No. of Pieces">
+                <input type="number" min={1} value={data.numberOfPieces} onChange={e => set('numberOfPieces', e.target.value)} placeholder="3" className={inputCls} />
+              </Field>
+            </div>
+
+            <Field label="Piece Types / Composition">
+              <input value={data.composition} onChange={e => set('composition', e.target.value)} placeholder="Flared Lehenga, Choli Blouse & Feather Cape" className={inputCls} />
             </Field>
-            <Field label="Dimensions">
-              <input value={data.dimensions} onChange={e => set('dimensions', e.target.value)} placeholder="2.5cm x 1.2cm" className={inputCls} />
-            </Field>
-            <Field label="Weight">
-              <input value={data.weight} onChange={e => set('weight', e.target.value)} placeholder="4.2g per earring" className={inputCls} />
-            </Field>
-            <Field label="Editor's Note">
+
+            <Field label="Key Features (one per line)">
               <Textarea
-                value={data.editorsNote}
-                onChange={e => set('editorsNote', e.target.value)}
-                placeholder="A short editorial comment on this piece…"
+                value={data.keyFeatures}
+                onChange={e => set('keyFeatures', e.target.value)}
+                placeholder={"Set includes 3 pieces: Flared lehenga skirt, Choli blouse, Feather cape\nColour: Coffee\nPremium handcrafted embellishment and embroidery work"}
+                rows={5}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+
+            <Field label="Care Instructions">
+              <Textarea
+                value={data.careInstructions}
+                onChange={e => set('careInstructions', e.target.value)}
+                placeholder={"Couture Dry Clean only; do not wash at home.\nStore in a poly bag inside the Bora Honey's branded bag."}
+                rows={4}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+
+            <Field label="Delivery Timeline">
+              <Textarea
+                value={data.deliveryTimeline}
+                onChange={e => set('deliveryTimeline', e.target.value)}
+                placeholder={"All pieces are made-to-order and delivered within 2-3 months from the date of order confirmation.\nShipping is paid and available Worldwide."}
                 rows={3}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />
             </Field>
+
             <Field label="Tags (comma-separated)">
-              <input value={data.tags} onChange={e => set('tags', e.target.value)} placeholder="gold, earrings, statement" className={inputCls} />
+              <input value={data.tags} onChange={e => set('tags', e.target.value)} placeholder="lehenga, bridal, festive" className={inputCls} />
             </Field>
           </section>
 

@@ -13,8 +13,6 @@ import Link from "next/link"
 import ProductImageGallery from "@/components/products/ProductImageGallery"
 import ProductInfo from "@/components/products/ProductInfo"
 import ProductDescription from "@/components/products/ProductDescription"
-import { connectDB } from '@/lib/db/mongoose'
-import Product from '@/lib/models/Product'
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -22,8 +20,10 @@ interface PageProps {
 }
 
 async function getProduct(slug: string) {
-  await connectDB()
-  return Product.findOne({ slug }).populate('categories', 'name slug').lean()
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? `http://localhost:${process.env.PORT ?? 3000}`
+  const res = await fetch(`${baseUrl}/api/products/slug/${slug}`, { cache: 'no-store' })
+  if (!res.ok) return null
+  return res.json()
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -96,14 +96,20 @@ const ProductDetail = async ({ params }: PageProps) => {
                 name={product.name}
                 price={product.price}
                 compareAtPrice={product.compareAtPrice}
-                material={product.material}
-                dimensions={product.dimensions}
-                weight={product.weight}
-                editorsNote={product.editorsNote}
+                color={product.color}
+                styleCode={product.styleCode}
+                numberOfPieces={product.numberOfPieces}
+                composition={product.composition}
                 categories={categories}
                 stock={product.stock}
               />
-              <ProductDescription description={product.description} sku={product.sku} />
+              <ProductDescription
+                description={product.description}
+                sku={product.sku}
+                keyFeatures={product.keyFeatures}
+                careInstructions={product.careInstructions}
+                deliveryTimeline={product.deliveryTimeline}
+              />
             </div>
           </div>
         </section>

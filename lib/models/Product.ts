@@ -13,10 +13,13 @@ export interface IProduct extends Document {
   compareAtPrice?: number
   images: IProductImage[]
   categories: mongoose.Types.ObjectId[]
-  material?: string
-  dimensions?: string
-  weight?: string
-  editorsNote?: string
+  color?: string
+  styleCode?: string
+  numberOfPieces?: number
+  composition?: string
+  keyFeatures?: string
+  careInstructions?: string
+  deliveryTimeline?: string
   stock: number
   sku?: string
   tags: string[]
@@ -41,10 +44,13 @@ const ProductSchema = new Schema<IProduct>(
     compareAtPrice: { type: Number, min: 0 },
     images: { type: [ProductImageSchema], default: [] },
     categories: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
-    material: { type: String, trim: true },
-    dimensions: { type: String, trim: true },
-    weight: { type: String, trim: true },
-    editorsNote: { type: String, trim: true },
+    color: { type: String, trim: true },
+    styleCode: { type: String, trim: true },
+    numberOfPieces: { type: Number, min: 1 },
+    composition: { type: String, trim: true },
+    keyFeatures: { type: String, trim: true },
+    careInstructions: { type: String, trim: true },
+    deliveryTimeline: { type: String, trim: true },
     stock: { type: Number, default: 0, min: 0 },
     sku: { type: String, trim: true },
     tags: { type: [String], default: [] },

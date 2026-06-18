@@ -22,7 +22,7 @@ interface ShoppingBagProps {
 
 const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorites }: ShoppingBagProps) => {
   const subtotal = cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace('€', '').replace(',', ''));
+    const price = parseFloat(item.price.replace('₹', '').replace(/,/g, ''));
     return sum + (price * item.quantity);
   }, 0);
 
@@ -125,7 +125,7 @@ const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorit
               <div className="border-t border-border pt-6 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-light text-foreground">Subtotal</span>
-                  <span className="text-sm font-medium text-foreground">€{subtotal.toLocaleString('en-EU', { minimumFractionDigits: 2 })}</span>
+                  <span className="text-sm font-medium text-foreground">₹{subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
                 </div>
                 
                 <p className="text-xs text-muted-foreground">

@@ -2,6 +2,7 @@ import { connectDB } from '@/lib/db/mongoose'
 import Product from '@/lib/models/Product'
 import { auth } from '@/auth'
 import type { NextRequest } from 'next/server'
+import Category from '@/lib/models/Category'
 
 function toSlug(name: string) {
   return name.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -9,6 +10,8 @@ function toSlug(name: string) {
 
 export async function GET(request: NextRequest) {
   await connectDB()
+  const categorySchemaRegistering = Category.modelName;
+  
   const sp = request.nextUrl.searchParams
   const search = sp.get('search')
   const category = sp.get('category')
@@ -44,10 +47,12 @@ export async function POST(request: NextRequest) {
   }
 
   await connectDB()
+  const categorySchemaRegistering = Category.modelName;
   const body = await request.json()
   const {
     name, description, price, compareAtPrice, images, categories,
-    material, dimensions, weight, editorsNote, stock, sku, tags, isActive, isFeatured, seo,
+    color, styleCode, numberOfPieces, composition, keyFeatures, careInstructions, deliveryTimeline,
+    stock, sku, tags, isActive, isFeatured, seo,
   } = body
 
   if (!name?.trim()) return Response.json({ error: 'Name is required' }, { status: 400 })
@@ -59,7 +64,8 @@ export async function POST(request: NextRequest) {
 
   const product = await Product.create({
     name: name.trim(), slug, description, price, compareAtPrice, images: images ?? [],
-    categories: categories ?? [], material, dimensions, weight, editorsNote,
+    categories: categories ?? [], color, styleCode, numberOfPieces, composition,
+    keyFeatures, careInstructions, deliveryTimeline,
     stock: stock ?? 0, sku, tags: tags ?? [], isActive: isActive ?? true,
     isFeatured: isFeatured ?? false, seo,
   })

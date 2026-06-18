@@ -140,9 +140,9 @@ export default function ProductsPage() {
 
                 {/* Price */}
                 <div>
-                  <p className="text-sm font-light text-foreground">€{product.price.toLocaleString()}</p>
+                  <p className="text-sm font-light text-foreground">₹{product.price.toLocaleString('en-IN')}</p>
                   {product.compareAtPrice && (
-                    <p className="text-[10px] text-muted-foreground/50 line-through">€{product.compareAtPrice.toLocaleString()}</p>
+                    <p className="text-[10px] text-muted-foreground/50 line-through">₹{product.compareAtPrice.toLocaleString('en-IN')}</p>
                   )}
                 </div>
 

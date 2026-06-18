@@ -18,17 +18,19 @@ interface ProductInfoProps {
   name: string
   price: number
   compareAtPrice?: number
-  material?: string
-  dimensions?: string
-  weight?: string
-  editorsNote?: string
+  color?: string
+  styleCode?: string
+  numberOfPieces?: number
+  composition?: string
   categories: CategoryRef[]
   stock: number
 }
 
-const ProductInfo = ({ name, price, compareAtPrice, material, dimensions, weight, editorsNote, categories, stock }: ProductInfoProps) => {
+const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, categories, stock }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const primaryCategory = categories[0]
+
+  const hasDetails = color || styleCode || numberOfPieces || composition
 
   return (
     <div className="space-y-6">
@@ -74,39 +76,39 @@ const ProductInfo = ({ name, price, compareAtPrice, material, dimensions, weight
             <h1 className="text-2xl md:text-3xl font-light text-foreground">{name}</h1>
           </div>
           <div className="text-right">
-            <p className="text-xl font-light text-foreground">€{price.toLocaleString()}</p>
+            <p className="text-xl font-light text-foreground">₹{price.toLocaleString('en-IN')}</p>
             {compareAtPrice && (
-              <p className="text-sm font-light text-muted-foreground line-through">€{compareAtPrice.toLocaleString()}</p>
+              <p className="text-sm font-light text-muted-foreground line-through">₹{compareAtPrice.toLocaleString('en-IN')}</p>
             )}
           </div>
         </div>
       </div>
 
-      {/* Details */}
-      {(material || dimensions || weight || editorsNote) && (
-        <div className="space-y-4 py-4 border-b border-border">
-          {material && (
-            <div className="space-y-2">
-              <h3 className="text-sm font-light text-foreground">Material</h3>
-              <p className="text-sm font-light text-muted-foreground">{material}</p>
+      {/* Product quick details */}
+      {hasDetails && (
+        <div className="space-y-2 py-4 border-b border-border">
+          {styleCode && (
+            <div className="flex justify-between">
+              <span className="text-sm font-light text-muted-foreground">Style Code</span>
+              <span className="text-sm font-light text-foreground">{styleCode}</span>
             </div>
           )}
-          {dimensions && (
-            <div className="space-y-2">
-              <h3 className="text-sm font-light text-foreground">Dimensions</h3>
-              <p className="text-sm font-light text-muted-foreground">{dimensions}</p>
+          {color && (
+            <div className="flex justify-between">
+              <span className="text-sm font-light text-muted-foreground">Colour</span>
+              <span className="text-sm font-light text-foreground">{color}</span>
             </div>
           )}
-          {weight && (
-            <div className="space-y-2">
-              <h3 className="text-sm font-light text-foreground">Weight</h3>
-              <p className="text-sm font-light text-muted-foreground">{weight}</p>
+          {numberOfPieces && (
+            <div className="flex justify-between">
+              <span className="text-sm font-light text-muted-foreground">No. of Pieces</span>
+              <span className="text-sm font-light text-foreground">{numberOfPieces}</span>
             </div>
           )}
-          {editorsNote && (
-            <div className="space-y-2">
-              <h3 className="text-sm font-light text-foreground">Editor's notes</h3>
-              <p className="text-sm font-light text-muted-foreground italic">"{editorsNote}"</p>
+          {composition && (
+            <div className="flex justify-between gap-8">
+              <span className="text-sm font-light text-muted-foreground shrink-0">Includes</span>
+              <span className="text-sm font-light text-foreground text-right">{composition}</span>
             </div>
           )}
         </div>

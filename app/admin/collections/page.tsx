@@ -417,7 +417,7 @@ export default function CollectionsPage() {
                           )}
                           <div className="min-w-0 flex-1">
                             <p className="text-[11px] text-foreground font-light truncate">{p.name}</p>
-                            <p className="text-[10px] text-muted-foreground/50">€{p.price?.toLocaleString()}</p>
+                            <p className="text-[10px] text-muted-foreground/50">₹{p.price?.toLocaleString('en-IN')}</p>
                           </div>
                           {inCollection && (
                             <Check className="w-3 h-3 text-primary shrink-0" />

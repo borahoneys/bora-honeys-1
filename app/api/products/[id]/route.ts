@@ -1,9 +1,11 @@
 import { connectDB } from '@/lib/db/mongoose'
 import Product from '@/lib/models/Product'
 import { auth } from '@/auth'
+import Category from '@/lib/models/Category';
 
 export async function GET(_req: Request, { params }: { params: Promise<{ id: string }> }) {
   await connectDB()
+  const categorySchemaRegistering = Category.modelName;
   const { id } = await params
   const product = await Product.findById(id).populate('categories', 'name slug').lean()
   if (!product) return Response.json({ error: 'Not found' }, { status: 404 })
@@ -18,6 +20,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
   }
 
   await connectDB()
+  const categorySchemaRegistering = Category.modelName;
   const { id } = await params
   const body = await request.json()
 

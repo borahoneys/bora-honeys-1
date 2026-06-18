@@ -140,9 +140,9 @@ export default function ThemeTest() {
         <p className="text-xs tracking-widest uppercase text-muted-foreground">Cards</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { title: "Noir Silk Gown", price: "€ 4,200", tag: "New Arrival" },
-            { title: "Velvet Blazer", price: "€ 2,800", tag: "Exclusive" },
-            { title: "Gold Clutch", price: "€ 1,650", tag: "Limited" },
+            { title: "Noir Silk Gown", price: "₹ 4,200", tag: "New Arrival" },
+            { title: "Velvet Blazer", price: "₹ 2,800", tag: "Exclusive" },
+            { title: "Gold Clutch", price: "₹ 1,650", tag: "Limited" },
           ].map((item) => (
             <div key={item.title} className="bg-card border border-border rounded-sm overflow-hidden">
               <div className="bg-secondary h-36 flex items-center justify-center text-primary text-3xl border-b border-border">
