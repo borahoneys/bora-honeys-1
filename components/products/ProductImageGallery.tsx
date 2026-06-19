@@ -66,7 +66,7 @@ const ProductImageGallery = ({ images }: Props) => {
             <img
               src={displayImages[currentImageIndex]}
               alt={`Product view ${currentImageIndex + 1}`}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
+              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 select-none"
             />
           </div>
           <div className="flex justify-center mt-4 gap-2">
