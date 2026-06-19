@@ -111,12 +111,6 @@ const Navigation = () => {
       images: [],
     },
     {
-      name: "All Pieces",
-      href: "/products",
-      submenuItems: [],
-      images: [],
-    },
-    {
       name: "Women",
       href: "/women",
       submenuItems: [],
