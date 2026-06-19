@@ -62,12 +62,12 @@ async function fetchPageData(sp: Awaited<SP>) {
   if (!isNaN(maxRaw) && maxRaw > 0) priceFilter.$lte = maxRaw
   if (Object.keys(priceFilter).length) filter.price = priceFilter
 
-  const sortMap: Record<string, Record<string, number>> = {
-    newest: { createdAt: -1 },
-    price_asc: { price: 1 },
-    price_desc: { price: -1 },
-    name_asc: { name: 1 },
-    name_desc: { name: -1 },
+  const sortMap: Record<string, [string, 1 | -1][]> = {
+    newest: [['createdAt', -1]],
+    price_asc: [['price', 1]],
+    price_desc: [['price', -1]],
+    name_asc: [['name', 1]],
+    name_desc: [['name', -1]],
   }
   const sortOrder = sortMap[sort] ?? sortMap.newest
 
