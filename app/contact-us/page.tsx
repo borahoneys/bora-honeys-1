@@ -270,12 +270,20 @@ export default function ContactUsPage() {
 
                             <div className="space-y-4">
                                 <p className="text-[10px] tracking-[0.4em] uppercase text-primary">Email</p>
-                                <a
-                                    href="mailto:studio@borahoneys.com"
-                                    className="text-sm font-light text-white/70 hover:text-primary transition-colors"
-                                >
-                                    studio@borahoneys.com
-                                </a>
+                                <div className="flex flex-col gap-1">
+                                  <a
+                                      href="mailto:info@borahoneys.in"
+                                      className="text-sm font-light text-white/70 hover:text-primary transition-colors"
+                                  >
+                                      info@borahoneys.in
+                                  </a>
+                                  <a
+                                      href="mailto:honeynanda@borahoneys.in"
+                                      className="text-sm font-light text-white/70 hover:text-primary transition-colors"
+                                  >
+                                      honeynanda@borahoneys.in
+                                  </a>
+                                </div>
                             </div>
 
                             <div className="w-full border-t border-primary/15" />
@@ -283,12 +291,12 @@ export default function ContactUsPage() {
                             <div className="space-y-4">
                                 <p className="text-[10px] tracking-[0.4em] uppercase text-primary">WhatsApp</p>
                                 <a
-                                    href="https://wa.me/971000000000"
+                                    href="https://wa.me/918570873934"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-sm font-light text-white/70 hover:text-primary transition-colors"
                                 >
-                                    +971 00 000 0000
+                                    +91 85708 73934
                                 </a>
                             </div>
 

@@ -49,7 +49,7 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
         {isDescriptionOpen && (
           <div className="pb-6">
             {description ? (
-              <p className="text-sm font-light text-muted-foreground leading-relaxed whitespace-pre-line">
+              <p className="text-sm font-light text-foreground leading-relaxed whitespace-pre-line">
                 {description}
               </p>
             ) : (
@@ -80,7 +80,7 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
             {keyFeatures ? (
               <ul className="space-y-2 mt-1">
                 {keyFeatures.split('\n').filter(Boolean).map((line, i) => (
-                  <li key={i} className="text-sm font-light text-muted-foreground flex gap-2">
+                  <li key={i} className="text-sm font-light text-foreground flex gap-2">
                     <span className="shrink-0">•</span>
                     <span>{line.replace(/^[•\-]\s*/, '')}</span>
                   </li>
@@ -108,7 +108,7 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
             {careInstructions ? (
               <ul className="space-y-2">
                 {careInstructions.split('\n').filter(Boolean).map((line, i) => (
-                  <li key={i} className="text-sm font-light text-muted-foreground flex gap-2">
+                  <li key={i} className="text-sm font-light text-foreground flex gap-2">
                     <span className="shrink-0">•</span>
                     <span>{line.replace(/^[•\-]\s*/, '')}</span>
                   </li>
@@ -136,7 +136,7 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
             {deliveryTimeline ? (
               <ul className="space-y-2">
                 {deliveryTimeline.split('\n').filter(Boolean).map((line, i) => (
-                  <li key={i} className="text-sm font-light text-muted-foreground flex gap-2">
+                  <li key={i} className="text-sm font-light text-foreground flex gap-2">
                     <span className="shrink-0">•</span>
                     <span>{line.replace(/^[•\-]\s*/, '')}</span>
                   </li>
@@ -162,7 +162,7 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
               {[1, 2, 3, 4, 5].map((star) => (
                 <CustomStar key={star} filled={star <= 4.8} />
               ))}
-              <span className="text-sm font-light text-muted-foreground ml-1">4.8</span>
+              <span className="text-sm font-light text-foreground ml-1">4.8</span>
             </div>
           </div>
           {isReviewsOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
@@ -178,9 +178,9 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
                       <CustomStar key={star} filled={true} />
                     ))}
                   </div>
-                  <span className="text-sm font-light text-muted-foreground">Sarah M.</span>
+                  <span className="text-sm font-light text-foreground">Sarah M.</span>
                 </div>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed">
+                <p className="text-sm font-light text-foreground leading-relaxed">
                   "Absolutely stunning! The quality is exceptional and the craftsmanship is breathtaking.
                   I received so many compliments at the event."
                 </p>
@@ -193,9 +193,9 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
                       <CustomStar key={star} filled={star <= 4} />
                     ))}
                   </div>
-                  <span className="text-sm font-light text-muted-foreground">Emma T.</span>
+                  <span className="text-sm font-light text-foreground">Emma T.</span>
                 </div>
-                <p className="text-sm font-light text-muted-foreground leading-relaxed">
+                <p className="text-sm font-light text-foreground leading-relaxed">
                   "Beautiful craftsmanship and the fit was perfect. The embroidery work is incredibly detailed. Highly recommend!"
                 </p>
               </div>
