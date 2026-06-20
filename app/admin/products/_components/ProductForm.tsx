@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { Upload, X, Loader2 } from 'lucide-react'
+import { Upload, X, Loader2, GripVertical } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 
@@ -86,6 +86,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
   const [error, setError] = useState('')
   const [uploadingIdx, setUploadingIdx] = useState<number | null>(null)
   const fileRef = useRef<HTMLInputElement>(null)
+  const dragIdx = useRef<number | null>(null)
 
   useEffect(() => {
     fetch('/api/categories').then(r => r.json()).then(setCategories)
@@ -141,6 +142,16 @@ export default function ProductForm({ productId }: { productId?: string }) {
 
   function removeImage(i: number) {
     setData(prev => ({ ...prev, images: prev.images.filter((_, idx) => idx !== i) }))
+  }
+
+  function reorderImages(from: number, to: number) {
+    if (from === to) return
+    setData(prev => {
+      const imgs = [...prev.images]
+      const [moved] = imgs.splice(from, 1)
+      imgs.splice(to, 0, moved)
+      return { ...prev, images: imgs }
+    })
   }
 
   function submit() {
@@ -343,8 +354,29 @@ export default function ProductForm({ productId }: { productId?: string }) {
 
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
               {data.images.map((img, i) => (
-                <div key={img.publicId} className="relative aspect-square border border-border group">
-                  <Image src={img.url} alt="" fill className="object-cover" sizes="150px" />
+                <div
+                  key={img.publicId}
+                  draggable
+                  onDragStart={() => { dragIdx.current = i }}
+                  onDragOver={e => {
+                    e.preventDefault()
+                    if (dragIdx.current !== null && dragIdx.current !== i) {
+                      reorderImages(dragIdx.current, i)
+                      dragIdx.current = i
+                    }
+                  }}
+                  onDragEnd={() => { dragIdx.current = null }}
+                  className="relative aspect-square border border-border group cursor-grab active:cursor-grabbing"
+                >
+                  <Image src={img.url} alt="" fill className="object-cover pointer-events-none" sizes="150px" />
+                  {i === 0 && (
+                    <span className="absolute bottom-1 left-1 text-[8px] tracking-widest uppercase bg-primary text-primary-foreground px-1.5 py-0.5 leading-none">
+                      Cover
+                    </span>
+                  )}
+                  <div className="absolute top-1 left-1 opacity-0 group-hover:opacity-100 transition-opacity text-white drop-shadow">
+                    <GripVertical className="w-3.5 h-3.5" />
+                  </div>
                   <button
                     onClick={() => removeImage(i)}
                     className="absolute top-1 right-1 w-5 h-5 bg-background/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
@@ -376,7 +408,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
               className="hidden"
               onChange={handleFileChange}
             />
-            <p className="text-[10px] text-muted-foreground/50">First image will be the cover. Drag to reorder (coming soon).</p>
+            <p className="text-[10px] text-muted-foreground/50">First image is the cover. Drag images to reorder.</p>
           </section>
 
           {/* SEO */}

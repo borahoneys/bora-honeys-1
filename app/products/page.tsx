@@ -191,7 +191,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 bg-background px-4 py-4 md:p-6">
                   {(products as unknown as PopulatedProduct[]).map((product) => {
                     const primaryCategory = product.categories[0]
                     const isOnSale =
@@ -210,7 +210,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
                               src={product.images[0].url}
                               alt={product.name}
                               fill
-                              sizes="(max-width:768px) 50vw, (max-width:1200px) 33vw, 25vw"
+                              sizes="(max-width:768px) 100vw, 50vw"
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                           ) : (
