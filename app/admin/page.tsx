@@ -1,6 +1,6 @@
 import { verifyAdminSession } from '@/app/lib/dal'
 import Link from 'next/link'
-import { ImageIcon, Package, Users, BarChart3 } from 'lucide-react'
+import { ImageIcon, Package, Users, BarChart3, Sparkles, GalleryVertical, BookOpen } from 'lucide-react'
 
 const quickLinks = [
   {
@@ -15,6 +15,27 @@ const quickLinks = [
     label: 'Products',
     description: 'Add, edit, and organise your catalogue',
     icon: Package,
+    available: true,
+  },
+  {
+    href: '/admin/timeless-classics',
+    label: 'Timeless Classics',
+    description: 'Edit the Timeless Classics editorial page',
+    icon: Sparkles,
+    available: true,
+  },
+  {
+    href: '/admin/capsule-collection',
+    label: 'Capsule Collection',
+    description: 'Edit the Capsule Collection page',
+    icon: GalleryVertical,
+    available: true,
+  },
+  {
+    href: '/admin/client-diaries',
+    label: 'Client Diaries',
+    description: 'Add and manage client testimonials',
+    icon: BookOpen,
     available: true,
   },
   {
@@ -49,7 +70,7 @@ export default async function AdminDashboardPage() {
 
       {/* Grid */}
       <div className="px-8 py-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
           {quickLinks.map(({ href, label, description, icon: Icon, available }) =>
             available ? (
               <Link

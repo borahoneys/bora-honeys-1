@@ -112,12 +112,6 @@ const Navigation = () => {
     },
     {
       name: "Women",
-      href: "/women",
-      submenuItems: [],
-      images: [],
-    },
-    {
-      name: "Categories / Silhouettes",
       href: "/categories",
       submenuItems: [
         {
@@ -163,6 +157,24 @@ const Navigation = () => {
         { name: "Collection 2025", href: "/collections/2025" },
         { name: "Collection 2026", href: "/collections/2026" },
       ],
+      images: [],
+    },
+    {
+      name: "Timeless Classics",
+      href: "/timeless-classics",
+      submenuItems: [],
+      images: [],
+    },
+    {
+      name: "Capsule Collection",
+      href: "/capsule-collection",
+      submenuItems: [],
+      images: [],
+    },
+    {
+      name: "Client Diaries",
+      href: "/client-diaries",
+      submenuItems: [],
       images: [],
     },
     {
