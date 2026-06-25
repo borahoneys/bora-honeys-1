@@ -5,8 +5,8 @@ import Image from "next/image"
 
 const images = [
   // { src: "/founder-1.jpeg", alt: "Honey Nanda — Founder of BORA HONEY" },
-  { src: "/founder-2.jpeg", alt: "Honey Nanda — Founder of BORA HONEY" },
-  // { src: "/founder-3.jpeg", alt: "Honey Nanda — Founder of BORA HONEY" },
+  // { src: "/founder-2.jpeg", alt: "Honey Nanda — Founder of BORA HONEY" },
+  { src: "/founder-3.jpeg", alt: "Honey Nanda — Founder of BORA HONEY" },
 ]
 
 const AUTOPLAY_MS = 3500
