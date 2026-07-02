@@ -72,8 +72,8 @@ export default async function CategoryPage({ params }: PageProps) {
 
       <main className="pt-20">
         {/* Hero / Header */}
-        <section className="px-6 py-14 border-b border-border">
-          <div className="max-w-4xl">
+        <section className="px-6 py-12 border-b border-border">
+          <div className="max-w-screen-xl mx-auto">
             <Breadcrumb className="mb-6">
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -90,26 +90,26 @@ export default async function CategoryPage({ params }: PageProps) {
               {category.name}
             </h1>
             {category.description && (
-              <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed">
+              <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed mb-4">
                 {category.description}
               </p>
             )}
-            <p className="text-[10px] tracking-widest uppercase text-muted-foreground/40 mt-5">
+            <p className="text-[10px] tracking-widest uppercase text-muted-foreground/40">
               {products.length} {products.length === 1 ? 'piece' : 'pieces'}
             </p>
           </div>
         </section>
 
         {/* Product grid */}
-        <section className="px-6 py-12">
+        <div className="max-w-screen-xl mx-auto">
           {products.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground/50">
+            <div className="flex flex-col items-center justify-center py-32 px-6 text-center">
+              <p className="text-[11px] tracking-[0.35em] uppercase text-muted-foreground/40 mb-4">
                 No pieces in this category yet
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 bg-background px-4 py-4 md:p-6">
               {products.map(product => {
                 const primaryCategory = product.categories[0]
                 const isOnSale = product.compareAtPrice && product.compareAtPrice > product.price
@@ -127,11 +127,15 @@ export default async function CategoryPage({ params }: PageProps) {
                           src={product.images[0].url}
                           alt={product.name}
                           fill
-                          sizes="(max-width:768px) 50vw, (max-width:1200px) 33vw, 25vw"
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width:768px) 100vw, 50vw"
+                          className="object-contain transition-transform duration-700 group-hover:scale-105"
                         />
                       ) : (
-                        <div className="w-full h-full bg-muted/30" />
+                        <div className="w-full h-full bg-muted/30 flex items-center justify-center">
+                          <span className="text-[9px] tracking-widest uppercase text-muted-foreground/20">
+                            No image
+                          </span>
+                        </div>
                       )}
                       {isOnSale && (
                         <span className="absolute top-3 left-3 text-[9px] tracking-[0.25em] uppercase bg-background text-foreground px-2 py-1 border border-border">
@@ -166,7 +170,7 @@ export default async function CategoryPage({ params }: PageProps) {
               })}
             </div>
           )}
-        </section>
+        </div>
       </main>
 
       <Footer />
