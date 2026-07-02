@@ -103,7 +103,7 @@ export default async function CollectionPage({ params }: PageProps) {
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-border">
               {products.map(product => {
                 const primaryCategory = (product.categories as { name: string; slug: string }[])[0]
                 const isOnSale = product.compareAtPrice && product.compareAtPrice > product.price

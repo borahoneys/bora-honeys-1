@@ -129,7 +129,7 @@ const Navigation = () => {
     },
     {
       name: "Women",
-      href: "",
+      href: "/products",
       submenuItems: [
         {
           name: "Flared Lehngas Sets",
