@@ -40,7 +40,7 @@ export default function FounderCarousel() {
             src={img.src}
             alt={img.alt}
             fill
-            className="object-cover object-top"
+            className="object-contain object-bottom"
             sizes="(max-width: 768px) 100vw, 50vw"
             priority={i === 0}
           />

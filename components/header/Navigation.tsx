@@ -15,6 +15,11 @@ interface CartItem {
   category: string;
 }
 
+interface CollectionNavItem {
+  name: string;
+  slug: string;
+}
+
 const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -23,6 +28,18 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isShoppingBagOpen, setIsShoppingBagOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [collections, setCollections] = useState<CollectionNavItem[]>([]);
+
+  useEffect(() => {
+    fetch("/api/collections")
+      .then(res => res.json())
+      .then((data: { name: string; slug: string; isActive: boolean }[]) => {
+        setCollections(
+          data.filter(c => c.isActive).map(c => ({ name: c.name, slug: c.slug }))
+        );
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -112,31 +129,31 @@ const Navigation = () => {
     },
     {
       name: "Women",
-      href: "/categories",
+      href: "",
       submenuItems: [
         {
-          name: "Flaired Lehngas Sets",
-          href: "/categories/flaired-lehngas-sets",
+          name: "Flared Lehngas Sets",
+          href: "/categories/flared-lehngas-sets",
         },
         {
           name: "Mermaid Lehngas Sets",
           href: "/categories/mermaid-lehngas-sets",
         },
         {
-          name: "Fish Cut Lehnga Sets",
-          href: "/categories/fish-cut-lehnga-sets",
+          name: "Fish Cut Lehngas Sets",
+          href: "/categories/fish-cut-lehngas-sets",
         },
         {
-          name: "Straight Cut Lehnga Sets",
-          href: "/categories/straight-cut-lehnga-sets",
+          name: "Straight Cut Lehngas Sets",
+          href: "/categories/straight-cut-lehngas-sets",
         },
         {
           name: "Gowns",
           href: "/categories/gowns",
         },
         {
-          name: "Co-Ord Sets",
-          href: "/categories/co-ord-sets",
+          name: "Co-Ords Set",
+          href: "/categories/co-ords-set",
         },
       ],
       images: [],
@@ -150,13 +167,10 @@ const Navigation = () => {
     {
       name: "Collections",
       href: "/collections",
-      submenuItems: [
-        { name: "Collection 2022", href: "/collections/2022" },
-        { name: "Collection 2023", href: "/collections/2023" },
-        { name: "Collection 2024", href: "/collections/2024" },
-        { name: "Collection 2025", href: "/collections/2025" },
-        { name: "Collection 2026", href: "/collections/2026" },
-      ],
+      submenuItems: collections.map(c => ({
+        name: c.name,
+        href: `/collections/${c.slug}`,
+      })),
       images: [],
     },
     {

@@ -40,15 +40,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm font-light text-white/80 leading-relaxed">
-                  123 Maison Street<br />
-                  Mumbai, MH 400001<br />
-                  India
+                  Number 4, Second Floor Ramnath Building, Aurobindo Marg, 110030 Mehrauli, New Delhi 
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
                 <a href="tel:+918570873934" className="text-sm font-light text-white/80 hover:text-primary transition-colors duration-300">
-                  +91 85708 73934
+                  +91 70158 28414
                 </a>
               </li>
               <li className="flex items-center gap-3">
