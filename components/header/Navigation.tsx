@@ -212,7 +212,7 @@ const Navigation = () => {
     },
     {
       name: "Terms & Policies",
-      href: "/terms-and-policies",
+      href: "/terms-and-conditions",
       submenuItems: [],
       images: [],
     },
