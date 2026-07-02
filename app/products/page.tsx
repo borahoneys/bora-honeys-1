@@ -211,7 +211,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
                               alt={product.name}
                               fill
                               sizes="(max-width:768px) 100vw, 50vw"
-                              className="object-cover transition-transform duration-700 group-hover:scale-105"
+                              className="object-contain transition-transform duration-700 group-hover:scale-105"
                             />
                           ) : (
                             <div className="w-full h-full bg-muted/30 flex items-center justify-center">
