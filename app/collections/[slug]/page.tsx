@@ -66,8 +66,32 @@ export default async function CollectionPage({ params }: PageProps) {
 
       <main className="pt-20">
         {/* Hero / Header */}
-        <section className="px-6 py-12 border-b border-border">
-          <div className="max-w-screen-xl mx-auto">
+        <section className="border-b border-border">
+          {collection.video?.url ? (
+            <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-muted/20">
+              <video
+                src={collection.video.url}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ) : collection.image?.url ? (
+            <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-muted/20">
+              <Image
+                src={collection.image.url}
+                alt={collection.name}
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          ) : null}
+
+          <div className="max-w-screen-xl mx-auto px-6 py-12">
             <Breadcrumb className="mb-6">
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -83,30 +107,8 @@ export default async function CollectionPage({ params }: PageProps) {
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-4">
               {collection.name}
             </h1>
-            {collection.video?.url ? (
-              <div className="relative w-full max-w-2xl aspect-video overflow-hidden mb-6 bg-muted/20">
-                <video
-                  src={collection.video.url}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ) : collection.image?.url ? (
-              <div className="relative w-full max-w-2xl aspect-video overflow-hidden mb-6 bg-muted/20">
-                <Image
-                  src={collection.image.url}
-                  alt={collection.name}
-                  fill
-                  sizes="(max-width:768px) 100vw, 672px"
-                  className="object-cover"
-                />
-              </div>
-            ) : null}
             {collection.description && (
-              <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed mb-4">
+              <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed mb-4 whitespace-pre-line">
                 {collection.description}
               </p>
             )}
