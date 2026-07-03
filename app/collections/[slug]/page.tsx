@@ -65,8 +65,20 @@ export default async function CollectionPage({ params }: PageProps) {
       <Header />
 
       <main className="pt-20">
+
         {/* Hero / Header */}
         <section className="border-b border-border">
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild><Link href="/">Home</Link></BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{collection.name}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           {collection.video?.url ? (
             <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-muted/20">
               <video
@@ -92,18 +104,8 @@ export default async function CollectionPage({ params }: PageProps) {
           ) : null}
 
           <div className="max-w-screen-xl mx-auto px-6 py-12">
-            <Breadcrumb className="mb-6">
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild><Link href="/">Home</Link></BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>{collection.name}</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Collection</p>
+
+            {/* <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Collection</p> */}
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-4">
               {collection.name}
             </h1>
