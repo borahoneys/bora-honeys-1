@@ -5,6 +5,7 @@ export interface ICollection extends Document {
   slug: string
   description?: string
   image?: { url: string; publicId: string }
+  video?: { url: string; publicId: string }
   products: mongoose.Types.ObjectId[]
   isActive: boolean
   createdAt: Date
@@ -17,6 +18,10 @@ const CollectionSchema = new Schema<ICollection>(
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
     description: { type: String, trim: true },
     image: {
+      url: { type: String },
+      publicId: { type: String },
+    },
+    video: {
       url: { type: String },
       publicId: { type: String },
     },

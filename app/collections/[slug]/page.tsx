@@ -83,6 +83,28 @@ export default async function CollectionPage({ params }: PageProps) {
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-4">
               {collection.name}
             </h1>
+            {collection.video?.url ? (
+              <div className="relative w-full max-w-2xl aspect-video overflow-hidden mb-6 bg-muted/20">
+                <video
+                  src={collection.video.url}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ) : collection.image?.url ? (
+              <div className="relative w-full max-w-2xl aspect-video overflow-hidden mb-6 bg-muted/20">
+                <Image
+                  src={collection.image.url}
+                  alt={collection.name}
+                  fill
+                  sizes="(max-width:768px) 100vw, 672px"
+                  className="object-cover"
+                />
+              </div>
+            ) : null}
             {collection.description && (
               <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed mb-4">
                 {collection.description}

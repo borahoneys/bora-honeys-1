@@ -1,8 +1,10 @@
 'use client'
 
-import { useState, useEffect, useTransition } from 'react'
-import { Plus, Pencil, Trash2, Loader2, Check, X, Search, Package, ChevronRight } from 'lucide-react'
+import { useState, useEffect, useRef, useTransition } from 'react'
+import { Plus, Pencil, Trash2, Loader2, Check, X, Search, Package, ChevronRight, Upload, VideoIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+
+type MediaAsset = { url: string; publicId: string }
 
 interface ProductRef {
   _id: string
@@ -18,8 +20,105 @@ interface Collection {
   name: string
   slug: string
   description?: string
+  image?: MediaAsset
+  video?: MediaAsset
   isActive: boolean
   products: ProductRef[]
+}
+
+type UploadZoneProps = {
+  label: string
+  accept: string
+  resourceType: 'image' | 'video'
+  value: MediaAsset | null
+  onChange: (asset: MediaAsset | null) => void
+}
+
+function UploadZone({ label, accept, resourceType, value, onChange }: UploadZoneProps) {
+  const inputRef = useRef<HTMLInputElement>(null)
+  const [uploading, setUploading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  async function handleFile(file: File) {
+    setUploading(true)
+    setError(null)
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      fd.append('folder', 'bora-honeys/collections')
+      fd.append('resourceType', resourceType)
+      const res = await fetch('/api/upload', { method: 'POST', body: fd })
+      if (!res.ok) throw new Error((await res.json()).error ?? 'Upload failed')
+      const data: MediaAsset = await res.json()
+      onChange(data)
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Upload failed')
+    } finally {
+      setUploading(false)
+    }
+  }
+
+  function onInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (file) handleFile(file)
+    e.target.value = ''
+  }
+
+  function onDrop(e: React.DragEvent) {
+    e.preventDefault()
+    const file = e.dataTransfer.files?.[0]
+    if (file) handleFile(file)
+  }
+
+  return (
+    <div className="flex flex-col gap-1.5">
+      <label className="block text-[10px] tracking-[0.2em] uppercase text-muted-foreground">{label}</label>
+
+      {value ? (
+        <div className="relative group border border-border overflow-hidden bg-muted/30">
+          {resourceType === 'image' ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={value.url} alt="" className="w-full h-28 object-cover" />
+          ) : (
+            <div className="flex items-center gap-3 px-3 py-4">
+              <VideoIcon className="w-4 h-4 text-primary shrink-0" />
+              <span className="text-xs text-foreground truncate">{value.publicId.split('/').pop()}</span>
+            </div>
+          )}
+          <button
+            type="button"
+            onClick={() => onChange(null)}
+            className="absolute top-1.5 right-1.5 bg-background/80 border border-border p-0.5 opacity-0 group-hover:opacity-100 transition-opacity hover:border-destructive hover:text-destructive"
+          >
+            <X className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      ) : (
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => inputRef.current?.click()}
+          onKeyDown={(e) => e.key === 'Enter' && inputRef.current?.click()}
+          onDrop={onDrop}
+          onDragOver={(e) => e.preventDefault()}
+          className="border border-dashed border-border flex flex-col items-center justify-center gap-2 py-5 cursor-pointer hover:border-primary/60 hover:bg-primary/5 transition-colors"
+        >
+          {uploading ? (
+            <Loader2 className="w-4 h-4 text-primary animate-spin" />
+          ) : (
+            <Upload className="w-4 h-4 text-muted-foreground" />
+          )}
+          <span className="text-xs text-muted-foreground">
+            {uploading ? 'Uploading…' : 'Click or drag to upload'}
+          </span>
+        </div>
+      )}
+
+      {error && <p className="text-xs text-destructive">{error}</p>}
+
+      <input ref={inputRef} type="file" accept={accept} className="hidden" onChange={onInputChange} />
+    </div>
+  )
 }
 
 interface Product {
@@ -43,6 +142,8 @@ export default function CollectionsPage() {
   // Form state
   const [formName, setFormName] = useState('')
   const [formDescription, setFormDescription] = useState('')
+  const [formImage, setFormImage] = useState<MediaAsset | null>(null)
+  const [formVideo, setFormVideo] = useState<MediaAsset | null>(null)
   const [formError, setFormError] = useState('')
 
   // Product search in manage panel
@@ -61,6 +162,8 @@ export default function CollectionsPage() {
   function openCreate() {
     setFormName('')
     setFormDescription('')
+    setFormImage(null)
+    setFormVideo(null)
     setFormError('')
     setPanel({ type: 'create' })
   }
@@ -68,6 +171,8 @@ export default function CollectionsPage() {
   function openEdit(col: Collection) {
     setFormName(col.name)
     setFormDescription(col.description ?? '')
+    setFormImage(col.image ?? null)
+    setFormVideo(col.video ?? null)
     setFormError('')
     setPanel({ type: 'edit', collection: col })
   }
@@ -91,7 +196,12 @@ export default function CollectionsPage() {
       const res = await fetch(url, {
         method: isEdit ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: formName.trim(), description: formDescription.trim() }),
+        body: JSON.stringify({
+          name: formName.trim(),
+          description: formDescription.trim(),
+          image: formImage,
+          video: formVideo,
+        }),
       })
       const data = await res.json()
       if (!res.ok) { setFormError(data.error ?? 'Failed to save'); return }
@@ -321,6 +431,30 @@ export default function CollectionsPage() {
                   rows={3}
                   className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2.5 outline-none focus:border-primary/50 placeholder:text-muted-foreground/30 resize-none"
                 />
+              </div>
+              <div>
+                <p className="block text-[10px] tracking-[0.2em] uppercase text-muted-foreground mb-1.5">
+                  Hero Media
+                </p>
+                <p className="text-[10px] text-muted-foreground/50 mb-2">
+                  Shown between the heading and description on the collection page. Video takes priority over image.
+                </p>
+                <div className="space-y-3">
+                  <UploadZone
+                    label="Video"
+                    accept="video/*"
+                    resourceType="video"
+                    value={formVideo}
+                    onChange={setFormVideo}
+                  />
+                  <UploadZone
+                    label="Image"
+                    accept="image/*"
+                    resourceType="image"
+                    value={formImage}
+                    onChange={setFormImage}
+                  />
+                </div>
               </div>
               {formError && (
                 <p className="text-[11px] text-destructive flex items-center gap-1.5">
