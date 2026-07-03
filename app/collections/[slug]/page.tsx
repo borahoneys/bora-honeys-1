@@ -97,7 +97,7 @@ export default async function CollectionPage({ params }: PageProps) {
                 alt={collection.name}
                 fill
                 sizes="100vw"
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
