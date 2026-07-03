@@ -68,7 +68,7 @@ export default async function CollectionPage({ params }: PageProps) {
 
         {/* Hero / Header */}
         <section className="border-b border-border">
-          <Breadcrumb className="mb-6">
+          <Breadcrumb className="px-6 mb-6">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild><Link href="/">Home</Link></BreadcrumbLink>
@@ -110,7 +110,7 @@ export default async function CollectionPage({ params }: PageProps) {
               {collection.name}
             </h1>
             {collection.description && (
-              <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed mb-4 whitespace-pre-line">
+              <p className="text-sm font-light text-white leading-relaxed mb-4 whitespace-pre-line">
                 {collection.description}
               </p>
             )}
