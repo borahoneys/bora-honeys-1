@@ -3,6 +3,7 @@ import mongoose, { Schema, Document, Model } from 'mongoose'
 export interface ICollection extends Document {
   name: string
   slug: string
+  subheading?: string
   description?: string
   image?: { url: string; publicId: string }
   video?: { url: string; publicId: string }
@@ -16,6 +17,7 @@ const CollectionSchema = new Schema<ICollection>(
   {
     name: { type: String, required: true, trim: true },
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
+    subheading: { type: String, trim: true },
     description: { type: String, trim: true },
     image: {
       url: { type: String },

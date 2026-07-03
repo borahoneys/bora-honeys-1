@@ -57,7 +57,7 @@ const ProductImageGallery = ({ images }: Props) => {
       <div className="lg:hidden">
         <div className="relative">
           <div
-            className="w-full aspect-square overflow-hidden cursor-pointer group touch-pan-y"
+            className="w-full h-[80vh] overflow-hidden cursor-pointer group touch-pan-y"
             onClick={() => handleImageClick(currentImageIndex)}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}

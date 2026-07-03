@@ -244,7 +244,7 @@ const Navigation = () => {
             <img
               src="/logo.png"
               alt="Bora Honey's"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
         </div>

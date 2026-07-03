@@ -79,6 +79,14 @@ export default async function CollectionPage({ params }: PageProps) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
+          <h1 className="text-3xl px-6 md:text-4xl font-medium tracking-[0.08em] text-foreground mb-4">
+            {collection.name}
+          </h1>
+          {collection.subheading && (
+            <p className="text-base tracking-[0.15em] uppercase px-6 text-muted-foreground mb-3">
+              {collection.subheading}
+            </p>
+          )}
           {collection.video?.url ? (
             <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-muted/20">
               <video
@@ -87,7 +95,7 @@ export default async function CollectionPage({ params }: PageProps) {
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           ) : collection.image?.url ? (
@@ -95,7 +103,6 @@ export default async function CollectionPage({ params }: PageProps) {
               <Image
                 src={collection.image.url}
                 alt={collection.name}
-                fill
                 sizes="100vw"
                 className="object-contain"
                 priority
@@ -106,9 +113,7 @@ export default async function CollectionPage({ params }: PageProps) {
           <div className="max-w-screen-xl mx-auto px-6 py-12">
 
             {/* <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Collection</p> */}
-            <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-4">
-              {collection.name}
-            </h1>
+
             {collection.description && (
               <p className="text-sm font-light text-white leading-relaxed mb-4 whitespace-pre-line">
                 {collection.description}

@@ -19,6 +19,7 @@ interface Collection {
   _id: string
   name: string
   slug: string
+  subheading?: string
   description?: string
   image?: MediaAsset
   video?: MediaAsset
@@ -141,6 +142,7 @@ export default function CollectionsPage() {
 
   // Form state
   const [formName, setFormName] = useState('')
+  const [formSubheading, setFormSubheading] = useState('')
   const [formDescription, setFormDescription] = useState('')
   const [formImage, setFormImage] = useState<MediaAsset | null>(null)
   const [formVideo, setFormVideo] = useState<MediaAsset | null>(null)
@@ -161,6 +163,7 @@ export default function CollectionsPage() {
 
   function openCreate() {
     setFormName('')
+    setFormSubheading('')
     setFormDescription('')
     setFormImage(null)
     setFormVideo(null)
@@ -170,6 +173,7 @@ export default function CollectionsPage() {
 
   function openEdit(col: Collection) {
     setFormName(col.name)
+    setFormSubheading(col.subheading ?? '')
     setFormDescription(col.description ?? '')
     setFormImage(col.image ?? null)
     setFormVideo(col.video ?? null)
@@ -198,6 +202,7 @@ export default function CollectionsPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: formName.trim(),
+          subheading: formSubheading.trim(),
           description: formDescription.trim(),
           image: formImage,
           video: formVideo,
@@ -417,6 +422,18 @@ export default function CollectionsPage() {
                   onChange={e => setFormName(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && saveCollection()}
                   placeholder="e.g. Summer Edit 2025"
+                  className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2.5 outline-none focus:border-primary/50 placeholder:text-muted-foreground/30"
+                />
+              </div>
+              <div>
+                <label className="block text-[10px] tracking-[0.2em] uppercase text-muted-foreground mb-1.5">
+                  Subheading
+                </label>
+                <input
+                  value={formSubheading}
+                  onChange={e => setFormSubheading(e.target.value)}
+                  onKeyDown={e => e.key === 'Enter' && saveCollection()}
+                  placeholder="e.g. Handpicked pieces for the season"
                   className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2.5 outline-none focus:border-primary/50 placeholder:text-muted-foreground/30"
                 />
               </div>

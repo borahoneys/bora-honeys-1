@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
   await connectDB()
   const body = await request.json()
-  const { name, description, image, video } = body
+  const { name, subheading, description, image, video } = body
 
   if (!name?.trim()) return Response.json({ error: 'Name is required' }, { status: 400 })
 
@@ -33,6 +33,6 @@ export async function POST(request: NextRequest) {
   const existing = await Collection.findOne({ slug })
   if (existing) return Response.json({ error: 'A collection with this name already exists' }, { status: 409 })
 
-  const collection = await Collection.create({ name: name.trim(), slug, description, image, video })
+  const collection = await Collection.create({ name: name.trim(), slug, subheading, description, image, video })
   return Response.json(collection, { status: 201 })
 }
