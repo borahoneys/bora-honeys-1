@@ -13,6 +13,8 @@ import {
 } from '@/components/ui/breadcrumb'
 import { connectDB } from '@/lib/db/mongoose'
 import Collection from '@/lib/models/Collection'
+import Product from "@/lib/models/Product"
+import Category from "@/lib/models/Category"
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -32,6 +34,8 @@ interface PopulatedProduct {
 
 async function getCollection(slug: string) {
   await connectDB()
+  Product.modelName
+  Category.modelName
   return Collection.findOne({ slug, isActive: true })
     .populate({
       path: 'products',
@@ -68,7 +72,7 @@ export default async function CollectionPage({ params }: PageProps) {
 
         {/* Hero / Header */}
         <section className="border-b border-border">
-          <Breadcrumb className="px-6 mb-6">
+          <Breadcrumb className="px-6 mb-[40px]">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild><Link href="/">Home</Link></BreadcrumbLink>
@@ -79,14 +83,14 @@ export default async function CollectionPage({ params }: PageProps) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <h1 className="text-3xl px-6 md:text-4xl font-medium tracking-[0.08em] text-foreground mb-4">
+          {/* <h1 className="text-3xl px-6 md:text-4xl font-medium tracking-[0.08em] text-foreground mb-4">
             {collection.name}
-          </h1>
-          {collection.subheading && (
-            <p className="text-base tracking-[0.15em] uppercase px-6 text-muted-foreground mb-3">
+          </h1> */}
+          {/* {collection.subheading && (
+            <p className="text-base tracking-[0.15em] mb-3 uppercase px-6 text-muted-foreground mb-3">
               {collection.subheading}
             </p>
-          )}
+          )} */}
           {collection.video?.url ? (
             <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-muted/20">
               <video
@@ -115,7 +119,7 @@ export default async function CollectionPage({ params }: PageProps) {
             {/* <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Collection</p> */}
 
             {collection.description && (
-              <p className="text-sm font-light text-white leading-relaxed mb-4 whitespace-pre-line">
+              <p className="text-[16px] font-light text-white leading-relaxed mb-4 whitespace-pre-line">
                 {collection.description}
               </p>
             )}
