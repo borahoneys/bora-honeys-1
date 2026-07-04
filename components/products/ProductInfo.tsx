@@ -9,14 +9,14 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
-import { Minus, Plus } from "lucide-react";
+import { Minus, Plus, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
 interface CategoryRef { _id: string; name: string; slug: string }
 
 interface ProductInfoProps {
   name: string
-  price: number
+  price?: number
   compareAtPrice?: number
   color?: string
   styleCode?: string
@@ -25,9 +25,10 @@ interface ProductInfoProps {
   collectionName?: string
   categories: CategoryRef[]
   stock: number
+  whatsappNumber?: string
 }
 
-const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, collectionName, categories, stock }: ProductInfoProps) => {
+const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919876543210" }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const primaryCategory = categories[0]
 
@@ -67,21 +68,16 @@ const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPi
         </Breadcrumb>
       </div>
 
-      {/* Title and price */}
+      {/* Title and price on request */}
       <div className="space-y-2">
-        <div className="flex justify-between items-start">
-          <div>
-            {primaryCategory && (
-              <p className="text-sm font-light text-muted-foreground mb-1">{primaryCategory.name}</p>
-            )}
-            <h1 className="text-2xl md:text-3xl font-light text-foreground">{name}</h1>
-          </div>
-          <div className="text-right">
-            <p className="text-xl font-light text-foreground">₹{price.toLocaleString('en-IN')}</p>
-            {compareAtPrice && (
-              <p className="text-sm font-light text-muted-foreground line-through">₹{compareAtPrice.toLocaleString('en-IN')}</p>
-            )}
-          </div>
+        <div>
+          {primaryCategory && (
+            <p className="text-sm font-light text-muted-foreground mb-1">{primaryCategory.name}</p>
+          )}
+          <h1 className="text-2xl md:text-3xl font-light text-foreground">{name}</h1>
+        </div>
+        <div className="pt-2">
+          <p className="text-lg font-light text-muted-foreground">Price on Request</p>
         </div>
       </div>
 
@@ -157,6 +153,22 @@ const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPi
           className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 font-light rounded-none disabled:opacity-40"
         >
           {stock === 0 ? 'Out of Stock' : 'Add to Bag'}
+        </Button>
+
+        <Button
+          asChild
+          variant="outline"
+          className="w-full h-12 font-light rounded-none border-foreground text-foreground hover:bg-foreground/5"
+        >
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in ${encodeURIComponent(name)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Message on WhatsApp
+          </a>
         </Button>
       </div>
     </div>
