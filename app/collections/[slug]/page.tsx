@@ -119,7 +119,7 @@ export default async function CollectionPage({ params }: PageProps) {
             {/* <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Collection</p> */}
 
             {collection.description && (
-              <p className="text-[16px] font-light text-white leading-relaxed mb-4 whitespace-pre-line">
+              <p className="text-sm font-light text-white leading-relaxed mb-4 whitespace-pre-line">
                 {collection.description}
               </p>
             )}

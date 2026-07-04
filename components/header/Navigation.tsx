@@ -38,7 +38,7 @@ const Navigation = () => {
           data.filter(c => c.isActive).map(c => ({ name: c.name, slug: c.slug }))
         );
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   useEffect(() => {
@@ -127,50 +127,51 @@ const Navigation = () => {
       submenuItems: [],
       images: [],
     },
+    // {
+    //   name: "Women",
+    //   href: "/products",
+    //   submenuItems: [
+    //     {
+    //       name: "Flared Lehngas Sets",
+    //       href: "/categories/flared-lehngas-sets",
+    //     },
+    //     {
+    //       name: "Mermaid Lehngas Sets",
+    //       href: "/categories/mermaid-lehngas-sets",
+    //     },
+    //     {
+    //       name: "Fish Cut Lehngas Sets",
+    //       href: "/categories/fish-cut-lehngas-sets",
+    //     },
+    //     {
+    //       name: "Straight Cut Lehngas Sets",
+    //       href: "/categories/straight-cut-lehngas-sets",
+    //     },
+    //     {
+    //       name: "Gowns",
+    //       href: "/categories/gowns",
+    //     },
+    //     {
+    //       name: "Co-Ords Set",
+    //       href: "/categories/co-ords-set",
+    //     },
+    //   ],
+    //   images: [],
+    // },
+
     {
       name: "Women",
-      href: "/products",
-      submenuItems: [
-        {
-          name: "Flared Lehngas Sets",
-          href: "/categories/flared-lehngas-sets",
-        },
-        {
-          name: "Mermaid Lehngas Sets",
-          href: "/categories/mermaid-lehngas-sets",
-        },
-        {
-          name: "Fish Cut Lehngas Sets",
-          href: "/categories/fish-cut-lehngas-sets",
-        },
-        {
-          name: "Straight Cut Lehngas Sets",
-          href: "/categories/straight-cut-lehngas-sets",
-        },
-        {
-          name: "Gowns",
-          href: "/categories/gowns",
-        },
-        {
-          name: "Co-Ords Set",
-          href: "/categories/co-ords-set",
-        },
-      ],
+      href: "/collections",
+      submenuItems: collections.map(c => ({
+        name: c.name,
+        href: `/collections/${c.slug}`,
+      })),
       images: [],
     },
     {
       name: "Men",
       href: "/men",
       submenuItems: [],
-      images: [],
-    },
-    {
-      name: "Collections",
-      href: "/collections",
-      submenuItems: collections.map(c => ({
-        name: c.name,
-        href: `/collections/${c.slug}`,
-      })),
       images: [],
     },
     {
