@@ -304,7 +304,7 @@ export default function BespokeCouturePage() {
           Every element of your couture creation can be personalised to suit your style, body, and occasion.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-px bg-primary/10 border border-primary/10 text-left">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-px border border-primary/10 text-left">
           {customisations.map((item) => (
             <div key={item.title} className="bg-background flex flex-col">
               <div className="relative aspect-[3/4]">
