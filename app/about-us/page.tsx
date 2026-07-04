@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About Us | BORA HONEY',
-  description: 'Founded by Honey Nanda in 2021, BORA HONEY is a luxury fashion label proudly Made in India, creating couture for the modern woman and the modern Indian bride.',
+  description: 'Founded by Honey Nanda in 2022, BORA HONEY is a luxury fashion label proudly Made in India, creating couture for the modern woman and the modern Indian bride.',
 }
 
 const pillars = [
@@ -59,7 +59,7 @@ export default function AboutUsPage() {
           About Us
         </h1>
         <p className="mt-5 text-sm text-white/50 font-light max-w-xl mx-auto leading-relaxed">
-          Founded by Honey Nanda in 2021, BORA HONEY is a luxury fashion label proudly Made in India,
+          Founded by Honey Nanda in 2022, BORA HONEY is a luxury fashion label proudly Made in India,
           creating couture for the modern woman and the modern Indian bride.
         </p>
       </div>
