@@ -25,13 +25,58 @@ interface ProductDescriptionProps {
   keyFeatures?: string
   careInstructions?: string
   deliveryTimeline?: string
+  silhouette?: string
+  craftsmanship?: string
+  perfectFor?: string
+  bespokeCustomisation?: string
+  collectionName?: string
+  collectionStory?: string
 }
 
-const ProductDescription = ({ description, sku, keyFeatures, careInstructions, deliveryTimeline }: ProductDescriptionProps) => {
+const BulletSection = ({
+  title, items, isOpen, onToggle, emptyLabel,
+}: { title: string; items: string; isOpen: boolean; onToggle: () => void; emptyLabel: string }) => (
+  <div className="border-b border-border">
+    <Button
+      variant="ghost"
+      onClick={onToggle}
+      className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
+    >
+      <span>{title}</span>
+      {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+    </Button>
+    {isOpen && (
+      <div className="pb-6">
+        {items ? (
+          <ul className="space-y-2">
+            {items.split('\n').filter(Boolean).map((line, i) => (
+              <li key={i} className="text-sm font-light text-foreground flex gap-2">
+                <span className="shrink-0">•</span>
+                <span>{line.replace(/^[•\-]\s*/, '')}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-sm font-light text-muted-foreground/50 italic">{emptyLabel}</p>
+        )}
+      </div>
+    )}
+  </div>
+)
+
+const ProductDescription = ({
+  description, sku, keyFeatures, careInstructions, deliveryTimeline,
+  silhouette, craftsmanship, perfectFor, bespokeCustomisation, collectionName, collectionStory,
+}: ProductDescriptionProps) => {
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isSilhouetteOpen, setIsSilhouetteOpen] = useState(false);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [isCraftsmanshipOpen, setIsCraftsmanshipOpen] = useState(false);
+  const [isPerfectForOpen, setIsPerfectForOpen] = useState(false);
+  const [isBespokeOpen, setIsBespokeOpen] = useState(false);
   const [isCareOpen, setIsCareOpen] = useState(false);
   const [isDeliveryOpen, setIsDeliveryOpen] = useState(false);
+  const [isStoryOpen, setIsStoryOpen] = useState(false);
   const [isReviewsOpen, setIsReviewsOpen] = useState(false);
 
   return (
@@ -58,6 +103,17 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
           </div>
         )}
       </div>
+
+      {/* Silhouette */}
+      {silhouette && (
+        <BulletSection
+          title="Silhouette"
+          items={silhouette}
+          isOpen={isSilhouetteOpen}
+          onToggle={() => setIsSilhouetteOpen(!isSilhouetteOpen)}
+          emptyLabel="No silhouette details available."
+        />
+      )}
 
       {/* Product Details / Key Features */}
       <div className="border-b border-border">
@@ -92,6 +148,49 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
           </div>
         )}
       </div>
+
+      {/* Craftsmanship */}
+      {craftsmanship && (
+        <BulletSection
+          title="Craftsmanship"
+          items={craftsmanship}
+          isOpen={isCraftsmanshipOpen}
+          onToggle={() => setIsCraftsmanshipOpen(!isCraftsmanshipOpen)}
+          emptyLabel="No craftsmanship details available."
+        />
+      )}
+
+      {/* Perfect For */}
+      {perfectFor && (
+        <BulletSection
+          title="Perfect For"
+          items={perfectFor}
+          isOpen={isPerfectForOpen}
+          onToggle={() => setIsPerfectForOpen(!isPerfectForOpen)}
+          emptyLabel="No occasion details available."
+        />
+      )}
+
+      {/* Bespoke Customisation */}
+      {bespokeCustomisation && (
+        <div className="border-b border-border">
+          <Button
+            variant="ghost"
+            onClick={() => setIsBespokeOpen(!isBespokeOpen)}
+            className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
+          >
+            <span>Bespoke Customisation</span>
+            {isBespokeOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          </Button>
+          {isBespokeOpen && (
+            <div className="pb-6">
+              <p className="text-sm font-light text-foreground leading-relaxed whitespace-pre-line">
+                {bespokeCustomisation}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Care Instructions */}
       <div className="border-b border-border">
@@ -148,6 +247,27 @@ const ProductDescription = ({ description, sku, keyFeatures, careInstructions, d
           </div>
         )}
       </div>
+
+      {/* Collection Story */}
+      {collectionStory && (
+        <div className="border-b border-border">
+          <Button
+            variant="ghost"
+            onClick={() => setIsStoryOpen(!isStoryOpen)}
+            className="w-full h-14 px-0 justify-between hover:bg-transparent font-light rounded-none"
+          >
+            <span>{collectionName ? `Discover ${collectionName}` : 'The Collection'}</span>
+            {isStoryOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+          </Button>
+          {isStoryOpen && (
+            <div className="pb-6">
+              <p className="text-sm font-light text-foreground leading-relaxed whitespace-pre-line">
+                {collectionStory}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Customer Reviews */}
       <div className="border-b border-border lg:mb-16">

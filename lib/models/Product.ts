@@ -26,6 +26,14 @@ export interface IProduct extends Document {
   isActive: boolean
   isFeatured: boolean
   seo?: { title?: string; description?: string }
+  silhouette?: string
+  collectionName?: string
+  craftsmanship?: string
+  perfectFor?: string
+  bespokeCustomisation?: string
+  collectionStory?: string
+  searchKeywords: string[]
+  imageAltText?: string
   createdAt: Date
   updatedAt: Date
 }
@@ -60,6 +68,14 @@ const ProductSchema = new Schema<IProduct>(
       title: { type: String, trim: true },
       description: { type: String, trim: true },
     },
+    silhouette: { type: String, trim: true },
+    collectionName: { type: String, trim: true },
+    craftsmanship: { type: String, trim: true },
+    perfectFor: { type: String, trim: true },
+    bespokeCustomisation: { type: String, trim: true },
+    collectionStory: { type: String, trim: true },
+    searchKeywords: { type: [String], default: [] },
+    imageAltText: { type: String, trim: true },
   },
   { timestamps: true }
 )

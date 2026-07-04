@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: product.seo?.title ?? product.name,
     description: product.seo?.description ?? product.description,
+    keywords: product.searchKeywords?.length ? product.searchKeywords : undefined,
   }
 }
 
@@ -89,7 +90,7 @@ const ProductDetail = async ({ params }: PageProps) => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            <ProductImageGallery images={images} />
+            <ProductImageGallery images={images} altText={product.imageAltText} />
 
             <div className="lg:pl-12 mt-8 lg:mt-0 lg:sticky lg:top-6 lg:h-fit">
               <ProductInfo
@@ -100,6 +101,7 @@ const ProductDetail = async ({ params }: PageProps) => {
                 styleCode={product.styleCode}
                 numberOfPieces={product.numberOfPieces}
                 composition={product.composition}
+                collectionName={product.collectionName}
                 categories={categories}
                 stock={product.stock}
               />
@@ -109,6 +111,12 @@ const ProductDetail = async ({ params }: PageProps) => {
                 keyFeatures={product.keyFeatures}
                 careInstructions={product.careInstructions}
                 deliveryTimeline={product.deliveryTimeline}
+                silhouette={product.silhouette}
+                craftsmanship={product.craftsmanship}
+                perfectFor={product.perfectFor}
+                bespokeCustomisation={product.bespokeCustomisation}
+                collectionName={product.collectionName}
+                collectionStory={product.collectionStory}
               />
             </div>
           </div>

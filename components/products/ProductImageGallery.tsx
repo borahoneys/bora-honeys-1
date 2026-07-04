@@ -4,9 +4,10 @@ import ImageZoom from "./ImageZoom";
 
 interface Props {
   images: string[]
+  altText?: string
 }
 
-const ProductImageGallery = ({ images }: Props) => {
+const ProductImageGallery = ({ images, altText }: Props) => {
   const displayImages = images.length > 0 ? images : ['/placeholder-image.png']
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isZoomOpen, setIsZoomOpen] = useState(false);
@@ -45,7 +46,7 @@ const ProductImageGallery = ({ images }: Props) => {
             >
               <img
                 src={image}
-                alt={`Product view ${index + 1}`}
+                alt={altText ? `${altText} — view ${index + 1}` : `Product view ${index + 1}`}
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -65,7 +66,7 @@ const ProductImageGallery = ({ images }: Props) => {
           >
             <img
               src={displayImages[currentImageIndex]}
-              alt={`Product view ${currentImageIndex + 1}`}
+              alt={altText ? `${altText} — view ${currentImageIndex + 1}` : `Product view ${currentImageIndex + 1}`}
               className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 select-none"
             />
           </div>

@@ -32,6 +32,14 @@ interface ProductData {
   isActive: boolean
   isFeatured: boolean
   seo: { title: string; description: string }
+  silhouette: string
+  collectionName: string
+  craftsmanship: string
+  perfectFor: string
+  bespokeCustomisation: string
+  collectionStory: string
+  searchKeywords: string
+  imageAltText: string
 }
 
 function toSlug(name: string) {
@@ -44,6 +52,8 @@ const empty: ProductData = {
   keyFeatures: '', careInstructions: '', deliveryTimeline: '',
   images: [], categories: [], tags: '', isActive: true, isFeatured: false,
   seo: { title: '', description: '' },
+  silhouette: '', collectionName: '', craftsmanship: '', perfectFor: '',
+  bespokeCustomisation: '', collectionStory: '', searchKeywords: '', imageAltText: '',
 }
 
 function fromApi(p: Record<string, unknown>): ProductData {
@@ -74,6 +84,14 @@ function fromApi(p: Record<string, unknown>): ProductData {
       title: String((p.seo as Record<string, string> | undefined)?.title ?? ''),
       description: String((p.seo as Record<string, string> | undefined)?.description ?? ''),
     },
+    silhouette: String(p.silhouette ?? ''),
+    collectionName: String(p.collectionName ?? ''),
+    craftsmanship: String(p.craftsmanship ?? ''),
+    perfectFor: String(p.perfectFor ?? ''),
+    bespokeCustomisation: String(p.bespokeCustomisation ?? ''),
+    collectionStory: String(p.collectionStory ?? ''),
+    searchKeywords: Array.isArray(p.searchKeywords) ? (p.searchKeywords as string[]).join(', ') : '',
+    imageAltText: String(p.imageAltText ?? ''),
   }
 }
 
@@ -181,6 +199,14 @@ export default function ProductForm({ productId }: { productId?: string }) {
         isActive: data.isActive,
         isFeatured: data.isFeatured,
         seo: data.seo,
+        silhouette: data.silhouette.trim() || undefined,
+        collectionName: data.collectionName.trim() || undefined,
+        craftsmanship: data.craftsmanship.trim() || undefined,
+        perfectFor: data.perfectFor.trim() || undefined,
+        bespokeCustomisation: data.bespokeCustomisation.trim() || undefined,
+        collectionStory: data.collectionStory.trim() || undefined,
+        searchKeywords: data.searchKeywords.split(',').map(k => k.trim()).filter(Boolean),
+        imageAltText: data.imageAltText.trim() || undefined,
       }
 
       const url = productId ? `/api/products/${productId}` : '/api/products'
@@ -348,6 +374,65 @@ export default function ProductForm({ productId }: { productId?: string }) {
             </Field>
           </section>
 
+          {/* Couture Details */}
+          <section className="border border-border p-6 space-y-4">
+            <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Couture Details</p>
+
+            <Field label="Collection">
+              <input value={data.collectionName} onChange={e => set('collectionName', e.target.value)} placeholder="REBIRTH 2026" className={inputCls} />
+            </Field>
+
+            <Field label="Silhouette (one per line)">
+              <Textarea
+                value={data.silhouette}
+                onChange={e => set('silhouette', e.target.value)}
+                placeholder={"Structured Blazer\nLuxury Bralette\nStraight Skirt with Extended Back Trail\nHandpicked Feather Detailing"}
+                rows={4}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+
+            <Field label="Craftsmanship (one per line)">
+              <Textarea
+                value={data.craftsmanship}
+                onChange={e => set('craftsmanship', e.target.value)}
+                placeholder={"Entirely handcrafted by Bora Honeys artisans\nCouture construction with luxury finishing\nPremium embellishments individually hand applied"}
+                rows={4}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+
+            <Field label="Perfect For (one per line)">
+              <Textarea
+                value={data.perfectFor}
+                onChange={e => set('perfectFor', e.target.value)}
+                placeholder={"Luxury Receptions\nDestination Weddings\nRed Carpet Appearances"}
+                rows={3}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+
+            <Field label="Bespoke Customisation">
+              <Textarea
+                value={data.bespokeCustomisation}
+                onChange={e => set('bespokeCustomisation', e.target.value)}
+                placeholder="Every Bora Honeys Couture creation can be customised to your measurements and styling preferences through our Bespoke Couture service."
+                rows={3}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+
+            <Field label="Collection Story">
+              <Textarea
+                value={data.collectionStory}
+                onChange={e => set('collectionStory', e.target.value)}
+                placeholder="REBIRTH is Bora Honeys Couture's 2026 collection—an exploration of transformation, strength and timeless femininity."
+                rows={3}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+          </section>
+
           {/* Images */}
           <section className="border border-border p-6 space-y-4">
             <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Images</p>
@@ -422,6 +507,18 @@ export default function ProductForm({ productId }: { productId?: string }) {
                 value={data.seo.description}
                 onChange={e => setSeo('description', e.target.value)}
                 placeholder="Brief description for search engines…"
+                rows={2}
+                className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
+              />
+            </Field>
+            <Field label="Image Alt Text">
+              <input value={data.imageAltText} onChange={e => set('imageAltText', e.target.value)} placeholder="Lilac Ash luxury couture blazer with handcrafted bralette…" className={inputCls} />
+            </Field>
+            <Field label="Search Keywords (comma-separated)">
+              <Textarea
+                value={data.searchKeywords}
+                onChange={e => set('searchKeywords', e.target.value)}
+                placeholder="Luxury Couture, Haute Couture, Designer Reception Outfit"
                 rows={2}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />

@@ -86,11 +86,11 @@ export default async function CapsuleCollectionPage() {
               <section key={idx} className="relative w-screen h-screen overflow-hidden">
                 {hasBoth ? (
                   <>
-                    <Image src={desktop!.url} fill className="object-cover object-top hidden md:block" alt="" priority={idx === 0} sizes="100vw" />
-                    <Image src={mobile!.url} fill className="object-cover object-top md:hidden" alt="" priority={idx === 0} sizes="100vw" />
+                    <Image src={desktop!.url} fill className="object-cover object-top hidden md:block" alt="Bora Honeys Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
+                    <Image src={mobile!.url} fill className="object-cover object-top md:hidden" alt="Bora Honeys Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
                   </>
                 ) : (
-                  <Image src={(desktop ?? mobile)!.url} fill className="object-cover object-top" alt="" priority={idx === 0} sizes="100vw" />
+                  <Image src={(desktop ?? mobile)!.url} fill className="object-cover object-top" alt="Bora Honeys Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
                 )}
                 {section.button && (
                   <div className="absolute inset-0 flex items-end justify-center pb-20">

@@ -10,7 +10,7 @@ export default function PlaceholderImage({
   priority?: boolean
 }) {
   return (
-    <div className={`relative overflow-hidden bg-secondary ${className}`}>
+    <div className={`overflow-hidden ${className}`}>
       <Image
         src="/placeholder-image.png"
         alt={alt}

@@ -22,15 +22,16 @@ interface ProductInfoProps {
   styleCode?: string
   numberOfPieces?: number
   composition?: string
+  collectionName?: string
   categories: CategoryRef[]
   stock: number
 }
 
-const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, categories, stock }: ProductInfoProps) => {
+const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, collectionName, categories, stock }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const primaryCategory = categories[0]
 
-  const hasDetails = color || styleCode || numberOfPieces || composition
+  const hasDetails = color || styleCode || numberOfPieces || composition || collectionName
 
   return (
     <div className="space-y-6">
@@ -109,6 +110,12 @@ const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPi
             <div className="flex justify-between gap-8">
               <span className="text-sm font-light text-muted-foreground shrink-0">Includes</span>
               <span className="text-sm font-light text-foreground text-right">{composition}</span>
+            </div>
+          )}
+          {collectionName && (
+            <div className="flex justify-between">
+              <span className="text-sm font-light text-muted-foreground">Collection</span>
+              <span className="text-sm font-light text-foreground">{collectionName}</span>
             </div>
           )}
         </div>

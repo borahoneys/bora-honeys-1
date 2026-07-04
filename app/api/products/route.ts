@@ -53,6 +53,8 @@ export async function POST(request: NextRequest) {
     name, description, price, compareAtPrice, images, categories,
     color, styleCode, numberOfPieces, composition, keyFeatures, careInstructions, deliveryTimeline,
     stock, sku, tags, isActive, isFeatured, seo,
+    silhouette, collectionName, craftsmanship, perfectFor, bespokeCustomisation, collectionStory,
+    searchKeywords, imageAltText,
   } = body
 
   if (!name?.trim()) return Response.json({ error: 'Name is required' }, { status: 400 })
@@ -68,6 +70,8 @@ export async function POST(request: NextRequest) {
     keyFeatures, careInstructions, deliveryTimeline,
     stock: stock ?? 0, sku, tags: tags ?? [], isActive: isActive ?? true,
     isFeatured: isFeatured ?? false, seo,
+    silhouette, collectionName, craftsmanship, perfectFor, bespokeCustomisation, collectionStory,
+    searchKeywords: searchKeywords ?? [], imageAltText,
   })
 
   await product.populate('categories', 'name slug')

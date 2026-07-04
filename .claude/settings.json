@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -b cookies.txt -X POST http://localhost:3000/api/upload -F file=@f:/bora-honeys/public/placeholder-image.png -F folder=bora-honeys/products)",
+      "Bash(curl -s -b cookies.txt -X POST http://localhost:3000/api/products -H 'Content-Type: application/json' --data-binary @rosaline-product.json)",
+      "Bash(curl -s -b cookies.txt -X POST http://localhost:3000/api/products -H 'Content-Type: application/json' --data-binary @moonlight-blue-product.json)",
+      "Bash(curl -s -b cookies.txt -X POST http://localhost:3000/api/products -H 'Content-Type: application/json' --data-binary @antique-gold-product.json)"
+    ]
+  }
+}
