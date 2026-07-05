@@ -220,11 +220,6 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
                               </span>
                             </div>
                           )}
-                          {isOnSale && (
-                            <span className="absolute top-3 left-3 text-[9px] tracking-[0.25em] uppercase bg-background text-foreground px-2 py-1 border border-border">
-                              Sale
-                            </span>
-                          )}
                         </div>
 
                         {/* Info */}
@@ -239,13 +234,13 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
                           </h3>
                           <div className="flex items-baseline gap-2 mt-2">
                             <span className="text-sm font-light text-foreground">
-                              ₹{product.price.toLocaleString('en-IN')}
+                              Price on Request
                             </span>
-                            {product.compareAtPrice && (
+                            {/* {product.compareAtPrice && (
                               <span className="text-xs font-light text-muted-foreground line-through">
                                 ₹{product.compareAtPrice.toLocaleString('en-IN')}
                               </span>
-                            )}
+                            )} */}
                           </div>
                         </div>
                       </Link>
