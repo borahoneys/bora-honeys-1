@@ -116,49 +116,23 @@ const Navigation = () => {
 
   const navItems = [
     {
-      name: "Home",
+      name: "Homepage",
       href: "/",
       submenuItems: [],
       images: [],
     },
     {
-      name: "About Us",
+      name: "About us",
       href: "/about-us",
       submenuItems: [],
       images: [],
     },
-    // {
-    //   name: "Women",
-    //   href: "/products",
-    //   submenuItems: [
-    //     {
-    //       name: "Flared Lehngas Sets",
-    //       href: "/categories/flared-lehngas-sets",
-    //     },
-    //     {
-    //       name: "Mermaid Lehngas Sets",
-    //       href: "/categories/mermaid-lehngas-sets",
-    //     },
-    //     {
-    //       name: "Fish Cut Lehngas Sets",
-    //       href: "/categories/fish-cut-lehngas-sets",
-    //     },
-    //     {
-    //       name: "Straight Cut Lehngas Sets",
-    //       href: "/categories/straight-cut-lehngas-sets",
-    //     },
-    //     {
-    //       name: "Gowns",
-    //       href: "/categories/gowns",
-    //     },
-    //     {
-    //       name: "Co-Ords Set",
-    //       href: "/categories/co-ords-set",
-    //     },
-    //   ],
-    //   images: [],
-    // },
-
+    {
+      name: "House of BORA HONEYS",
+      href: "/about-us",
+      submenuItems: [],
+      images: [],
+    },
     {
       name: "Women",
       href: "/collections",
@@ -169,50 +143,25 @@ const Navigation = () => {
       images: [],
     },
     {
-      name: "Men",
+      name: "MEN",
       href: "/men",
       submenuItems: [],
       images: [],
     },
     {
-      name: "Timeless Classics",
-      href: "/timeless-classics",
+      name: "BESPOKE COUTURE BY BORA HONEYS",
+      href: "/bespoke-couture",
       submenuItems: [],
       images: [],
     },
     {
-      name: "Capsule Collection",
-      href: "/capsule-collection",
-      submenuItems: [],
-      images: [],
-    },
-    {
-      name: "Client Diaries",
-      href: "/client-diaries",
-      submenuItems: [],
-      images: [],
-    },
-    {
-      name: "Contact Us / Payment",
+      name: "Contact US",
       href: "/contact-us",
-      submenuItems: [
-        {
-          name: "Client Information Form",
-          href: "/contact-us#form",
-        },
-        {
-          name: "Phone Number",
-          href: "/contact-us#phone",
-        },
-        {
-          name: "Email",
-          href: "/contact-us#email",
-        },
-      ],
+      submenuItems: [],
       images: [],
     },
     {
-      name: "Terms & Policies",
+      name: "Terms and policies",
       href: "/terms-and-conditions",
       submenuItems: [],
       images: [],
