@@ -10,52 +10,52 @@ export const metadata: Metadata = {
     'At Bora Honeys Couture, we believe that true luxury is deeply personal. Our Bespoke Couture service offers an exclusive design experience where every garment is imagined, designed, and handcrafted specifically for you.',
 }
 
-const customisations = [
-  {
-    title: 'Made-to-Measure',
-    paragraphs: [
-      'Every garment is individually tailored to your exact body measurements, ensuring an impeccable fit that enhances your natural silhouette while offering exceptional comfort.',
-    ],
-  },
-  {
-    title: 'Custom Colours',
-    paragraphs: [
-      'Select from an extensive palette of luxurious shades, or work with our design team to create a colour story that perfectly complements your skin tone, personality, and celebration.',
-    ],
-  },
-  {
-    title: 'Necklines & Sleeves',
-    paragraphs: [
-      'From elegant sweetheart necklines and sculpted corsets to deep scoop necks, illusion details, dramatic sleeves, off-shoulder silhouettes, and timeless classics, every design element can be personalised to suit your vision.',
-    ],
-  },
-  {
-    title: 'Silhouettes',
-    paragraphs: [
-      'Whether you prefer a dramatic ball gown, elegant fish-cut skirt, structured mermaid silhouette, flowing A-line, regal trail, contemporary drapes, or modern couture separates, every silhouette is created exclusively around your body.',
-    ],
-  },
-  {
-    title: 'Fabrics',
-    paragraphs: [
-      'Choose from luxurious tulles, satins, silks, organza, crepes, velvets, laces, and premium couture textiles sourced to create garments that feel as extraordinary as they appear.',
-    ],
-  },
-  {
-    title: 'Embroidery',
-    paragraphs: [
-      'Every embroidery design is developed exclusively for your garment.',
-      'From delicate hand embroidery to intricate crystal work, pearls, sequins, cutdana, zari, beads, metallic embellishments, and couture craftsmanship, every detail is carefully handcrafted by skilled artisans.',
-    ],
-  },
-  {
-    title: 'Occasion Styling',
-    paragraphs: [
-      'Every couture piece is thoughtfully designed around your occasion.',
-      'Whether it is a Bridal Ceremony, Reception, Engagement, Sangeet, Cocktail, Mehendi, Red Carpet appearance, Destination Wedding, Luxury Celebration, or Evening Gala, we ensure your ensemble perfectly complements the moment.',
-    ],
-  },
-]
+// const customisations = [
+//   {
+//     title: 'Made-to-Measure',
+//     paragraphs: [
+//       'Every garment is individually tailored to your exact body measurements, ensuring an impeccable fit that enhances your natural silhouette while offering exceptional comfort.',
+//     ],
+//   },
+//   {
+//     title: 'Custom Colours',
+//     paragraphs: [
+//       'Select from an extensive palette of luxurious shades, or work with our design team to create a colour story that perfectly complements your skin tone, personality, and celebration.',
+//     ],
+//   },
+//   {
+//     title: 'Necklines & Sleeves',
+//     paragraphs: [
+//       'From elegant sweetheart necklines and sculpted corsets to deep scoop necks, illusion details, dramatic sleeves, off-shoulder silhouettes, and timeless classics, every design element can be personalised to suit your vision.',
+//     ],
+//   },
+//   {
+//     title: 'Silhouettes',
+//     paragraphs: [
+//       'Whether you prefer a dramatic ball gown, elegant fish-cut skirt, structured mermaid silhouette, flowing A-line, regal trail, contemporary drapes, or modern couture separates, every silhouette is created exclusively around your body.',
+//     ],
+//   },
+//   {
+//     title: 'Fabrics',
+//     paragraphs: [
+//       'Choose from luxurious tulles, satins, silks, organza, crepes, velvets, laces, and premium couture textiles sourced to create garments that feel as extraordinary as they appear.',
+//     ],
+//   },
+//   {
+//     title: 'Embroidery',
+//     paragraphs: [
+//       'Every embroidery design is developed exclusively for your garment.',
+//       'From delicate hand embroidery to intricate crystal work, pearls, sequins, cutdana, zari, beads, metallic embellishments, and couture craftsmanship, every detail is carefully handcrafted by skilled artisans.',
+//     ],
+//   },
+//   {
+//     title: 'Occasion Styling',
+//     paragraphs: [
+//       'Every couture piece is thoughtfully designed around your occasion.',
+//       'Whether it is a Bridal Ceremony, Reception, Engagement, Sangeet, Cocktail, Mehendi, Red Carpet appearance, Destination Wedding, Luxury Celebration, or Evening Gala, we ensure your ensemble perfectly complements the moment.',
+//     ],
+//   },
+// ]
 
 const experienceSteps = [
   {
@@ -96,61 +96,6 @@ const experienceSteps = [
     paragraphs: [
       'The final creation is carefully finished, inspected, and prepared exclusively for you.',
       'The result is a couture garment that is timeless, elegant, and uniquely yours.',
-    ],
-  },
-]
-
-const processSteps = [
-  {
-    step: 'Step 1',
-    title: 'Consultation & Measurements',
-    paragraphs: [
-      'We begin with an in-depth consultation to understand your vision, event, personal style, and exact body measurements. Every design is thoughtfully created around your proportions and preferences.',
-    ],
-  },
-  {
-    step: 'Step 2',
-    title: 'Design Development',
-    paragraphs: [
-      'Our designers prepare exclusive sketches, select luxurious fabrics, develop embroidery concepts, and finalise every design detail before production begins.',
-    ],
-  },
-  {
-    step: 'Step 3',
-    title: 'Mock-Up & Test Fitting',
-    paragraphs: [
-      'Before working on your final couture fabric, we create a test-fit garment (mock-up) to evaluate the silhouette, structure, neckline, sleeve design, corsetry, and overall proportions.',
-      'This stage allows us to make precise adjustments and achieve the perfect fit before any embroidery is undertaken.',
-    ],
-  },
-  {
-    step: 'Step 4',
-    title: 'Pattern Refinement',
-    paragraphs: [
-      'Once the test fitting is approved, our master pattern makers refine every panel, seam, and construction detail to create the final couture pattern.',
-      'Only after the fit has been perfected do we move forward with production.',
-    ],
-  },
-  {
-    step: 'Step 5',
-    title: 'Hand Embroidery Begins',
-    paragraphs: [
-      'Once the final pattern is approved, our artisans begin the intricate process of hand embroidery.',
-      'Every crystal, pearl, bead, sequin, cutdana, and embellishment is meticulously placed by hand according to the approved design, ensuring every detail aligns perfectly with the garment’s final construction.',
-    ],
-  },
-  {
-    step: 'Step 6',
-    title: 'Couture Construction & Fittings',
-    paragraphs: [
-      'Following the completion of the embroidery, the garment is expertly assembled and undergoes multiple couture fittings to perfect every contour, drape, and finish.',
-    ],
-  },
-  {
-    step: 'Step 7',
-    title: 'Final Finishing',
-    paragraphs: [
-      'Every Bora Honeys Couture piece is carefully inspected, hand-finished, steamed, and prepared for delivery, ensuring it meets our uncompromising standards of luxury and craftsmanship.',
     ],
   },
 ]
@@ -295,7 +240,7 @@ export default function BespokeCouturePage() {
       </section>
 
       {/* What Can Be Customised */}
-      <section className="max-w-6xl mx-auto px-6 pb-20 md:pb-28 text-center">
+      {/* <section className="max-w-6xl mx-auto px-6 pb-20 md:pb-28 text-center">
         <p className="text-primary text-[10px] tracking-[0.4em] uppercase mb-4">Personalisation</p>
         <h2 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-foreground mb-4">
           What Can Be Customised?
@@ -323,7 +268,7 @@ export default function BespokeCouturePage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* The Bespoke Couture Experience */}
       <section className="bg-card border-y border-primary/15 py-20 md:py-28 px-6">
@@ -351,76 +296,6 @@ export default function BespokeCouturePage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Our Couture Process */}
-      <section className="py-20 md:py-28 px-6">
-        <div className="max-w-4xl mx-auto text-center mb-14 space-y-5">
-          <p className="text-primary text-[10px] tracking-[0.4em] uppercase">Methodology</p>
-          <h2 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-foreground">
-            Our Couture Process
-          </h2>
-          <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed">
-            <p>
-              Every Bora Honeys Couture creation follows a meticulous process to ensure exceptional fit,
-              flawless craftsmanship, and timeless elegance.
-            </p>
-            <p>
-              Unlike ready-made garments, our couture pieces are not embroidered immediately. We first
-              create and perfect the garment&apos;s structure before any hand embroidery begins.
-            </p>
-          </div>
-        </div>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 mb-16">
-          {processSteps.map((s) => (
-            <div key={s.step} className="space-y-3">
-              <div className="relative aspect-[3/4]">
-                <PlaceholderImage className="absolute inset-0" alt={s.title} />
-              </div>
-              <p className="text-primary text-[9px] tracking-[0.3em] uppercase">{s.step}</p>
-              <h3 className="text-[11px] font-normal tracking-[0.15em] uppercase text-foreground leading-snug">
-                {s.title}
-              </h3>
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-4xl mx-auto space-y-10">
-          {processSteps.map((s) => (
-            <div key={s.step} className="grid sm:grid-cols-[140px_1fr] gap-3 sm:gap-8 border-t border-primary/15 pt-8">
-              <div>
-                <p className="text-primary text-[10px] tracking-[0.35em] uppercase">{s.step}</p>
-                <h3 className="text-sm font-normal tracking-[0.15em] uppercase text-foreground mt-1">
-                  {s.title}
-                </h3>
-              </div>
-              <div className="space-y-3">
-                {s.paragraphs.map((p, i) => (
-                  <p key={i} className="text-sm font-light text-white/70 leading-relaxed">
-                    {p}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-4xl mx-auto mt-16 pt-10 border-t border-primary/20 space-y-5 text-center">
-          <p className="text-primary text-[10px] tracking-[0.4em] uppercase">Why We Follow This Process</p>
-          <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed max-w-2xl mx-auto">
-            <p>
-              Embroidery is one of the most intricate and time-intensive aspects of couture. By perfecting
-              the fit and structure first, we ensure that every handcrafted embellishment is placed with
-              precision, resulting in a garment that is beautifully balanced, exceptionally comfortable, and
-              uniquely yours.
-            </p>
-            <p>
-              This dedication to craftsmanship is what transforms a beautiful garment into true bespoke
-              couture.
-            </p>
-          </div>
         </div>
       </section>
 
