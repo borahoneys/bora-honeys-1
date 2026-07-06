@@ -58,7 +58,7 @@ export default function HouseOfBoraHoneysPage() {
         <div className="relative h-full flex items-center px-6 md:px-16 py-24">
           <div className="max-w-xl space-y-6">
             <h1 className="text-4xl md:text-6xl font-light tracking-widest uppercase text-foreground">
-              Our Atelier
+              House of Bora Honeys
             </h1>
             <p className="text-primary text-sm tracking-[0.35em] uppercase">Where Every Creation Begins.</p>
             <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed">
