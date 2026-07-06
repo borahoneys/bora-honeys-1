@@ -195,7 +195,7 @@ export default function HouseOfBoraHoneysPage() {
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <div className="mb-12 space-y-4 text-center">
           <h2 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-foreground">
-            By Appointment Only
+            By Appointment Only.
           </h2>
         </div>
 
