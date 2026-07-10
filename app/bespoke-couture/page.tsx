@@ -3,6 +3,7 @@ import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
 import PlaceholderImage from './_components/PlaceholderImage'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Bespoke Couture | BORA HONEYS',
@@ -64,6 +65,7 @@ const experienceSteps = [
     paragraphs: [
       'Every journey begins with a personalised consultation where we understand your inspiration, preferences, event, measurements, colour choices, and styling requirements.',
     ],
+    img: "/bespoke-couture/a.png"
   },
   {
     step: 'Step Two',
@@ -71,6 +73,7 @@ const experienceSteps = [
     paragraphs: [
       'Our designers transform your vision into exclusive concepts, sketches, embroidery layouts, fabric selections, and silhouette recommendations created uniquely for you.',
     ],
+    img: "/bespoke-couture/b.png"
   },
   {
     step: 'Step Three',
@@ -81,6 +84,7 @@ const experienceSteps = [
       'Each embellishment is applied by hand.',
       'Every garment is crafted with patience, artistry, and uncompromising quality.',
     ],
+    img: "/bespoke-couture/e.png"
   },
   {
     step: 'Step Four',
@@ -89,6 +93,7 @@ const experienceSteps = [
       'Multiple fittings ensure every seam, contour, and proportion sits beautifully on your body.',
       'Our commitment is not simply creating a beautiful garment—but creating one that feels effortless to wear.',
     ],
+    img: "/bespoke-couture/c.png"
   },
   {
     step: 'Step Five',
@@ -97,6 +102,7 @@ const experienceSteps = [
       'The final creation is carefully finished, inspected, and prepared exclusively for you.',
       'The result is a couture garment that is timeless, elegant, and uniquely yours.',
     ],
+    img: "/bespoke-couture/d.png"
   },
 ]
 
@@ -140,7 +146,8 @@ export default function BespokeCouturePage() {
 
       {/* Hero */}
       <section className="relative min-h-[70vh] md:min-h-[85vh] w-full overflow-hidden border-b border-primary/15">
-        <PlaceholderImage className="absolute inset-0" alt="Bespoke Couture" priority />
+        <img src={"/bespoke-couture/6.jpg"} className="w-full h-full absolute object-cover object-right md:object-center inset-0" alt='appointments-only' />
+
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
         <div className="relative h-full flex items-center px-6 md:px-16 py-24">
           <div className="max-w-xl space-y-6">
@@ -174,7 +181,8 @@ export default function BespokeCouturePage() {
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-0 border border-primary/15">
           <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[420px]">
-            <PlaceholderImage className="absolute inset-0" alt="Couture consultation" />
+            <img src={"/bespoke-couture/1.png"} className="w-full h-full absolute object-cover inset-0" alt='appointments-only' />
+
           </div>
           <div className="flex flex-col justify-center p-10 md:p-14 space-y-6 border-t border-primary/15 md:border-t-0 md:border-l md:border-primary/15">
             <h2 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-foreground">
@@ -234,7 +242,8 @@ export default function BespokeCouturePage() {
             </div>
           </div>
           <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[420px] order-1 md:order-2 border-b border-primary/15 md:border-b-0 md:border-l md:border-primary/15">
-            <PlaceholderImage className="absolute inset-0" alt="Design sketches and mood board" />
+            <img src={"/bespoke-couture/3.png"} className="w-full h-full absolute object-contain inset-0" alt='appointments-only' />
+
           </div>
         </div>
       </section>
@@ -281,7 +290,7 @@ export default function BespokeCouturePage() {
           {experienceSteps.map((s) => (
             <div key={s.step} className="space-y-4">
               <div className="relative aspect-[3/4]">
-                <PlaceholderImage className="absolute inset-0" alt={s.title} />
+                <Image src={s.img} className="absolute inset-0" fill alt={s.title} />
               </div>
               <p className="text-primary text-[10px] tracking-[0.35em] uppercase">{s.step}</p>
               <h3 className="text-sm font-normal tracking-[0.15em] uppercase text-foreground">
@@ -403,7 +412,7 @@ export default function BespokeCouturePage() {
             </div>
           </div>
           <div className="relative aspect-[4/5] md:aspect-auto border-t border-primary/15 md:border-t-0 md:border-l md:border-primary/15">
-            <PlaceholderImage className="absolute inset-0" alt="Bora Honeys Couture masterpiece" />
+            <img src={"/bespoke-couture/5.png"} className="w-full h-full absolute object-contain inset-0" alt='appointments-only' />
           </div>
         </div>
 
