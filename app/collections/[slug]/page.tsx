@@ -180,13 +180,13 @@ export default async function CollectionPage({ params }: PageProps) {
                       </h3>
                       <div className="flex items-baseline gap-2 mt-2">
                         <span className="text-sm font-light text-foreground">
-                          Price on Request
+                          ₹{product.price.toLocaleString('en-IN')}
                         </span>
-                        {/* {product.compareAtPrice && (
+                        {product.compareAtPrice && (
                           <span className="text-xs font-light text-muted-foreground line-through">
                             ₹{product.compareAtPrice.toLocaleString('en-IN')}
                           </span>
-                        )} */}
+                        )}
                       </div>
                     </div>
                   </Link>

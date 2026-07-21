@@ -68,7 +68,7 @@ const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPi
         </Breadcrumb>
       </div>
 
-      {/* Title and price on request */}
+      {/* Title and price */}
       <div className="space-y-2">
         <div>
           {primaryCategory && (
@@ -76,8 +76,15 @@ const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPi
           )}
           <h1 className="text-2xl md:text-3xl font-light text-foreground">{name}</h1>
         </div>
-        <div className="pt-2">
-          <p className="text-lg font-light text-muted-foreground">Price on Request</p>
+        <div className="pt-2 flex items-baseline gap-3">
+          {price != null ? (
+            <p className="text-lg font-light text-foreground">₹{price.toLocaleString('en-IN')}</p>
+          ) : (
+            <p className="text-lg font-light text-muted-foreground">Price on Request</p>
+          )}
+          {compareAtPrice && (
+            <p className="text-sm font-light text-muted-foreground line-through">₹{compareAtPrice.toLocaleString('en-IN')}</p>
+          )}
         </div>
       </div>
 
