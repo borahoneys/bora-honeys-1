@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
 const PAGE_SIZE = 20
-const QUICK_PRICES = [450000, 550000]
 
 interface CategoryRef { _id: string; name: string }
 
@@ -34,7 +33,6 @@ export default function ProductsPage() {
   const [search, setSearch] = useState('')
   const [isPending, startTransition] = useTransition()
   const [deletingId, setDeletingId] = useState<string | null>(null)
-  const [updatingPriceId, setUpdatingPriceId] = useState<string | null>(null)
 
   function fetchProducts(q = '', p = 1) {
     setLoading(true)
@@ -64,21 +62,6 @@ export default function ProductsPage() {
   function goToPage(p: number) {
     if (p < 1 || p > pages || p === page) return
     fetchProducts(search, p)
-  }
-
-  function handleQuickPrice(id: string, price: number) {
-    setUpdatingPriceId(id)
-    startTransition(async () => {
-      const res = await fetch(`/api/products/${id}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ price }),
-      })
-      if (res.ok) {
-        setProducts(prev => prev.map(p => (p._id === id ? { ...p, price } : p)))
-      }
-      setUpdatingPriceId(null)
-    })
   }
 
   function handleDelete(id: string) {
@@ -138,14 +121,14 @@ export default function ProductsPage() {
         ) : (
           <div className="border border-border divide-y divide-border">
             {/* Header */}
-            <div className="grid grid-cols-[3rem_1fr_8rem_11rem_6rem_5rem_5rem] gap-4 px-4 py-2.5 bg-muted/20">
+            <div className="grid grid-cols-[3rem_1fr_8rem_8rem_6rem_5rem_5rem] gap-4 px-4 py-2.5 bg-muted/20">
               {['', 'Product', 'Categories', 'Price', 'Stock', 'Status', ''].map((h, i) => (
                 <span key={i} className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground/60">{h}</span>
               ))}
             </div>
 
             {products.map(product => (
-              <div key={product._id} className="grid grid-cols-[3rem_1fr_8rem_11rem_6rem_5rem_5rem] gap-4 px-4 py-3.5 items-center hover:bg-muted/10 transition-colors group">
+              <div key={product._id} className="grid grid-cols-[3rem_1fr_8rem_8rem_6rem_5rem_5rem] gap-4 px-4 py-3.5 items-center hover:bg-muted/10 transition-colors group">
                 {/* Thumbnail */}
                 <div className="w-10 h-10 relative border border-border bg-muted/20 shrink-0 overflow-hidden">
                   {product.images[0] ? (
@@ -179,25 +162,6 @@ export default function ProductsPage() {
                   {product.compareAtPrice && (
                     <p className="text-[10px] text-muted-foreground/50 line-through">₹{product.compareAtPrice.toLocaleString('en-IN')}</p>
                   )}
-                  {/* Temporary quick-price buttons */}
-                  <div className="flex items-center gap-1 mt-1.5">
-                    {QUICK_PRICES.map(qp => (
-                      <button
-                        key={qp}
-                        type="button"
-                        onClick={() => handleQuickPrice(product._id, qp)}
-                        disabled={updatingPriceId === product._id || product.price === qp}
-                        title={`Set price to ₹${qp.toLocaleString('en-IN')}`}
-                        className="px-1.5 py-0.5 text-[9px] tracking-wide border border-border text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-default"
-                      >
-                        {updatingPriceId === product._id ? (
-                          <Loader2 className="w-2.5 h-2.5 animate-spin" />
-                        ) : (
-                          `₹${qp.toLocaleString('en-IN')}`
-                        )}
-                      </button>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Stock */}
