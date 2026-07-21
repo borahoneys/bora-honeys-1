@@ -3,9 +3,12 @@
 import { useState, useEffect, useTransition } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Plus, Pencil, Trash2, Loader2, Search } from 'lucide-react'
+import { Plus, Pencil, Trash2, Loader2, Search, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+
+const PAGE_SIZE = 20
+const QUICK_PRICES = [450000, 550000]
 
 interface CategoryRef { _id: string; name: string }
 
@@ -25,17 +28,29 @@ interface Product {
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([])
   const [total, setTotal] = useState(0)
+  const [pages, setPages] = useState(1)
+  const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [isPending, startTransition] = useTransition()
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [updatingPriceId, setUpdatingPriceId] = useState<string | null>(null)
 
-  function fetchProducts(q = '') {
+  function fetchProducts(q = '', p = 1) {
     setLoading(true)
-    const params = new URLSearchParams({ limit: '50', ...(q ? { search: q } : {}) })
+    const params = new URLSearchParams({
+      limit: String(PAGE_SIZE),
+      page: String(p),
+      ...(q ? { search: q } : {}),
+    })
     fetch(`/api/products?${params}&active=false`)
       .then(r => r.json())
-      .then(data => { setProducts(data.products ?? []); setTotal(data.total ?? 0) })
+      .then(data => {
+        setProducts(data.products ?? [])
+        setTotal(data.total ?? 0)
+        setPages(data.pages ?? 1)
+        setPage(data.page ?? 1)
+      })
       .finally(() => setLoading(false))
   }
 
@@ -43,7 +58,27 @@ export default function ProductsPage() {
 
   function handleSearch(e: React.FormEvent) {
     e.preventDefault()
-    fetchProducts(search)
+    fetchProducts(search, 1)
+  }
+
+  function goToPage(p: number) {
+    if (p < 1 || p > pages || p === page) return
+    fetchProducts(search, p)
+  }
+
+  function handleQuickPrice(id: string, price: number) {
+    setUpdatingPriceId(id)
+    startTransition(async () => {
+      const res = await fetch(`/api/products/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ price }),
+      })
+      if (res.ok) {
+        setProducts(prev => prev.map(p => (p._id === id ? { ...p, price } : p)))
+      }
+      setUpdatingPriceId(null)
+    })
   }
 
   function handleDelete(id: string) {
@@ -103,14 +138,14 @@ export default function ProductsPage() {
         ) : (
           <div className="border border-border divide-y divide-border">
             {/* Header */}
-            <div className="grid grid-cols-[3rem_1fr_8rem_8rem_6rem_5rem_5rem] gap-4 px-4 py-2.5 bg-muted/20">
+            <div className="grid grid-cols-[3rem_1fr_8rem_11rem_6rem_5rem_5rem] gap-4 px-4 py-2.5 bg-muted/20">
               {['', 'Product', 'Categories', 'Price', 'Stock', 'Status', ''].map((h, i) => (
                 <span key={i} className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground/60">{h}</span>
               ))}
             </div>
 
             {products.map(product => (
-              <div key={product._id} className="grid grid-cols-[3rem_1fr_8rem_8rem_6rem_5rem_5rem] gap-4 px-4 py-3.5 items-center hover:bg-muted/10 transition-colors group">
+              <div key={product._id} className="grid grid-cols-[3rem_1fr_8rem_11rem_6rem_5rem_5rem] gap-4 px-4 py-3.5 items-center hover:bg-muted/10 transition-colors group">
                 {/* Thumbnail */}
                 <div className="w-10 h-10 relative border border-border bg-muted/20 shrink-0 overflow-hidden">
                   {product.images[0] ? (
@@ -144,6 +179,25 @@ export default function ProductsPage() {
                   {product.compareAtPrice && (
                     <p className="text-[10px] text-muted-foreground/50 line-through">₹{product.compareAtPrice.toLocaleString('en-IN')}</p>
                   )}
+                  {/* Temporary quick-price buttons */}
+                  <div className="flex items-center gap-1 mt-1.5">
+                    {QUICK_PRICES.map(qp => (
+                      <button
+                        key={qp}
+                        type="button"
+                        onClick={() => handleQuickPrice(product._id, qp)}
+                        disabled={updatingPriceId === product._id || product.price === qp}
+                        title={`Set price to ₹${qp.toLocaleString('en-IN')}`}
+                        className="px-1.5 py-0.5 text-[9px] tracking-wide border border-border text-muted-foreground hover:border-primary/50 hover:text-primary transition-colors disabled:opacity-40 disabled:cursor-default"
+                      >
+                        {updatingPriceId === product._id ? (
+                          <Loader2 className="w-2.5 h-2.5 animate-spin" />
+                        ) : (
+                          `₹${qp.toLocaleString('en-IN')}`
+                        )}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Stock */}
@@ -180,6 +234,55 @@ export default function ProductsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {!loading && products.length > 0 && pages > 1 && (
+          <div className="flex items-center justify-between mt-6">
+            <p className="text-[10px] tracking-widest uppercase text-muted-foreground/60">
+              Page {page} of {pages}
+            </p>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => goToPage(page - 1)}
+                disabled={page <= 1}
+                className="p-1.5 border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors disabled:opacity-30 disabled:cursor-default disabled:hover:border-border"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+              </button>
+              {Array.from({ length: pages }, (_, i) => i + 1)
+                .filter(p => p === 1 || p === pages || Math.abs(p - page) <= 1)
+                .reduce<number[]>((acc, p) => {
+                  if (acc.length && p - acc[acc.length - 1] > 1) acc.push(-1)
+                  acc.push(p)
+                  return acc
+                }, [])
+                .map((p, i) =>
+                  p === -1 ? (
+                    <span key={`ellipsis-${i}`} className="text-[10px] text-muted-foreground/40 px-1">…</span>
+                  ) : (
+                    <button
+                      key={p}
+                      onClick={() => goToPage(p)}
+                      className={`min-w-[1.75rem] h-7 px-1.5 text-[10px] tracking-wide border transition-colors ${
+                        p === page
+                          ? 'border-primary bg-primary text-primary-foreground'
+                          : 'border-border text-muted-foreground hover:text-foreground hover:border-primary/50'
+                      }`}
+                    >
+                      {p}
+                    </button>
+                  )
+                )}
+              <button
+                onClick={() => goToPage(page + 1)}
+                disabled={page >= pages}
+                className="p-1.5 border border-border text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors disabled:opacity-30 disabled:cursor-default disabled:hover:border-border"
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         )}
       </div>
