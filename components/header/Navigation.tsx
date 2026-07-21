@@ -129,7 +129,7 @@ const Navigation = () => {
     },
     {
       name: "House of BORA HONEYS",
-      href: "/about-us",
+      href: "/house-of-bora-honeys",
       submenuItems: [],
       images: [],
     },
