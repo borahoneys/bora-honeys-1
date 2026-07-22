@@ -2,31 +2,22 @@
 import { X, Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
-interface CartItem {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-  quantity: number;
-  category: string;
-}
+import { useSession } from "next-auth/react";
+import { useCart } from "@/components/cart/CartProvider";
 
 interface ShoppingBagProps {
   isOpen: boolean;
   onClose: () => void;
-  cartItems: CartItem[];
-  updateQuantity: (id: number, newQuantity: number) => void;
   onViewFavorites?: () => void;
 }
 
-const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorites }: ShoppingBagProps) => {
-  const subtotal = cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace('₹', '').replace(/,/g, ''));
-    return sum + (price * item.quantity);
-  }, 0);
+const ShoppingBag = ({ isOpen, onClose, onViewFavorites }: ShoppingBagProps) => {
+  const { status } = useSession();
+  const { items, subtotal, isLoading, updateItem, removeItem } = useCart();
 
   if (!isOpen) return null;
+
+  const isAuthenticated = status === "authenticated";
 
   return (
     <div className="fixed inset-0 z-50 h-screen">
@@ -49,7 +40,7 @@ const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorit
             <X size={20} />
           </button>
         </div>
-        
+
         {/* Content */}
         <div className="flex-1 flex flex-col p-6">
           {/* Mobile favorites toggle - only show on mobile */}
@@ -66,8 +57,21 @@ const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorit
               </button>
             </div>
           )}
-          
-          {cartItems.length === 0 ? (
+
+          {!isAuthenticated ? (
+            <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center">
+              <p className="text-muted-foreground text-sm">
+                Sign in to view your shopping bag and manage your items.
+              </p>
+              <Button asChild className="rounded-none" onClick={onClose}>
+                <Link href="/login">Sign In</Link>
+              </Button>
+            </div>
+          ) : isLoading ? (
+            <div className="flex-1 flex items-center justify-center">
+              <p className="text-muted-foreground text-sm">Loading your bag…</p>
+            </div>
+          ) : items.length === 0 ? (
             <div className="flex-1 flex items-center justify-center">
               <p className="text-muted-foreground text-sm text-center">
                 Your shopping bag is empty.<br />
@@ -78,27 +82,28 @@ const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorit
             <>
               {/* Cart items */}
               <div className="flex-1 overflow-y-auto space-y-6 mb-6">
-                {cartItems.map((item) => (
-                  <div key={item.id} className="flex gap-4">
+                {items.map((item) => (
+                  <div key={item.product._id} className="flex gap-4">
                     <div className="w-20 h-20 bg-muted/10 rounded-lg overflow-hidden">
-                      <img 
-                        src={item.image} 
-                        alt={item.name}
+                      <img
+                        src={item.product.images?.[0]?.url ?? "/placeholder-image.png"}
+                        alt={item.product.name}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="flex-1">
                       <div className="flex justify-between items-start mb-2">
                         <div>
-                          <p className="text-sm font-light text-muted-foreground">{item.category}</p>
-                          <h3 className="text-sm font-medium text-foreground">{item.name}</h3>
+                          <h3 className="text-sm font-medium text-foreground">{item.product.name}</h3>
                         </div>
-                        <p className="text-sm font-light text-foreground">{item.price}</p>
+                        <p className="text-sm font-light text-foreground">
+                          ₹{item.product.price.toLocaleString('en-IN')}
+                        </p>
                       </div>
                       <div className="flex items-center gap-2 mt-3">
                         <div className="flex items-center border border-border">
-                          <button 
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          <button
+                            onClick={() => updateItem(item.product._id, item.quantity - 1)}
                             className="p-2 hover:bg-muted/50 transition-colors"
                             aria-label="Decrease quantity"
                           >
@@ -107,34 +112,40 @@ const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorit
                           <span className="px-3 py-2 text-sm font-light min-w-[40px] text-center">
                             {item.quantity}
                           </span>
-                          <button 
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          <button
+                            onClick={() => updateItem(item.product._id, item.quantity + 1)}
                             className="p-2 hover:bg-muted/50 transition-colors"
                             aria-label="Increase quantity"
                           >
                             <Plus size={14} />
                           </button>
                         </div>
+                        <button
+                          onClick={() => removeItem(item.product._id)}
+                          className="text-xs text-muted-foreground hover:text-destructive transition-colors ml-2"
+                        >
+                          Remove
+                        </button>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              
+
               {/* Subtotal and checkout */}
               <div className="border-t border-border pt-6 space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-light text-foreground">Subtotal</span>
                   <span className="text-sm font-medium text-foreground">₹{subtotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
                 </div>
-                
+
                 <p className="text-xs text-muted-foreground">
                   Shipping and taxes calculated at checkout
                 </p>
-                
-                <Button 
-                  asChild 
-                  className="w-full rounded-none" 
+
+                <Button
+                  asChild
+                  className="w-full rounded-none"
                   size="lg"
                   onClick={onClose}
                 >
@@ -142,15 +153,15 @@ const ShoppingBag = ({ isOpen, onClose, cartItems, updateQuantity, onViewFavorit
                     Proceed to Checkout
                   </Link>
                 </Button>
-                
-                <Button 
-                  variant="outline" 
-                  className="w-full rounded-none" 
+
+                <Button
+                  variant="outline"
+                  className="w-full rounded-none"
                   size="lg"
                   onClick={onClose}
                   asChild
                 >
-                  <Link href="/category/shop">
+                  <Link href="/products">
                     Continue Shopping
                   </Link>
                 </Button>

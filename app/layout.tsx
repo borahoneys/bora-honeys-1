@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import AppProviders from "@/components/providers/AppProviders";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -57,7 +58,9 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", raleway.variable)}
     >
-      <body className="min-h-full w-screen overflow-x-hidden flex flex-col">{children}</body>
+      <body className="min-h-full w-screen overflow-x-hidden flex flex-col">
+        <AppProviders>{children}</AppProviders>
+      </body>
     </html>
   );
 }

@@ -5,6 +5,9 @@ import type { NextRequest } from 'next/server'
 const adminPublicRoutes = ['/admin/login', '/admin/signup']
 const adminProtectedPrefix = '/admin'
 
+const customerPublicRoutes = ['/login', '/signup']
+const customerProtectedPrefixes = ['/account', '/checkout', '/orders']
+
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const session = await auth()
@@ -25,6 +28,25 @@ export default async function proxy(request: NextRequest) {
     if (user?.role !== 'admin' && user?.role !== 'super_admin') {
       return NextResponse.redirect(new URL('/', request.url))
     }
+
+    return NextResponse.next()
+  }
+
+  const isCustomerPublic = customerPublicRoutes.includes(pathname)
+  const isCustomerProtected = customerProtectedPrefixes.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+  )
+
+  if (isCustomerPublic && session?.user) {
+    const redirectTo = request.nextUrl.searchParams.get('redirect')
+    const target = redirectTo && redirectTo.startsWith('/') ? redirectTo : '/'
+    return NextResponse.redirect(new URL(target, request.url))
+  }
+
+  if (isCustomerProtected && !session?.user) {
+    const loginUrl = new URL('/login', request.url)
+    loginUrl.searchParams.set('redirect', pathname)
+    return NextResponse.redirect(loginUrl)
   }
 
   return NextResponse.next()

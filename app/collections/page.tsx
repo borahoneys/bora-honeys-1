@@ -110,9 +110,9 @@ export default async function CollectionsPage() {
                       <h3 className="text-sm font-light text-foreground group-hover:text-primary transition-colors leading-snug">
                         {collection.name}
                       </h3>
-                      <p className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground mt-2">
+                      {/* <p className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground mt-2">
                         {collection.products.length} {collection.products.length === 1 ? 'piece' : 'pieces'}
-                      </p>
+                      </p> */}
                     </div>
                   </Link>
                 )

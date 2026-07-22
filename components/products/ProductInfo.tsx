@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Breadcrumb,
@@ -11,10 +12,12 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Minus, Plus, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import { useCart } from "@/components/cart/CartProvider";
 
 interface CategoryRef { _id: string; name: string; slug: string }
 
 interface ProductInfoProps {
+  productId: string
   name: string
   price?: number
   compareAtPrice?: number
@@ -28,9 +31,26 @@ interface ProductInfoProps {
   whatsappNumber?: string
 }
 
-const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919876543210" }: ProductInfoProps) => {
+const ProductInfo = ({ productId, name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919876543210" }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+  const [addError, setAddError] = useState<string | null>(null);
+  const { addItem } = useCart();
+  const router = useRouter();
+  const pathname = usePathname();
   const primaryCategory = categories[0]
+
+  const handleAddToBag = async () => {
+    setAddError(null);
+    setIsAdding(true);
+    const result = await addItem(productId, quantity);
+    setIsAdding(false);
+    if (result.unauthorized) {
+      router.push(`/login?redirect=${encodeURIComponent(pathname)}`);
+    } else if (!result.ok) {
+      setAddError(result.error ?? "Unable to add item to your bag.");
+    }
+  };
 
   const hasDetails = color || styleCode || numberOfPieces || composition || collectionName
 
@@ -156,11 +176,16 @@ const ProductInfo = ({ name, price, compareAtPrice, color, styleCode, numberOfPi
         )}
 
         <Button
-          disabled={stock === 0}
+          disabled={stock === 0 || isAdding}
+          onClick={handleAddToBag}
           className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 font-light rounded-none disabled:opacity-40"
         >
-          {stock === 0 ? 'Out of Stock' : 'Add to Bag'}
+          {stock === 0 ? 'Out of Stock' : isAdding ? 'Adding…' : 'Add to Bag'}
         </Button>
+
+        {addError && (
+          <p className="text-xs text-destructive">{addError}</p>
+        )}
 
         <Button
           asChild

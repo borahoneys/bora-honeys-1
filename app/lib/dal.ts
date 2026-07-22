@@ -27,3 +27,14 @@ export const verifyAdminSession = cache(async () => {
 
   return session
 })
+
+export const verifyCustomerSession = cache(async (redirectTo?: string) => {
+  const session = await auth()
+
+  if (!session?.user) {
+    const loginUrl = redirectTo ? `/login?redirect=${encodeURIComponent(redirectTo)}` : '/login'
+    redirect(loginUrl)
+  }
+
+  return session
+})

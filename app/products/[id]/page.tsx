@@ -94,6 +94,7 @@ const ProductDetail = async ({ params }: PageProps) => {
 
             <div className="lg:pl-12 mt-8 lg:mt-0 lg:sticky lg:top-6 lg:h-fit">
               <ProductInfo
+                productId={product._id}
                 name={product.name}
                 price={product.price}
                 compareAtPrice={product.compareAtPrice}

@@ -1,19 +1,10 @@
 "use client"
-import { ArrowRight, X, Plus } from "lucide-react";
+import { ArrowRight, X, Plus, User } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 import ShoppingBag from "./ShoppingBag";
+import { useCart } from "@/components/cart/CartProvider";
 import Link from "next/link";
-
-interface CartItem {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-  quantity: number;
-  category: string;
-}
 
 interface CollectionNavItem {
   name: string;
@@ -21,6 +12,8 @@ interface CollectionNavItem {
 }
 
 const Navigation = () => {
+  const { data: session } = useSession();
+  const { totalItems } = useCart();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [offCanvasType, setOffCanvasType] = useState<'favorites' | null>(null);
@@ -46,48 +39,6 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Shopping bag state with 3 mock items
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: 1,
-      name: "Pantheon",
-      price: "₹2,850",
-      image: "/placeholder-image.png",
-      quantity: 1,
-      category: "Earrings"
-    },
-    {
-      id: 2,
-      name: "Eclipse",
-      price: "₹3,200",
-      image: "/placeholder-image.png",
-      quantity: 1,
-      category: "Bracelets"
-    },
-    {
-      id: 3,
-      name: "Halo",
-      price: "₹1,950",
-      image: "/placeholder-image.png",
-      quantity: 1,
-      category: "Earrings"
-    }
-  ]);
-
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-
-  const updateQuantity = (id: number, newQuantity: number) => {
-    if (newQuantity <= 0) {
-      setCartItems(items => items.filter(item => item.id !== id));
-    } else {
-      setCartItems(items =>
-        items.map(item =>
-          item.id === id ? { ...item, quantity: newQuantity } : item
-        )
-      );
-    }
-  };
 
   // Preload dropdown images for faster display
   useEffect(() => {
@@ -210,6 +161,13 @@ const Navigation = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
           </button>
+          <Link
+            href={session?.user ? "/account" : "/login"}
+            className="p-2 text-foreground hover:text-primary transition-colors duration-200"
+            aria-label="Account"
+          >
+            <User size={20} strokeWidth={1.5} />
+          </Link>
           <button
             className="p-2 text-foreground hover:text-primary transition-colors duration-200 relative"
             aria-label="Shopping bag"
@@ -270,6 +228,13 @@ const Navigation = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
           </button>
+          <Link
+            href={session?.user ? "/account" : "/login"}
+            className="p-2 text-foreground hover:text-primary transition-colors duration-200"
+            aria-label="Account"
+          >
+            <User size={20} strokeWidth={1.5} />
+          </Link>
           <button
             className="p-2 text-foreground hover:text-primary transition-colors duration-200 relative"
             aria-label="Shopping bag"
@@ -473,8 +438,6 @@ const Navigation = () => {
       <ShoppingBag
         isOpen={isShoppingBagOpen}
         onClose={() => setIsShoppingBagOpen(false)}
-        cartItems={cartItems}
-        updateQuantity={updateQuantity}
         onViewFavorites={() => {
           setIsShoppingBagOpen(false);
           setOffCanvasType('favorites');
