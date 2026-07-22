@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Phone, Mail } from 'lucide-react'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
 import ComingSoonPlaceholder from '@/app/house-of-bora-honeys/_components/ComingSoonPlaceholder'
@@ -228,11 +229,11 @@ export default function HouseOfBoraHoneysPage() {
                   <p className="text-xs text-muted-foreground tracking-[0.15em] uppercase">Contact</p>
                   <div className="space-y-2">
                     <a href={`tel:${atelierInfo.phone}`} className="flex items-center gap-3 text-sm font-light text-white/70 hover:text-primary transition-colors">
-                      <span>☎</span>
+                      <Phone className="h-3.5 w-3.5" strokeWidth={1.5} />
                       <span>{atelierInfo.phone}</span>
                     </a>
                     <a href={`mailto:${atelierInfo.email}`} className="flex items-center gap-3 text-sm font-light text-white/70 hover:text-primary transition-colors">
-                      <span>✉</span>
+                      <Mail className="h-3.5 w-3.5" strokeWidth={1.5} />
                       <span>{atelierInfo.email}</span>
                     </a>
                   </div>

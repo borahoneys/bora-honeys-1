@@ -23,9 +23,9 @@ const LegalFooter = () => (
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
       <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Phone:</span> +91 8570873934
+      <span className="text-white/60"> Grievance:</span> info@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Legal Notices:</span> info@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Phone:</span> +91 9138881112
     </p>
   </div>
 )
@@ -123,7 +123,7 @@ export default function LegalDisputeResolutionPage() {
               <p>3.2 Any commercial use of BORA HONEY&apos;S content by influencers, stylists, media, or content creators requires a prior written licensing agreement. Commercial use without such authorisation constitutes infringement of our intellectual property rights, and BORA HONEY&apos;S reserves all rights and remedies available under applicable law.</p>
 
               <h3>4. Media and Editorial Consent</h3>
-              <p>4.1 By sharing photographs, videos, testimonials, or styling content that features BORA HONEY&apos;S Products with us directly or by tagging us on social media, you grant BORA HONEY&apos;S a royalty-free, worldwide, perpetual, non-exclusive license to reproduce, publish, and distribute such content for promotional purposes, without additional compensation, unless you expressly object in writing to legal@borahoneys.in.</p>
+              <p>4.1 By sharing photographs, videos, testimonials, or styling content that features BORA HONEY&apos;S Products with us directly or by tagging us on social media, you grant BORA HONEY&apos;S a royalty-free, worldwide, perpetual, non-exclusive license to reproduce, publish, and distribute such content for promotional purposes, without additional compensation, unless you expressly object in writing to info@borahoneys.in.</p>
               <p>4.2 You warrant that you own or hold the right to license all content submitted, and that it does not infringe the rights of any third party.</p>
               <p>4.3 Fitting photographs, bridal photoshoots, and event styling images shared with us in connection with an Order are covered by this consent unless you expressly opt out in writing.</p>
 
@@ -131,7 +131,7 @@ export default function LegalDisputeResolutionPage() {
               <p>5.1 The manufacture, sale, or promotion of counterfeit or imitation BORA HONEY&apos;S products constitutes infringement of our intellectual property rights. BORA HONEY&apos;S reserves all rights and remedies available under the Trade Marks Act, 1999, the Copyright Act, 1957, and all other applicable laws.</p>
 
               <h3>6. Reporting Infringement</h3>
-              <p>6.1 To report suspected infringement or to serve formal legal notices: notices@borahoneys.in. For general IP queries: legal@borahoneys.in. Please include details of the infringing content, the platform on which it appears, and any supporting evidence.</p>
+              <p>6.1 To report suspected infringement or to serve formal legal notices: info@borahoneys.in. For general IP queries: info@borahoneys.in. Please include details of the infringing content, the platform on which it appears, and any supporting evidence.</p>
             </div>
 
             <LegalFooter />
@@ -149,7 +149,7 @@ export default function LegalDisputeResolutionPage() {
 
               <h3>2. Tagging and Reposting</h3>
               <p>2.1 Users who tag BORA HONEY&apos;S in Posts featuring our Products grant BORA HONEY&apos;S permission to repost, share, or feature such content across our social media channels and Website for promotional purposes, subject to appropriate attribution where feasible.</p>
-              <p>2.2 If you do not wish your content to be reposted, please notify us in writing at legal@borahoneys.in and we will remove the content promptly.</p>
+              <p>2.2 If you do not wish your content to be reposted, please notify us in writing at info@borahoneys.in and we will remove the content promptly.</p>
 
               <h3>3. Influencer and Stylist Usage Rights</h3>
               <p>3.1 Any commercial use of BORA HONEY&apos;S Products, imagery, or brand name by influencers, content creators, or stylists for commercial gain requires a prior written licensing agreement with BORA HONEY&apos;S. Organic, non-commercial tagging with proper attribution is permitted.</p>
@@ -169,7 +169,7 @@ export default function LegalDisputeResolutionPage() {
 
               <h3>7. Content Moderation and Takedown</h3>
               <p>7.1 BORA HONEY&apos;S reserves the right to delete, hide, or report any comment, post, or message on our owned channels that violates this Policy, applicable law, or platform community standards. We are not obligated to respond to every comment or message.</p>
-              <p>7.2 If you believe any content on our social media channels infringes your rights, please contact us at legal@borahoneys.in with relevant details.</p>
+              <p>7.2 If you believe any content on our social media channels infringes your rights, please contact us at info@borahoneys.in with relevant details.</p>
             </div>
 
             <LegalFooter />
@@ -183,7 +183,7 @@ export default function LegalDisputeResolutionPage() {
 
             <div className="prose-legal">
               <h3>1. Complaint Resolution</h3>
-              <p>1.1 In the event of any grievance, please first contact us at grievance@borahoneys.in with a written description of the issue, your Order reference number, and supporting documentation. We will acknowledge receipt within 48 hours and endeavour to resolve the matter within 30 days.</p>
+              <p>1.1 In the event of any grievance, please first contact us at info@borahoneys.in with a written description of the issue, your Order reference number, and supporting documentation. We will acknowledge receipt within 48 hours and endeavour to resolve the matter within 30 days.</p>
 
               <h3>2. Mediation</h3>
               <p>2.1 If the dispute is not resolved through direct negotiation within 30 days, either Party may propose mediation. If both Parties agree, a mutually acceptable neutral mediator will be appointed and costs shared equally unless otherwise agreed.</p>
@@ -351,10 +351,10 @@ export default function LegalDisputeResolutionPage() {
                 <p><span className="text-white/50">Registered Address:</span> Coming Soon</p>
                 <p><span className="text-white/50">GSTIN:</span> 06AIOPN2893G1ZU</p>
                 <p><span className="text-white/50">Customer Support:</span> orders@borahoneys.in</p>
-                <p><span className="text-white/50">Grievance Officer:</span> Honey Nanda &nbsp;·&nbsp; grievance@borahoneys.in</p>
-                <p><span className="text-white/50">Legal Notices:</span> notices@borahoneys.in</p>
-                <p><span className="text-white/50">Privacy:</span> privacy@borahoneys.in</p>
-                <p><span className="text-white/50">Phone:</span> +91 8570873934</p>
+                <p><span className="text-white/50">Grievance Officer:</span> Honey Nanda &nbsp;·&nbsp; info@borahoneys.in</p>
+                <p><span className="text-white/50">Legal Notices:</span> info@borahoneys.in</p>
+                <p><span className="text-white/50">Privacy:</span> info@borahoneys.in</p>
+                <p><span className="text-white/50">Phone:</span> +91 9138881112</p>
                 <p><span className="text-white/50">Support Hours:</span> Monday to Sunday, 11:00 AM to 6:00 PM</p>
               </div>
               <p>10.2 The Grievance Officer&apos;s name and contact details must be displayed prominently on the Website and must be updated promptly if there is any change in the designated officer.</p>

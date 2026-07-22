@@ -24,9 +24,9 @@ const LegalFooter = () => (
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
       <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Phone:</span> +91 8570873934
+      <span className="text-white/60"> Grievance:</span> info@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Legal Notices:</span> info@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Phone:</span> +91 9138881112
     </p>
   </div>
 )
@@ -241,7 +241,7 @@ export default function PaymentsShippingRefundsPage() {
               <p>3.3 Payment gateway transaction fees may be deducted from the refund amount where applicable.</p>
 
               <h3>4. Consumer Protection Act, 2019</h3>
-              <p>4.1 Nothing in this Policy is intended to override or exclude any remedy to which a consumer is entitled under the Consumer Protection Act, 2019 in the event of a defective product or proven deficiency in service. If you believe you have such a right, please contact our Grievance Officer at grievance@borahoneys.in.</p>
+              <p>4.1 Nothing in this Policy is intended to override or exclude any remedy to which a consumer is entitled under the Consumer Protection Act, 2019 in the event of a defective product or proven deficiency in service. If you believe you have such a right, please contact our Grievance Officer at info@borahoneys.in.</p>
             </div>
 
             <LegalFooter />
@@ -273,7 +273,7 @@ export default function PaymentsShippingRefundsPage() {
               <p>3.1 Where a Product is defective in a manner constituting a deficiency in service under the Consumer Protection Act, 2019, or where an incorrect Product has been delivered, the User may raise a claim under our Refund Policy above. Such claims are governed exclusively by the Refund Policy.</p>
 
               <h3>4. Consumer Rights</h3>
-              <p>4.1 Nothing in this Policy restricts a consumer&apos;s statutory rights under the Consumer Protection Act, 2019. Users who believe their statutory rights have not been met may contact our Grievance Officer at grievance@borahoneys.in or approach the relevant Consumer Disputes Redressal Commission.</p>
+              <p>4.1 Nothing in this Policy restricts a consumer&apos;s statutory rights under the Consumer Protection Act, 2019. Users who believe their statutory rights have not been met may contact our Grievance Officer at info@borahoneys.in or approach the relevant Consumer Disputes Redressal Commission.</p>
             </div>
 
             <LegalFooter />

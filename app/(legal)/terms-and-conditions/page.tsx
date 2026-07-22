@@ -24,9 +24,9 @@ const LegalFooter = () => (
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
       <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Grievance:</span> grievance@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Legal Notices:</span> notices@borahoneys.in &nbsp;|&nbsp;
-      <span className="text-white/60"> Phone:</span> +91 8570873934
+      <span className="text-white/60"> Grievance:</span> info@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Legal Notices:</span> info@borahoneys.in &nbsp;|&nbsp;
+      <span className="text-white/60"> Phone:</span> +91 9138881112
     </p>
   </div>
 )
@@ -164,8 +164,8 @@ export default function TermsAndConditionsPage() {
               <p>11.1 These Terms are governed by the laws of India. Subject to the Dispute Resolution and Arbitration Policy, any dispute shall be subject to the exclusive jurisdiction of the courts of New Delhi.</p>
 
               <h3>12. Grievance Officer</h3>
-              <p>12.1 Name: Honey Nanda &nbsp;|&nbsp; Designation: Grievance Officer &nbsp;|&nbsp; Email: grievance@borahoneys.in. Grievances will be acknowledged within 48 hours and resolved within 30 days of receipt, in accordance with the Consumer Protection (E-Commerce) Rules, 2020.</p>
-              <p>12.2 For formal legal notices, cease and desist communications, and all formal legal correspondence, please write to: notices@borahoneys.in. Communications sent to any other address will not constitute valid legal notice to BORA HONEY&apos;S.</p>
+              <p>12.1 Name: Honey Nanda &nbsp;|&nbsp; Designation: Grievance Officer &nbsp;|&nbsp; Email: info@borahoneys.in. Grievances will be acknowledged within 48 hours and resolved within 30 days of receipt, in accordance with the Consumer Protection (E-Commerce) Rules, 2020.</p>
+              <p>12.2 For formal legal notices, cease and desist communications, and all formal legal correspondence, please write to: info@borahoneys.in. Communications sent to any other address will not constitute valid legal notice to BORA HONEY&apos;S.</p>
 
               <h3>13. Modifications, Severability, and Entire Agreement</h3>
               <p>13.1 We may amend these Terms at any time. Updated Terms take effect upon publication on the Website. Your continued use of the Website constitutes acceptance.</p>
@@ -212,7 +212,7 @@ export default function TermsAndConditionsPage() {
 
               <h3>6. Luxury Authentication</h3>
               <p>6.1 BORA HONEY&apos;S guarantees the authenticity of all Products sold through the Website and any other officially authorised sales channel expressly communicated by BORA HONEY&apos;S (including authorised trunk shows, exhibitions, pop-up events, or offline appointments confirmed in writing by BORA HONEY&apos;S). We do not authenticate, warrant, or assume any responsibility for Products purchased through unauthorised resellers, multi-brand marketplaces, second-hand platforms, or any channel not expressly authorised by us.</p>
-              <p>6.2 Authentic BORA HONEY&apos;S Products are available only through the Website and officially authorised channels confirmed in writing by BORA HONEY&apos;S. If you encounter BORA HONEY&apos;S Products listed on any unauthorised third-party platform or marketplace, please report this to legal@borahoneys.in.</p>
+              <p>6.2 Authentic BORA HONEY&apos;S Products are available only through the Website and officially authorised channels confirmed in writing by BORA HONEY&apos;S. If you encounter BORA HONEY&apos;S Products listed on any unauthorised third-party platform or marketplace, please report this to info@borahoneys.in.</p>
 
               <h3>7. Anti-Reseller and Personal Use</h3>
               <p>7.1 All Products are for the personal, non-commercial use of the purchasing User. Purchase for resale, commercial use, or arbitrage is strictly prohibited and may result in cancellation of the Order and blacklisting of the account.</p>
