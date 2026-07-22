@@ -65,7 +65,7 @@ export default async function ClientDiariesPage() {
 
                   {/* Quote block */}
                   <div className="space-y-3">
-                    <p className="text-primary text-2xl font-serif leading-none">&ldquo;</p>
+                    <p className="text-primary text-2xl leading-none">&ldquo;</p>
                     {entry.title && (
                       <h2 className="text-sm font-light tracking-[0.1em] uppercase text-foreground">
                         {entry.title}

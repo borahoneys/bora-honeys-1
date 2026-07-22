@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import AppProviders from "@/components/providers/AppProviders";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
+const geomini = localFont({
+  src: [
+    { path: "../fonts/Geomini-ExtraLight.ttf", weight: "200", style: "normal" },
+    { path: "../fonts/Geomini-Light.ttf", weight: "300", style: "normal" },
+    { path: "../fonts/Geomini-Regular.ttf", weight: "400", style: "normal" },
+    { path: "../fonts/Geomini-Medium.ttf", weight: "500", style: "normal" },
+    { path: "../fonts/Geomini-SemiBold.ttf", weight: "600", style: "normal" },
+    { path: "../fonts/Geomini-Bold.ttf", weight: "700", style: "normal" },
+    { path: "../fonts/Geomini-ExtraBold.ttf", weight: "800", style: "normal" },
+  ],
+  variable: "--font-geomini",
 });
 
 export const metadata: Metadata = {
@@ -56,7 +64,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", raleway.variable)}
+      className={cn("h-full", "antialiased", geomini.variable)}
     >
       <body className="min-h-full w-screen overflow-x-hidden flex flex-col">
         <AppProviders>{children}</AppProviders>

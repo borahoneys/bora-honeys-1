@@ -30,7 +30,7 @@ interface ProductInfoProps {
   whatsappNumber?: string
 }
 
-const ProductInfo = ({ productId, name, price, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919876543210" }: ProductInfoProps) => {
+const ProductInfo = ({ productId, name, price, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919138881112" }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
   const [addError, setAddError] = useState<string | null>(null);

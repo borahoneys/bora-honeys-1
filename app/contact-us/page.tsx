@@ -23,7 +23,7 @@ const SERVICES = [
 const CONTACT_METHODS = ['Email', 'WhatsApp', 'Phone Call']
 
 // TODO: Replace with actual FormsPress endpoint once credentials are provided
-const FORMSPRESS_ENDPOINT = 'https://api.formspress.com/v1/YOUR_FORM_ID/submit'
+const FORMSPRESS_ENDPOINT = "https://formspree.io/f/xaqrbrjw"
 
 export default function ContactUsPage() {
     const [subject, setSubject] = useState<'enquire' | 'appointment'>('enquire')
