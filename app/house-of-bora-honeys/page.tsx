@@ -40,7 +40,6 @@ const atelierInfo = {
   email: 'info@borahoneys.com',
   hours: {
     weekdays: '11:00 AM - 8:00 PM',
-    sunday: 'Closed',
     note: 'By Appointment Only',
   },
 }
@@ -245,10 +244,6 @@ export default function HouseOfBoraHoneysPage() {
                     <div className="flex justify-between">
                       <span>Monday – Sunday</span>
                       <span>{atelierInfo.hours.weekdays}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday</span>
-                      <span>{atelierInfo.hours.sunday}</span>
                     </div>
                     <p className="text-xs text-primary italic tracking-wide pt-2">
                       {atelierInfo.hours.note}
