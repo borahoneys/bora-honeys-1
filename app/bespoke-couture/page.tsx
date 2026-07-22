@@ -181,7 +181,7 @@ export default function BespokeCouturePage() {
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-0 border border-primary/15">
           <div className="relative min-h-[600px] md:aspect-auto md:min-h-[640px]">
-            <img src={"/bespoke-couture/errorimage.jpeg"} className="w-full h-full absolute object-cover inset-0" alt='appointments-only' />
+            <img src={"/bespoke-couture/2.jpeg"} className="w-full h-full absolute object-cover inset-0" alt='appointments-only' />
 
           </div>
           <div className="flex flex-col justify-center p-10 md:p-14 space-y-6 border-t border-primary/15 md:border-t-0 md:border-l md:border-primary/15">
