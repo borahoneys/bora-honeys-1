@@ -97,7 +97,6 @@ const ProductDetail = async ({ params }: PageProps) => {
                 productId={product._id}
                 name={product.name}
                 price={product.price}
-                compareAtPrice={product.compareAtPrice}
                 color={product.color}
                 styleCode={product.styleCode}
                 numberOfPieces={product.numberOfPieces}

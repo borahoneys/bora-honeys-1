@@ -10,7 +10,6 @@ export interface IProduct extends Document {
   slug: string
   description?: string
   price: number
-  compareAtPrice?: number
   images: IProductImage[]
   categories: mongoose.Types.ObjectId[]
   color?: string
@@ -49,7 +48,6 @@ const ProductSchema = new Schema<IProduct>(
     slug: { type: String, required: true, unique: true, lowercase: true, trim: true },
     description: { type: String, trim: true },
     price: { type: Number, required: true, min: 0 },
-    compareAtPrice: { type: Number, min: 0 },
     images: { type: [ProductImageSchema], default: [] },
     categories: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
     color: { type: String, trim: true },

@@ -20,7 +20,7 @@ interface EditorialSection {
 
 interface PopulatedProduct {
   _id: { toString(): string }
-  name: string; slug: string; price: number; compareAtPrice?: number
+  name: string; slug: string; price: number
   images: { url: string }[]; categories: { name: string; slug: string }[]; isActive: boolean
 }
 
@@ -29,7 +29,7 @@ async function getProducts(productIds: string[]) {
   await connectDB()
   const products = await Product.find({ _id: { $in: productIds }, isActive: true })
     .populate('categories', 'name slug')
-    .select('name slug price compareAtPrice images categories isActive')
+    .select('name slug price images categories isActive')
     .lean()
   const idOrder = new Map(productIds.map((id, i) => [id, i]))
   return (products as unknown as PopulatedProduct[]).sort(
@@ -132,7 +132,6 @@ export default async function TimelessClassicsPage() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-border">
               {products.map(product => {
                 const primaryCategory = (product.categories as { name: string; slug: string }[])[0]
-                const isOnSale = product.compareAtPrice && product.compareAtPrice > product.price
                 return (
                   <Link key={product._id.toString()} href={`/products/${product.slug}`}
                     className="group bg-background block overflow-hidden">
@@ -144,9 +143,6 @@ export default async function TimelessClassicsPage() {
                       ) : (
                         <div className="w-full h-full bg-muted/30" />
                       )}
-                      {isOnSale && (
-                        <span className="absolute top-3 left-3 text-[9px] tracking-[0.25em] uppercase bg-background text-foreground px-2 py-1 border border-border">Sale</span>
-                      )}
                     </div>
                     <div className="p-4">
                       {primaryCategory && (
@@ -155,9 +151,6 @@ export default async function TimelessClassicsPage() {
                       <h3 className="text-sm font-light text-foreground group-hover:text-primary transition-colors leading-snug">{product.name}</h3>
                       <div className="flex items-baseline gap-2 mt-2">
                         <span className="text-sm font-light text-foreground">₹{product.price.toLocaleString('en-IN')}</span>
-                        {product.compareAtPrice && (
-                          <span className="text-xs font-light text-muted-foreground line-through">₹{product.compareAtPrice.toLocaleString('en-IN')}</span>
-                        )}
                       </div>
                     </div>
                   </Link>

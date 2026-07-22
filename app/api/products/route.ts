@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
   const categorySchemaRegistering = Category.modelName;
   const body = await request.json()
   const {
-    name, description, price, compareAtPrice, images, categories,
+    name, description, price, images, categories,
     color, styleCode, numberOfPieces, composition, keyFeatures, careInstructions, deliveryTimeline,
     stock, sku, tags, isActive, isFeatured, seo,
     silhouette, collectionName, craftsmanship, perfectFor, bespokeCustomisation, collectionStory,
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
   if (existing) return Response.json({ error: 'A product with this name already exists' }, { status: 409 })
 
   const product = await Product.create({
-    name: name.trim(), slug, description, price, compareAtPrice, images: images ?? [],
+    name: name.trim(), slug, description, price, images: images ?? [],
     categories: categories ?? [], color, styleCode, numberOfPieces, composition,
     keyFeatures, careInstructions, deliveryTimeline,
     stock: stock ?? 0, sku, tags: tags ?? [], isActive: isActive ?? true,

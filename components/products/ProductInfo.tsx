@@ -20,7 +20,6 @@ interface ProductInfoProps {
   productId: string
   name: string
   price?: number
-  compareAtPrice?: number
   color?: string
   styleCode?: string
   numberOfPieces?: number
@@ -31,7 +30,7 @@ interface ProductInfoProps {
   whatsappNumber?: string
 }
 
-const ProductInfo = ({ productId, name, price, compareAtPrice, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919876543210" }: ProductInfoProps) => {
+const ProductInfo = ({ productId, name, price, color, styleCode, numberOfPieces, composition, collectionName, categories, stock, whatsappNumber = "919876543210" }: ProductInfoProps) => {
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
   const [addError, setAddError] = useState<string | null>(null);
@@ -102,21 +101,12 @@ const ProductInfo = ({ productId, name, price, compareAtPrice, color, styleCode,
           ) : (
             <p className="text-lg font-light text-muted-foreground">Price on Request</p>
           )}
-          {compareAtPrice && (
-            <p className="text-sm font-light text-muted-foreground line-through">₹{compareAtPrice.toLocaleString('en-IN')}</p>
-          )}
         </div>
       </div>
 
       {/* Product quick details */}
       {hasDetails && (
         <div className="space-y-2 py-4 border-b border-border">
-          {styleCode && (
-            <div className="flex justify-between">
-              <span className="text-sm font-light text-muted-foreground">Style Code</span>
-              <span className="text-sm font-light text-foreground">{styleCode}</span>
-            </div>
-          )}
           {color && (
             <div className="flex justify-between">
               <span className="text-sm font-light text-muted-foreground">Colour</span>

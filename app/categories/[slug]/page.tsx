@@ -27,7 +27,6 @@ interface PopulatedProduct {
   name: string
   slug: string
   price: number
-  compareAtPrice?: number
   images: { url: string }[]
   categories: { name: string; slug: string }[]
   isActive: boolean
@@ -41,7 +40,7 @@ async function getCategoryWithProducts(slug: string) {
 
   const products = await Product.find({ categories: category._id, isActive: true })
     .populate('categories', 'name slug')
-    .select('name slug price compareAtPrice images categories isActive')
+    .select('name slug price images categories isActive')
     .sort({ createdAt: -1 })
     .lean()
 
@@ -112,7 +111,6 @@ export default async function CategoryPage({ params }: PageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 bg-background px-4 py-4 md:p-6">
               {products.map(product => {
                 const primaryCategory = product.categories[0]
-                const isOnSale = product.compareAtPrice && product.compareAtPrice > product.price
 
                 return (
                   <Link
@@ -137,11 +135,6 @@ export default async function CategoryPage({ params }: PageProps) {
                           </span>
                         </div>
                       )}
-                      {isOnSale && (
-                        <span className="absolute top-3 left-3 text-[9px] tracking-[0.25em] uppercase bg-background text-foreground px-2 py-1 border border-border">
-                          Sale
-                        </span>
-                      )}
                     </div>
 
                     {/* Info */}
@@ -158,11 +151,6 @@ export default async function CategoryPage({ params }: PageProps) {
                         <span className="text-sm font-light text-foreground">
                           ₹{product.price.toLocaleString('en-IN')}
                         </span>
-                        {product.compareAtPrice && (
-                          <span className="text-xs font-light text-muted-foreground line-through">
-                            ₹{product.compareAtPrice.toLocaleString('en-IN')}
-                          </span>
-                        )}
                       </div>
                     </div>
                   </Link>

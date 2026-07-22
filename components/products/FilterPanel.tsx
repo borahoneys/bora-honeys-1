@@ -33,7 +33,6 @@ export default function FilterPanel({ categories }: Props) {
   const currentSort = searchParams.get('sort') ?? 'newest'
   const currentMin = searchParams.get('min') ?? ''
   const currentMax = searchParams.get('max') ?? ''
-  const currentSale = searchParams.get('sale') === 'true'
   const currentFeatured = searchParams.get('featured') === 'true'
 
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -93,7 +92,6 @@ export default function FilterPanel({ categories }: Props) {
     currentSort !== 'newest' ? currentSort : null,
     currentMin,
     currentMax,
-    currentSale ? 'sale' : null,
     currentFeatured ? 'featured' : null,
   ].filter(Boolean).length
 
@@ -241,26 +239,6 @@ export default function FilterPanel({ categories }: Props) {
       {/* Toggles */}
       <div className="space-y-3">
         <p className="text-[9px] tracking-[0.3em] uppercase text-muted-foreground">Refine</p>
-
-        <label className="flex items-center gap-3 cursor-pointer group">
-          <div
-            onClick={() => push({ sale: currentSale ? null : 'true' })}
-            className={cn(
-              'w-8 h-4 rounded-full transition-colors relative',
-              currentSale ? 'bg-primary' : 'bg-muted'
-            )}
-          >
-            <span
-              className={cn(
-                'absolute top-0.5 w-3 h-3 rounded-full bg-background transition-transform',
-                currentSale ? 'translate-x-4' : 'translate-x-0.5'
-              )}
-            />
-          </div>
-          <span className={cn('text-xs font-light transition-colors', currentSale ? 'text-primary' : 'text-muted-foreground group-hover:text-foreground')}>
-            On Sale
-          </span>
-        </label>
 
         <label className="flex items-center gap-3 cursor-pointer group">
           <div

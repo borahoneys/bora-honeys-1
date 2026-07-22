@@ -26,7 +26,6 @@ interface PopulatedProduct {
   name: string
   slug: string
   price: number
-  compareAtPrice?: number
   images: { url: string }[]
   categories: { name: string; slug: string }[]
   isActive: boolean
@@ -41,7 +40,7 @@ async function getCollection(slug: string) {
       path: 'products',
       match: { isActive: true },
       populate: { path: 'categories', select: 'name slug' },
-      select: 'name slug price compareAtPrice images categories isActive',
+      select: 'name slug price images categories isActive',
     })
     .lean()
 }
@@ -141,7 +140,6 @@ export default async function CollectionPage({ params }: PageProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 bg-background px-4 py-4 md:p-6">
               {products.map(product => {
                 const primaryCategory = (product.categories as { name: string; slug: string }[])[0]
-                const isOnSale = product.compareAtPrice && product.compareAtPrice > product.price
 
                 return (
                   <Link
@@ -182,11 +180,6 @@ export default async function CollectionPage({ params }: PageProps) {
                         <span className="text-sm font-light text-foreground">
                           ₹{product.price.toLocaleString('en-IN')}
                         </span>
-                        {product.compareAtPrice && (
-                          <span className="text-xs font-light text-muted-foreground line-through">
-                            ₹{product.compareAtPrice.toLocaleString('en-IN')}
-                          </span>
-                        )}
                       </div>
                     </div>
                   </Link>

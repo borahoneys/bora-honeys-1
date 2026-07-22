@@ -40,7 +40,6 @@ async function fetchPageData(sp: Awaited<SP>) {
   const sort = getString(sp.sort) || 'newest'
   const minRaw = parseFloat(getString(sp.min))
   const maxRaw = parseFloat(getString(sp.max))
-  const onSale = getString(sp.sale) === 'true'
   const featured = getString(sp.featured) === 'true'
   const page = Math.max(1, parseInt(getString(sp.page) || '1', 10))
 
@@ -48,14 +47,6 @@ async function fetchPageData(sp: Awaited<SP>) {
   if (q) filter.$text = { $search: q }
   if (cat) filter.categories = cat
   if (featured) filter.isFeatured = true
-  if (onSale) {
-    filter.$expr = {
-      $and: [
-        { $ifNull: ['$compareAtPrice', false] },
-        { $gt: ['$compareAtPrice', '$price'] },
-      ],
-    }
-  }
 
   const priceFilter: Record<string, number> = {}
   if (!isNaN(minRaw) && minRaw >= 0) priceFilter.$gte = minRaw
@@ -100,7 +91,6 @@ interface PopulatedProduct {
   name: string
   slug: string
   price: number
-  compareAtPrice?: number
   images: { url: string }[]
   categories: { name: string; slug: string }[]
 }
@@ -114,7 +104,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
   // Build a URL preserving all current params except page
   function pageHref(p: number) {
     const params = new URLSearchParams()
-    const keep = ['q', 'cat', 'sort', 'min', 'max', 'sale', 'featured']
+    const keep = ['q', 'cat', 'sort', 'min', 'max', 'featured']
     keep.forEach((k) => {
       const v = getString(sp[k])
       if (v) params.set(k, v)
@@ -194,8 +184,6 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 bg-background px-4 py-4 md:p-6">
                   {(products as unknown as PopulatedProduct[]).map((product) => {
                     const primaryCategory = product.categories[0]
-                    const isOnSale =
-                      product.compareAtPrice && product.compareAtPrice > product.price
 
                     return (
                       <Link
@@ -236,11 +224,6 @@ export default async function ProductsPage({ searchParams }: { searchParams: SP 
                             <span className="text-sm font-light text-foreground">
                               ₹{product.price.toLocaleString('en-IN')}
                             </span>
-                            {product.compareAtPrice && (
-                              <span className="text-xs font-light text-muted-foreground line-through">
-                                ₹{product.compareAtPrice.toLocaleString('en-IN')}
-                              </span>
-                            )}
                           </div>
                         </div>
                       </Link>

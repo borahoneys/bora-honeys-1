@@ -16,7 +16,6 @@ interface ProductData {
   slug?: string
   description: string
   price: string
-  compareAtPrice: string
   stock: string
   sku: string
   color: string
@@ -47,7 +46,7 @@ function toSlug(name: string) {
 }
 
 const empty: ProductData = {
-  name: '', description: '', price: '', compareAtPrice: '', stock: '0', sku: '',
+  name: '', description: '', price: '', stock: '0', sku: '',
   color: '', styleCode: '', numberOfPieces: '', composition: '',
   keyFeatures: '', careInstructions: '', deliveryTimeline: '',
   images: [], categories: [], tags: '', isActive: true, isFeatured: false,
@@ -63,7 +62,6 @@ function fromApi(p: Record<string, unknown>): ProductData {
     slug: String(p.slug ?? ''),
     description: String(p.description ?? ''),
     price: String(p.price ?? ''),
-    compareAtPrice: p.compareAtPrice ? String(p.compareAtPrice) : '',
     stock: String(p.stock ?? 0),
     sku: String(p.sku ?? ''),
     color: String(p.color ?? ''),
@@ -183,7 +181,6 @@ export default function ProductForm({ productId }: { productId?: string }) {
         name: data.name.trim(),
         description: data.description.trim(),
         price,
-        compareAtPrice: data.compareAtPrice ? parseFloat(data.compareAtPrice) : undefined,
         stock: parseInt(data.stock) || 0,
         sku: data.sku.trim() || undefined,
         color: data.color.trim() || undefined,
@@ -284,17 +281,6 @@ export default function ProductForm({ productId }: { productId?: string }) {
                   step={0.01}
                   value={data.price}
                   onChange={e => set('price', e.target.value)}
-                  placeholder="0.00"
-                  className={inputCls}
-                />
-              </Field>
-              <Field label="Compare at Price (₹)">
-                <input
-                  type="number"
-                  min={0}
-                  step={0.01}
-                  value={data.compareAtPrice}
-                  onChange={e => set('compareAtPrice', e.target.value)}
                   placeholder="0.00"
                   className={inputCls}
                 />
