@@ -39,7 +39,7 @@ const atelierInfo = {
   phone: '+91 9138881112',
   email: 'info@borahoneys.com',
   hours: {
-    weekdays: '11:00 AM - 9:00 PM',
+    weekdays: '11:00 AM - 8:00 PM',
     sunday: 'Closed',
     note: 'By Appointment Only',
   },
