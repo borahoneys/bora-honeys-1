@@ -355,7 +355,7 @@ export default function LegalDisputeResolutionPage() {
                 <p><span className="text-white/50">Legal Notices:</span> notices@borahoneys.in</p>
                 <p><span className="text-white/50">Privacy:</span> privacy@borahoneys.in</p>
                 <p><span className="text-white/50">Phone:</span> +91 8570873934</p>
-                <p><span className="text-white/50">Support Hours:</span> Monday to Sunday, 10:00 AM to 6:00 PM</p>
+                <p><span className="text-white/50">Support Hours:</span> Monday to Sunday, 11:00 AM to 6:00 PM</p>
               </div>
               <p>10.2 The Grievance Officer&apos;s name and contact details must be displayed prominently on the Website and must be updated promptly if there is any change in the designated officer.</p>
             </div>
