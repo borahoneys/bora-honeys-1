@@ -165,6 +165,7 @@ const ProductInfo = ({ productId, name, price, color, styleCode, numberOfPieces,
           </div>
         )}
 
+        {/* TEMP: add to bag button hidden
         <Button
           disabled={stock === 0 || isAdding}
           onClick={handleAddToBag}
@@ -176,6 +177,7 @@ const ProductInfo = ({ productId, name, price, color, styleCode, numberOfPieces,
         {addError && (
           <p className="text-xs text-destructive">{addError}</p>
         )}
+        */}
 
         <Button
           asChild

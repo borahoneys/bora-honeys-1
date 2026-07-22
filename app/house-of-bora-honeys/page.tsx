@@ -51,7 +51,7 @@ export default function HouseOfBoraHoneysPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] md:min-h-[85vh] w-full overflow-hidden border-b border-primary/15">
-        <ComingSoonPlaceholder className="absolute inset-0" />
+        {/* <ComingSoonPlaceholder className="absolute inset-0" /> */}
         {/* <div className="absolute inset-0 bg-linear-to-r from-background via-background/70 to-transparent" /> */}
         <div className="relative h-full flex items-center px-6 md:px-16 pb-24 pt-56">
           <div className="max-w-xl space-y-6">

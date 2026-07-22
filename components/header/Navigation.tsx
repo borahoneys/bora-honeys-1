@@ -168,6 +168,7 @@ const Navigation = () => {
           >
             <User size={20} strokeWidth={1.5} />
           </Link>
+          {/* TEMP: cart icon hidden
           <button
             className="p-2 text-foreground hover:text-primary transition-colors duration-200 relative"
             aria-label="Shopping bag"
@@ -182,6 +183,7 @@ const Navigation = () => {
               </span>
             )}
           </button>
+          */}
         </div>
       </div>
 
@@ -235,6 +237,7 @@ const Navigation = () => {
           >
             <User size={20} strokeWidth={1.5} />
           </Link>
+          {/* TEMP: cart icon hidden
           <button
             className="p-2 text-foreground hover:text-primary transition-colors duration-200 relative"
             aria-label="Shopping bag"
@@ -249,6 +252,7 @@ const Navigation = () => {
               </span>
             )}
           </button>
+          */}
         </div>
       </div>
 

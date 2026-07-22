@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { MapPin, Phone, Mail,  } from "lucide-react";
+import { MapPin, Phone, Mail, } from "lucide-react";
 
 const PinterestIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
@@ -46,14 +46,15 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
                 <div className="flex flex-col gap-1">
-                  <a href="tel:+919138881114" className="text-sm font-light text-white/80 hover:text-primary transition-colors duration-300">
-                    +91 9138881114
-                  </a>
+
                   <a href="tel:+919138881112" className="text-sm font-light text-white/80 hover:text-primary transition-colors duration-300">
                     +91 9138881112
                   </a>
                   <a href="tel:+919138881113" className="text-sm font-light text-white/80 hover:text-primary transition-colors duration-300">
                     +91 9138881113
+                  </a>
+                  <a href="tel:+919138881114" className="text-sm font-light text-white/80 hover:text-primary transition-colors duration-300">
+                    +91 9138881114
                   </a>
                 </div>
               </li>
