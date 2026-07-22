@@ -243,7 +243,7 @@ export default function HouseOfBoraHoneysPage() {
                   <p className="text-xs text-muted-foreground tracking-[0.15em] uppercase">Opening Hours</p>
                   <div className="space-y-2 text-sm font-light text-white/70">
                     <div className="flex justify-between">
-                      <span>Monday – Saturday</span>
+                      <span>Monday – Sunday</span>
                       <span>{atelierInfo.hours.weekdays}</span>
                     </div>
                     <div className="flex justify-between">

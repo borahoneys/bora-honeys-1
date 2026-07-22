@@ -305,7 +305,7 @@ export default function ContactUsPage() {
                             <div className="space-y-4">
                                 <p className="text-[10px] tracking-[0.4em] uppercase text-primary">Hours</p>
                                 <p className="text-sm font-light text-white/70 leading-relaxed">
-                                    Monday – Saturday<br />
+                                    Monday – Sunday<br />
                                     11:00 AM – 8:00 PM IST
                                 </p>
                             </div>
