@@ -15,7 +15,7 @@ const sections = [
 const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
     <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
-    <p><span className="text-white/60">Registered Address:</span> SCO 404, Second Floor, Mugal Canal, Karnal, Haryana 132001, India</p>
+    <p><span className="text-white/60">Registered Address:</span> Coming Soon</p>
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
       <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;

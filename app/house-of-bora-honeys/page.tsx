@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
-import PlaceholderImage from '@/app/bespoke-couture/_components/PlaceholderImage'
+import ComingSoonPlaceholder from '@/app/house-of-bora-honeys/_components/ComingSoonPlaceholder'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -35,10 +35,9 @@ const experiences = [
 
 const atelierInfo = {
   name: 'BORA HONEYS COUTURE ATELIER',
-  address: '7th Floor, Times Square Building, Mumbai, Mumbai-East, Mumbai 400090, India',
-  phone: '+91 8098 31000',
-  email: 'atelier@borahoneys.com',
-  whatsapp: 'WhatsApp Us',
+  address: 'Coming Soon',
+  phone: '+91 9138881112',
+  email: 'info@borahoneys.com',
   hours: {
     weekdays: '11:00 AM - 7:00 PM',
     sunday: 'Closed',
@@ -53,12 +52,12 @@ export default function HouseOfBoraHoneysPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] md:min-h-[85vh] w-full overflow-hidden border-b border-primary/15">
-        <PlaceholderImage className="absolute inset-0" alt="Bora Honeys Atelier" priority />
-        <div className="absolute inset-0 bg-linear-to-r from-background via-background/70 to-transparent" />
-        <div className="relative h-full flex items-center px-6 md:px-16 py-24">
+        <ComingSoonPlaceholder className="absolute inset-0" />
+        {/* <div className="absolute inset-0 bg-linear-to-r from-background via-background/70 to-transparent" /> */}
+        <div className="relative h-full flex items-center px-6 md:px-16 pb-24 pt-56">
           <div className="max-w-xl space-y-6">
             <h1 className="text-4xl md:text-6xl font-light tracking-widest uppercase text-foreground">
-              House of Bora Honeys
+              House of Bora Honey's
             </h1>
             <p className="text-primary text-sm tracking-[0.35em] uppercase">Where Every Creation Begins.</p>
             <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed">
@@ -96,7 +95,7 @@ export default function HouseOfBoraHoneysPage() {
             </p>
           </div>
           <div className="relative aspect-4/3">
-            <PlaceholderImage className="absolute inset-0" alt="Bora Honeys Atelier interior" />
+            <ComingSoonPlaceholder className="absolute inset-0" />
           </div>
         </div>
 
@@ -104,7 +103,7 @@ export default function HouseOfBoraHoneysPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px border border-primary/15">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="relative aspect-3/4 bg-background">
-              <PlaceholderImage className="absolute inset-0" alt={`Atelier detail ${i}`} />
+              <ComingSoonPlaceholder className="absolute inset-0" />
             </div>
           ))}
         </div>
@@ -156,14 +155,7 @@ export default function HouseOfBoraHoneysPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className={`relative aspect-3/4 group ${i === 1 ? 'md:col-span-1 md:row-span-2' : ''}`}>
-              <PlaceholderImage className="absolute inset-0" alt={`Atelier process ${i}`} />
-              {i === 2 && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                  <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center cursor-pointer hover:border-accent transition-colors">
-                    <div className="w-0 h-0 border-l-8 border-l-primary border-t-5 border-t-transparent border-b-5 border-b-transparent ml-1" />
-                  </div>
-                </div>
-              )}
+              <ComingSoonPlaceholder className="absolute inset-0" />
             </div>
           ))}
         </div>
@@ -185,7 +177,7 @@ export default function HouseOfBoraHoneysPage() {
               </div>
             </div>
             <div className="relative aspect-3/4 md:aspect-auto border-t border-primary/15 md:border-t-0 md:border-l md:border-primary/15">
-              <PlaceholderImage className="absolute inset-0" alt="Founder portrait" />
+              <ComingSoonPlaceholder className="absolute inset-0" />
             </div>
           </div>
         </div>
@@ -244,10 +236,6 @@ export default function HouseOfBoraHoneysPage() {
                       <span>✉</span>
                       <span>{atelierInfo.email}</span>
                     </a>
-                    <a href="#" className="flex items-center gap-3 text-sm font-light text-white/70 hover:text-primary transition-colors">
-                      <span>💬</span>
-                      <span>{atelierInfo.whatsapp}</span>
-                    </a>
                   </div>
                 </div>
 
@@ -272,7 +260,7 @@ export default function HouseOfBoraHoneysPage() {
 
             {/* Map Placeholder */}
             <div className="relative aspect-4/3 md:aspect-auto md:min-h-125 border border-primary/15">
-              <PlaceholderImage className="absolute inset-0" alt="Atelier location map" />
+              <ComingSoonPlaceholder className="absolute inset-0" />
             </div>
           </div>
         </div>
@@ -290,7 +278,7 @@ export default function HouseOfBoraHoneysPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-px border border-primary/15">
           {[1, 2, 3, 4, 5, 6, 7].map((i) => (
             <div key={i} className="relative aspect-square bg-background">
-              <PlaceholderImage className="absolute inset-0" alt={`Journey moment ${i}`} />
+              <ComingSoonPlaceholder className="absolute inset-0" />
             </div>
           ))}
         </div>
