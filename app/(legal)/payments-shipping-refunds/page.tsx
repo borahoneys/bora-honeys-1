@@ -3,8 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Payments, Shipping & Refunds | Bora Honey\'s',
-  description: 'Payment, Shipping, Cancellation, Refund, Return & Exchange, Fraud Prevention, and GST policies for Bora Honey\'s.',
+  title: 'Payments, Shipping & Refunds | BORA HONEY\'S',
+  description: 'Payment, Shipping, Cancellation, Refund, Return & Exchange, Fraud Prevention, and GST policies for BORA HONEY\'S.',
 }
 
 const sections = [
@@ -19,7 +19,7 @@ const sections = [
 
 const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
-    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
+    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> BORA HONEY&apos;S</p>
     <p><span className="text-white/60">Registered Address:</span> Coming Soon</p>
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
@@ -109,7 +109,7 @@ export default function PaymentsShippingRefundsPage() {
 
               <h3>5. Chargebacks and Payment Reversals</h3>
               <p>5.1 You agree not to initiate a chargeback or payment reversal for any legitimate transaction unless you have first raised the matter with us and we have failed to respond within a reasonable period.</p>
-              <p>5.2 Raising a chargeback or payment reversal in respect of a legitimately completed transaction, where the Product has been delivered as described, is inconsistent with the terms of purchase. Bora Honey&apos;s maintains comprehensive records of all transactions, delivery confirmations, and communications and reserves all legal rights and remedies available under applicable law in such circumstances.</p>
+              <p>5.2 Raising a chargeback or payment reversal in respect of a legitimately completed transaction, where the Product has been delivered as described, is inconsistent with the terms of purchase. BORA HONEY&apos;S maintains comprehensive records of all transactions, delivery confirmations, and communications and reserves all legal rights and remedies available under applicable law in such circumstances.</p>
 
               <h3>6. Pricing Errors</h3>
               <p>6.1 We reserve the right to correct pricing errors at any time. We are not obligated to honour Orders placed at manifestly erroneous prices and may cancel such Orders with a full refund.</p>
@@ -131,7 +131,7 @@ export default function PaymentsShippingRefundsPage() {
               <h3>1. Domestic Shipping</h3>
               <p>1.1 We currently ship all Products within India. Estimated dispatch timelines are communicated in the Order Confirmation and are indicative only. Timelines may vary based on the nature of the Product, delivery location, and logistical conditions.</p>
               <p>1.2 For handcrafted or made-to-order Products, additional production time is required before dispatch. The estimated production and dispatch timeline will be specified in the Order Confirmation.</p>
-              <p>1.3 Estimated dispatch and delivery timelines are indicative only and should not be treated as guaranteed delivery commitments unless expressly confirmed in writing by Bora Honey&apos;s. Users are strongly advised not to schedule fittings, travel, photography sessions, bridal ceremonies, or any time-sensitive event in immediate proximity to the estimated delivery date. Bora Honey&apos;s shall not be liable for any consequential loss, including event disruption, arising from reliance on estimated delivery timelines.</p>
+              <p>1.3 Estimated dispatch and delivery timelines are indicative only and should not be treated as guaranteed delivery commitments unless expressly confirmed in writing by BORA HONEY&apos;S. Users are strongly advised not to schedule fittings, travel, photography sessions, bridal ceremonies, or any time-sensitive event in immediate proximity to the estimated delivery date. BORA HONEY&apos;S shall not be liable for any consequential loss, including event disruption, arising from reliance on estimated delivery timelines.</p>
               <p>1.4 If a firm delivery deadline is required, it must be communicated to us in writing at the time of Order placement, and we must expressly confirm in writing that such deadline can be accommodated. Verbal or informal commitments regarding delivery dates will not be binding.</p>
               <p>1.5 Shipping charges, if applicable, will be disclosed at checkout before payment is completed.</p>
 
@@ -146,11 +146,11 @@ export default function PaymentsShippingRefundsPage() {
               <p>2.2 We advise Users not to accept delivery of any parcel that appears visibly damaged, tampered with, or improperly sealed. In such cases, the User should refuse delivery and contact us immediately at orders@borahoneys.in.</p>
 
               <h3>3. Risk Transfer</h3>
-              <p>3.1 Risk of loss, damage, or destruction transfers from Bora Honey&apos;s to the User upon physical delivery of the Product and execution of the OTP confirmation or signed delivery acknowledgement. Following such confirmation, Bora Honey&apos;s bears no liability for loss, theft, or damage to the Product.</p>
+              <p>3.1 Risk of loss, damage, or destruction transfers from BORA HONEY&apos;S to the User upon physical delivery of the Product and execution of the OTP confirmation or signed delivery acknowledgement. Following such confirmation, BORA HONEY&apos;S bears no liability for loss, theft, or damage to the Product.</p>
 
               <h3>4. Courier Liability and Insurance</h3>
               <p>4.1 We take reasonable precautions in selecting and engaging reputable, insured courier partners. All high-value shipments are dispatched with transit insurance coverage.</p>
-              <p>4.2 In the event of loss or damage in transit before delivery, Bora Honey&apos;s will reasonably assist the User in initiating an insurance claim with the courier. Any compensation payable to the User will reflect the amount recoverable under the courier&apos;s insurance, subject to applicable policy caps and applicable law. We will not charge the User for our reasonable assistance in this process.</p>
+              <p>4.2 In the event of loss or damage in transit before delivery, BORA HONEY&apos;S will reasonably assist the User in initiating an insurance claim with the courier. Any compensation payable to the User will reflect the amount recoverable under the courier&apos;s insurance, subject to applicable policy caps and applicable law. We will not charge the User for our reasonable assistance in this process.</p>
               <p>4.3 We shall not be liable for delays caused by the courier following dispatch, provided we have fulfilled our own dispatch obligations.</p>
 
               <h3>5. Failed and Refused Delivery</h3>
@@ -159,7 +159,7 @@ export default function PaymentsShippingRefundsPage() {
 
               <h3>6. International Shipping</h3>
               <p>6.1 International shipping is not currently offered as a standard service. International Orders may be considered on a case-by-case basis. Where accepted, applicable terms including shipping charges, customs duties, estimated timelines, and insurance will be confirmed in writing before Order confirmation.</p>
-              <p>6.2 All customs duties, import taxes, and other levies in the destination country are the sole responsibility of the User. Bora Honey&apos;s is not liable for delays, seizures, or additional costs arising from customs procedures in any jurisdiction.</p>
+              <p>6.2 All customs duties, import taxes, and other levies in the destination country are the sole responsibility of the User. BORA HONEY&apos;S is not liable for delays, seizures, or additional costs arising from customs procedures in any jurisdiction.</p>
             </div>
 
             <LegalFooter />
@@ -173,7 +173,7 @@ export default function PaymentsShippingRefundsPage() {
 
             <div className="prose-legal">
               <p>
-                Due to the made-to-order, handcrafted, and luxury nature of our Products, Bora Honey&apos;s follows
+                Due to the made-to-order, handcrafted, and luxury nature of our Products, BORA HONEY&apos;S follows
                 a highly restrictive cancellation framework. Please review your Order carefully before completing payment.
               </p>
 
@@ -197,7 +197,7 @@ export default function PaymentsShippingRefundsPage() {
               <h3>4. Pre-Order Cancellations</h3>
               <p>4.1 Orders placed for Pre-Order Products are subject to the Pre-Order Policy published on the Website at the time of purchase, which governs cancellation rights in respect of such Orders.</p>
 
-              <h3>5. Cancellation by Bora Honey&apos;s</h3>
+              <h3>5. Cancellation by BORA HONEY&apos;S</h3>
               <p>5.1 We may cancel any Order in circumstances including: pricing errors; Product unavailability; suspected fraud; failed identity verification; infeasibility of delivery to the specified address; or User breach of these Terms. We will notify the User promptly and process a full refund within 14 business days.</p>
             </div>
 
@@ -212,7 +212,7 @@ export default function PaymentsShippingRefundsPage() {
 
             <div className="prose-legal">
               <p>
-                Due to the made-to-order, handcrafted, and luxury nature of our Products, Bora Honey&apos;s follows
+                Due to the made-to-order, handcrafted, and luxury nature of our Products, BORA HONEY&apos;S follows
                 a highly restrictive refund framework. All statutory rights available to consumers under applicable
                 law, including under the Consumer Protection Act, 2019, are preserved.
               </p>
@@ -255,7 +255,7 @@ export default function PaymentsShippingRefundsPage() {
 
             <div className="prose-legal">
               <p>
-                Due to the made-to-order, handcrafted, and luxury nature of our Products, Bora Honey&apos;s follows
+                Due to the made-to-order, handcrafted, and luxury nature of our Products, BORA HONEY&apos;S follows
                 a highly restrictive return and exchange framework. All statutory rights available to consumers
                 under applicable law are preserved.
               </p>
@@ -267,7 +267,7 @@ export default function PaymentsShippingRefundsPage() {
               <h3>2. No Exchange Policy</h3>
               <p>2.1 Exchanges are not offered for a different size, colour, Product, or value equivalent, subject always to applicable consumer protection law, including the Consumer Protection Act, 2019.</p>
               <p>2.2 We strongly encourage Users to review the Product description, size guide, and Disclaimer before placing an Order. Pre-Order sizing consultations are available at orders@borahoneys.in. Size selection errors by the User do not constitute grounds for any remedy.</p>
-              <p>2.3 In exceptional circumstances, and at our discretion, we may agree to an exchange arrangement. Any such arrangement will be confirmed in writing and subject to separate agreed terms. No exchange right shall be inferred from any communication unless confirmed in writing by Bora Honey&apos;s.</p>
+              <p>2.3 In exceptional circumstances, and at our discretion, we may agree to an exchange arrangement. Any such arrangement will be confirmed in writing and subject to separate agreed terms. No exchange right shall be inferred from any communication unless confirmed in writing by BORA HONEY&apos;S.</p>
 
               <h3>3. Defective or Incorrect Product</h3>
               <p>3.1 Where a Product is defective in a manner constituting a deficiency in service under the Consumer Protection Act, 2019, or where an incorrect Product has been delivered, the User may raise a claim under our Refund Policy above. Such claims are governed exclusively by the Refund Policy.</p>
@@ -287,7 +287,7 @@ export default function PaymentsShippingRefundsPage() {
 
             <div className="prose-legal">
               <h3>1. Fraud Screening</h3>
-              <p>1.1 Bora Honey&apos;s screens all Orders for indicators of fraud, identity theft, unauthorised payment instrument use, and suspicious transactional patterns. This applies particularly to high-value Orders.</p>
+              <p>1.1 BORA HONEY&apos;S screens all Orders for indicators of fraud, identity theft, unauthorised payment instrument use, and suspicious transactional patterns. This applies particularly to high-value Orders.</p>
               <p>1.2 Fraud screening may include: automated checks by our payment gateway; manual review; billing and delivery address verification; contact detail cross-referencing; and Order history review.</p>
 
               <h3>2. Identity Verification</h3>
@@ -302,7 +302,7 @@ export default function PaymentsShippingRefundsPage() {
               <p>4.1 Initiating a chargeback for a legitimately delivered Product constitutes chargeback fraud. We maintain full documentary records of all transactions, communications, and delivery confirmations and reserve all rights and remedies available under applicable law in such circumstances.</p>
 
               <h3>5. Cooperation with Authorities</h3>
-              <p>5.1 Bora Honey&apos;s reserves the right to report instances of suspected fraud to relevant law enforcement and financial regulatory authorities and will cooperate with any resulting investigation as required by law.</p>
+              <p>5.1 BORA HONEY&apos;S reserves the right to report instances of suspected fraud to relevant law enforcement and financial regulatory authorities and will cooperate with any resulting investigation as required by law.</p>
             </div>
 
             <LegalFooter />

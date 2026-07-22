@@ -9,6 +9,7 @@ export interface ICollection extends Document {
   video?: { url: string; publicId: string }
   products: mongoose.Types.ObjectId[]
   isActive: boolean
+  comingSoon: boolean
   createdAt: Date
   updatedAt: Date
 }
@@ -29,6 +30,7 @@ const CollectionSchema = new Schema<ICollection>(
     },
     products: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
     isActive: { type: Boolean, default: true },
+    comingSoon: { type: Boolean, default: false },
   },
   { timestamps: true }
 )

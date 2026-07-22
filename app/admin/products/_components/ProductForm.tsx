@@ -339,7 +339,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
               <Textarea
                 value={data.careInstructions}
                 onChange={e => set('careInstructions', e.target.value)}
-                placeholder={"Couture Dry Clean only; do not wash at home.\nStore in a poly bag inside the Bora Honey's branded bag."}
+                placeholder={"Couture Dry Clean only; do not wash at home.\nStore in a poly bag inside the BORA HONEY'S branded bag."}
                 rows={4}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />
@@ -382,7 +382,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
               <Textarea
                 value={data.craftsmanship}
                 onChange={e => set('craftsmanship', e.target.value)}
-                placeholder={"Entirely handcrafted by Bora Honeys artisans\nCouture construction with luxury finishing\nPremium embellishments individually hand applied"}
+                placeholder={"Entirely handcrafted by BORA HONEY'S artisans\nCouture construction with luxury finishing\nPremium embellishments individually hand applied"}
                 rows={4}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />
@@ -402,7 +402,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
               <Textarea
                 value={data.bespokeCustomisation}
                 onChange={e => set('bespokeCustomisation', e.target.value)}
-                placeholder="Every Bora Honeys Couture creation can be customised to your measurements and styling preferences through our Bespoke Couture service."
+                placeholder="Every BORA HONEY'S Couture creation can be customised to your measurements and styling preferences through our Bespoke Couture service."
                 rows={3}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />
@@ -412,7 +412,7 @@ export default function ProductForm({ productId }: { productId?: string }) {
               <Textarea
                 value={data.collectionStory}
                 onChange={e => set('collectionStory', e.target.value)}
-                placeholder="REBIRTH is Bora Honeys Couture's 2026 collection—an exploration of transformation, strength and timeless femininity."
+                placeholder="REBIRTH is BORA HONEY'S Couture's 2026 collection—an exploration of transformation, strength and timeless femininity."
                 rows={3}
                 className="w-full bg-background border border-border text-foreground text-sm font-light px-3 py-2 outline-none focus:border-primary/50 placeholder:text-muted-foreground/40 resize-none rounded-none"
               />

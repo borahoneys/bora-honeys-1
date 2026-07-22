@@ -3,8 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Bora Honey\'s',
-  description: 'Terms of Use, Terms of Sale, Made-to-Order Policy, Pre-Order Policy, Alteration Policy, Product Disclaimer and Website Disclaimer for Bora Honey\'s.',
+  title: 'Terms & Conditions | BORA HONEY\'S',
+  description: 'Terms of Use, Terms of Sale, Made-to-Order Policy, Pre-Order Policy, Alteration Policy, Product Disclaimer and Website Disclaimer for BORA HONEY\'S.',
 }
 
 const sections = [
@@ -19,7 +19,7 @@ const sections = [
 
 const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
-    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
+    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> BORA HONEY&apos;S</p>
     <p><span className="text-white/60">Registered Address:</span> Coming Soon</p>
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
@@ -45,7 +45,7 @@ export default function TermsAndConditionsPage() {
         </h1>
         <p className="mt-5 text-sm text-white/50 font-light max-w-xl mx-auto leading-relaxed">
           This page consolidates all policies governing your access to, browsing of, and purchase of
-          Products through the Bora Honey&apos;s website. Last Updated: 18 June 2026.
+          Products through the BORA HONEY&apos;S website. Last Updated: 18 June 2026.
         </p>
       </div>
 
@@ -96,7 +96,7 @@ export default function TermsAndConditionsPage() {
               <p>
                 This Terms of Use (&ldquo;Policy&rdquo;) is published by SUPERLATIVE GROUP, a company incorporated under the
                 Companies Act, 2013 and registered under the laws of India, operating the luxury couture label
-                &ldquo;Bora Honey&apos;s&rdquo; through its website at www.borahoneys.in (&ldquo;Website&rdquo;). This Policy forms part of
+                &ldquo;BORA HONEY&apos;S&rdquo; through its website at www.borahoneys.in (&ldquo;Website&rdquo;). This Policy forms part of
                 the integrated legal framework governing your access to and use of the Website and the purchase of
                 Products offered thereon.
               </p>
@@ -113,7 +113,7 @@ export default function TermsAndConditionsPage() {
               </p>
 
               <h3>1. Definitions</h3>
-              <p>1.1 &ldquo;Website&rdquo; means the digital platform operated by Bora Honey&apos;s at www.borahoneys.in, including all pages, sub-domains, and mobile-optimised versions.</p>
+              <p>1.1 &ldquo;Website&rdquo; means the digital platform operated by BORA HONEY&apos;S at www.borahoneys.in, including all pages, sub-domains, and mobile-optimised versions.</p>
               <p>1.2 &ldquo;Products&rdquo; means all luxury couture garments, accessories, bridal wear, made-to-order pieces, and any other items offered for sale through the Website.</p>
               <p>1.3 &ldquo;Services&rdquo; means all features and functionalities made available through the Website, including browsing, account creation, purchasing, and customer support.</p>
               <p>1.4 &ldquo;User&rdquo; means any natural person who accesses or uses the Website, whether or not a purchase is made.</p>
@@ -135,17 +135,17 @@ export default function TermsAndConditionsPage() {
               <p>4.2 You must not: (a) use the Website for any unlawful or fraudulent purpose; (b) attempt unauthorised access to any part of the Website or its infrastructure; (c) introduce malicious code of any kind; (d) use automated scraping, crawling, or data-extraction tools; (e) reproduce or commercially exploit any Website content; (f) impersonate any person or entity; (g) interfere with Website performance; or (h) use the Website to collect personal data of other Users.</p>
 
               <h3>5. Communications Consent</h3>
-              <p>5.1 By registering an account or placing an Order, you expressly consent to receive transactional communications from Bora Honey&apos;s via email, SMS, and WhatsApp, including Order confirmations, dispatch notifications, delivery updates, payment receipts, and care instructions. Transactional communications are mandatory and cannot be opted out of while an Order is active.</p>
+              <p>5.1 By registering an account or placing an Order, you expressly consent to receive transactional communications from BORA HONEY&apos;S via email, SMS, and WhatsApp, including Order confirmations, dispatch notifications, delivery updates, payment receipts, and care instructions. Transactional communications are mandatory and cannot be opted out of while an Order is active.</p>
               <p>5.2 Marketing communications, including information about new collections, promotional offers, and editorial content, are optional. You may opt out of marketing communications at any time by following the unsubscribe instructions in any such communication, or by writing to orders@borahoneys.in.</p>
 
               <h3>6. Right to Refuse Service</h3>
-              <p>6.1 Bora Honey&apos;s reserves the right, at its sole discretion and without assigning reasons, to refuse service to any User, decline to accept any Order, cancel a confirmed Order, terminate a consultation, or decline to undertake a custom project, in the following circumstances:</p>
+              <p>6.1 BORA HONEY&apos;S reserves the right, at its sole discretion and without assigning reasons, to refuse service to any User, decline to accept any Order, cancel a confirmed Order, terminate a consultation, or decline to undertake a custom project, in the following circumstances:</p>
               <ul>
                 <li>The User has engaged in abusive, threatening, or harassing conduct towards our team.</li>
                 <li>The User has a history of fraudulent activity, unjustified chargebacks, or policy violations.</li>
                 <li>The Order is suspected to be for commercial resale or other unauthorised purposes.</li>
                 <li>The User has provided false or misleading information.</li>
-                <li>We have reasonable grounds to believe that proceeding with the Order or engagement would expose Bora Honey&apos;s to legal, reputational, or commercial risk.</li>
+                <li>We have reasonable grounds to believe that proceeding with the Order or engagement would expose BORA HONEY&apos;S to legal, reputational, or commercial risk.</li>
               </ul>
 
               <h3>7. Accuracy of Information</h3>
@@ -155,21 +155,21 @@ export default function TermsAndConditionsPage() {
               <p>8.1 The Website may contain links to third-party websites. We do not endorse or assume responsibility for such websites. Your use of any third-party website is entirely at your own risk.</p>
 
               <h3>9. Indemnification</h3>
-              <p>9.1 You agree to indemnify and hold harmless Bora Honey&apos;s, its proprietor, employees, and agents from and against any claims, damages, liabilities, costs, and legal expenses arising out of or in connection with your breach of these Terms, your violation of applicable law, or any content you submit through the Website.</p>
+              <p>9.1 You agree to indemnify and hold harmless BORA HONEY&apos;S, its proprietor, employees, and agents from and against any claims, damages, liabilities, costs, and legal expenses arising out of or in connection with your breach of these Terms, your violation of applicable law, or any content you submit through the Website.</p>
 
               <h3>10. Limitation of Liability</h3>
-              <p>10.1 To the maximum extent permissible under applicable law, Bora Honey&apos;s aggregate liability for any claim shall not exceed the amount paid by you for the specific Order giving rise to such claim. Nothing in these Terms excludes or limits liability to the extent such exclusion or limitation is prohibited by the Consumer Protection Act, 2019 or any other applicable law.</p>
+              <p>10.1 To the maximum extent permissible under applicable law, BORA HONEY&apos;S aggregate liability for any claim shall not exceed the amount paid by you for the specific Order giving rise to such claim. Nothing in these Terms excludes or limits liability to the extent such exclusion or limitation is prohibited by the Consumer Protection Act, 2019 or any other applicable law.</p>
 
               <h3>11. Governing Law and Jurisdiction</h3>
               <p>11.1 These Terms are governed by the laws of India. Subject to the Dispute Resolution and Arbitration Policy, any dispute shall be subject to the exclusive jurisdiction of the courts of New Delhi.</p>
 
               <h3>12. Grievance Officer</h3>
               <p>12.1 Name: Honey Nanda &nbsp;|&nbsp; Designation: Grievance Officer &nbsp;|&nbsp; Email: grievance@borahoneys.in. Grievances will be acknowledged within 48 hours and resolved within 30 days of receipt, in accordance with the Consumer Protection (E-Commerce) Rules, 2020.</p>
-              <p>12.2 For formal legal notices, cease and desist communications, and all formal legal correspondence, please write to: notices@borahoneys.in. Communications sent to any other address will not constitute valid legal notice to Bora Honey&apos;s.</p>
+              <p>12.2 For formal legal notices, cease and desist communications, and all formal legal correspondence, please write to: notices@borahoneys.in. Communications sent to any other address will not constitute valid legal notice to BORA HONEY&apos;S.</p>
 
               <h3>13. Modifications, Severability, and Entire Agreement</h3>
               <p>13.1 We may amend these Terms at any time. Updated Terms take effect upon publication on the Website. Your continued use of the Website constitutes acceptance.</p>
-              <p>13.2 If any provision is found unlawful or unenforceable, it shall be severed without affecting the remainder. These Terms, together with all Policies, constitute the entire agreement between you and Bora Honey&apos;s with respect to your use of the Website.</p>
+              <p>13.2 If any provision is found unlawful or unenforceable, it shall be severed without affecting the remainder. These Terms, together with all Policies, constitute the entire agreement between you and BORA HONEY&apos;S with respect to your use of the Website.</p>
             </div>
 
             <LegalFooter />
@@ -183,7 +183,7 @@ export default function TermsAndConditionsPage() {
 
             <div className="prose-legal">
               <p>
-                These Terms of Sale govern every transaction concluded between Bora Honey&apos;s and a User through
+                These Terms of Sale govern every transaction concluded between BORA HONEY&apos;S and a User through
                 the Website and are to be read with the Terms of Use and all other Policies.
               </p>
 
@@ -211,8 +211,8 @@ export default function TermsAndConditionsPage() {
               <p>5.3 Interstate supplies attract IGST. Intrastate supplies attract CGST and SGST, as applicable under the GST Act, 2017.</p>
 
               <h3>6. Luxury Authentication</h3>
-              <p>6.1 Bora Honey&apos;s guarantees the authenticity of all Products sold through the Website and any other officially authorised sales channel expressly communicated by Bora Honey&apos;s (including authorised trunk shows, exhibitions, pop-up events, or offline appointments confirmed in writing by Bora Honey&apos;s). We do not authenticate, warrant, or assume any responsibility for Products purchased through unauthorised resellers, multi-brand marketplaces, second-hand platforms, or any channel not expressly authorised by us.</p>
-              <p>6.2 Authentic Bora Honey&apos;s Products are available only through the Website and officially authorised channels confirmed in writing by Bora Honey&apos;s. If you encounter Bora Honey&apos;s Products listed on any unauthorised third-party platform or marketplace, please report this to legal@borahoneys.in.</p>
+              <p>6.1 BORA HONEY&apos;S guarantees the authenticity of all Products sold through the Website and any other officially authorised sales channel expressly communicated by BORA HONEY&apos;S (including authorised trunk shows, exhibitions, pop-up events, or offline appointments confirmed in writing by BORA HONEY&apos;S). We do not authenticate, warrant, or assume any responsibility for Products purchased through unauthorised resellers, multi-brand marketplaces, second-hand platforms, or any channel not expressly authorised by us.</p>
+              <p>6.2 Authentic BORA HONEY&apos;S Products are available only through the Website and officially authorised channels confirmed in writing by BORA HONEY&apos;S. If you encounter BORA HONEY&apos;S Products listed on any unauthorised third-party platform or marketplace, please report this to legal@borahoneys.in.</p>
 
               <h3>7. Anti-Reseller and Personal Use</h3>
               <p>7.1 All Products are for the personal, non-commercial use of the purchasing User. Purchase for resale, commercial use, or arbitrage is strictly prohibited and may result in cancellation of the Order and blacklisting of the account.</p>
@@ -222,7 +222,7 @@ export default function TermsAndConditionsPage() {
               <p>8.2 All international transactions are subject to applicable export control and customs laws. The User is responsible for ensuring that the importation of our Products is lawful in their jurisdiction.</p>
 
               <h3>9. Exclusion of Consequential, Event-Related, and Ceremonial Losses</h3>
-              <p>9.1 Bora Honey&apos;s shall not be liable for any indirect, incidental, special, consequential, ceremonial, emotional, reputational, or event-related loss or damage arising from or in connection with any Order, production timeline, delay in delivery, fit dissatisfaction, styling preference, or inability to use a Product for a specific occasion or purpose. Without limiting the generality of the foregoing, this exclusion applies specifically to:</p>
+              <p>9.1 BORA HONEY&apos;S shall not be liable for any indirect, incidental, special, consequential, ceremonial, emotional, reputational, or event-related loss or damage arising from or in connection with any Order, production timeline, delay in delivery, fit dissatisfaction, styling preference, or inability to use a Product for a specific occasion or purpose. Without limiting the generality of the foregoing, this exclusion applies specifically to:</p>
               <ul>
                 <li>Loss or damage arising from a missed, postponed, or disrupted wedding, engagement ceremony, reception, sangeet, mehendi, gala, award function, fashion event, or any other ceremonial or social occasion.</li>
                 <li>Costs arising from cancelled or rescheduled photography sessions, editorial shoots, campaign appearances, media engagements, or destination wedding events.</li>
@@ -232,8 +232,8 @@ export default function TermsAndConditionsPage() {
                 <li>Loss of income, professional opportunity, or commercial engagement.</li>
                 <li>Consequential losses arising from fit dissatisfaction, colour variation, or styling preference that do not constitute a defect under these Terms.</li>
               </ul>
-              <p>9.2 This clause applies whether the loss is foreseeable or not and whether Bora Honey&apos;s has been advised of the possibility of such loss or not.</p>
-              <p>9.3 Users who require a Product for a specific event or occasion are strongly advised to: (a) place their Order well in advance of the event date, allowing reasonable time for production, delivery, and any alterations; (b) obtain written confirmation of the production and delivery timeline from Bora Honey&apos;s before finalising event arrangements; and (c) maintain an independent contingency plan that does not depend solely on the estimated delivery date.</p>
+              <p>9.2 This clause applies whether the loss is foreseeable or not and whether BORA HONEY&apos;S has been advised of the possibility of such loss or not.</p>
+              <p>9.3 Users who require a Product for a specific event or occasion are strongly advised to: (a) place their Order well in advance of the event date, allowing reasonable time for production, delivery, and any alterations; (b) obtain written confirmation of the production and delivery timeline from BORA HONEY&apos;S before finalising event arrangements; and (c) maintain an independent contingency plan that does not depend solely on the estimated delivery date.</p>
               <p>9.4 Nothing in this Clause excludes any liability that cannot be excluded under the Consumer Protection Act, 2019 or other applicable law.</p>
 
               <h3>10. Governing Law</h3>
@@ -255,11 +255,11 @@ export default function TermsAndConditionsPage() {
               <p>1.2 Made-to-order Products are non-returnable, non-exchangeable, and non-cancellable from the moment of Order Confirmation.</p>
 
               <h3>2. Measurement Responsibility and Fit Tolerance</h3>
-              <p>2.1 The User is responsible for providing accurate body measurements using the measurement guide provided by Bora Honey&apos;s. We strongly recommend that measurements be taken by a qualified tailor or trained professional at the time of Order placement.</p>
-              <p>2.2 The User assumes sole responsibility for the accuracy of measurements provided. Fit issues arising from inaccurate, incorrectly recorded, or outdated measurements are not covered under our warranty and do not entitle the User to any remedy, including alteration at Bora Honey&apos;s cost.</p>
+              <p>2.1 The User is responsible for providing accurate body measurements using the measurement guide provided by BORA HONEY&apos;S. We strongly recommend that measurements be taken by a qualified tailor or trained professional at the time of Order placement.</p>
+              <p>2.2 The User assumes sole responsibility for the accuracy of measurements provided. Fit issues arising from inaccurate, incorrectly recorded, or outdated measurements are not covered under our warranty and do not entitle the User to any remedy, including alteration at BORA HONEY&apos;S cost.</p>
               <p>2.3 Couture garments are constructed to the exact measurements provided at the time of Order. Body fluctuations, weight changes, postural changes, or changes in body composition occurring after the measurement date are outside the scope of our production responsibility. Users who anticipate such changes are advised to communicate this at the time of Order placement.</p>
-              <p>2.4 Couture garments are structurally different from stretch or ready-to-wear clothing. Fit expectations based on ready-to-wear sizing, bodycon construction, or stretch fabrics do not apply. Bora Honey&apos;s garments are constructed using structured couture techniques with defined seam allowances, and fit is based on the measurements provided and not on any subjective expectation of stretch, compression, or generic sizing.</p>
-              <p>2.5 Individual body proportions, posture, shoulder slope, hip-to-waist ratio, and torso length may affect the drape and silhouette of a structured garment in ways that cannot be fully accounted for by measurements alone. Bora Honey&apos;s accepts no liability for fit variations attributable to individual body proportions not separately communicated at the time of Order.</p>
+              <p>2.4 Couture garments are structurally different from stretch or ready-to-wear clothing. Fit expectations based on ready-to-wear sizing, bodycon construction, or stretch fabrics do not apply. BORA HONEY&apos;S garments are constructed using structured couture techniques with defined seam allowances, and fit is based on the measurements provided and not on any subjective expectation of stretch, compression, or generic sizing.</p>
+              <p>2.5 Individual body proportions, posture, shoulder slope, hip-to-waist ratio, and torso length may affect the drape and silhouette of a structured garment in ways that cannot be fully accounted for by measurements alone. BORA HONEY&apos;S accepts no liability for fit variations attributable to individual body proportions not separately communicated at the time of Order.</p>
               <p>2.6 A garment measurement tolerance of plus or minus 1.5 centimetres is standard for handcrafted couture production and does not constitute a defect or grounds for any claim.</p>
 
               <h3>3. Production Timelines</h3>
@@ -307,7 +307,7 @@ export default function TermsAndConditionsPage() {
 
               <h3>5. Cancellation of Pre-Orders</h3>
               <p>5.1 Pre-orders may be cancelled by the User within 48 hours of placement, subject to a cancellation fee of 25% of the Order value. After 48 hours, pre-orders are non-cancellable as production planning and material sourcing are initiated.</p>
-              <p>5.2 Bora Honey&apos;s reserves the right to cancel a pre-order and issue a full refund in the event of production infeasibility, material unavailability, or other circumstances beyond our reasonable control.</p>
+              <p>5.2 BORA HONEY&apos;S reserves the right to cancel a pre-order and issue a full refund in the event of production infeasibility, material unavailability, or other circumstances beyond our reasonable control.</p>
 
               <h3>6. Payment</h3>
               <p>6.1 Full payment is required at the time of placing a pre-order. Payment will be held and the garment will enter production at the scheduled commencement date.</p>
@@ -324,7 +324,7 @@ export default function TermsAndConditionsPage() {
 
             <div className="prose-legal">
               <h3>1. Complimentary Alterations</h3>
-              <p>1.1 For made-to-order garments, Bora Honey&apos;s provides one round of complimentary minor alterations within the following scope: standard length adjustments, minor seam adjustments within available seam allowance, and hook-and-eye or closure adjustments. Complimentary alterations must be requested within 7 (seven) days of delivery and are subject to assessment by our team.</p>
+              <p>1.1 For made-to-order garments, BORA HONEY&apos;S provides one round of complimentary minor alterations within the following scope: standard length adjustments, minor seam adjustments within available seam allowance, and hook-and-eye or closure adjustments. Complimentary alterations must be requested within 7 (seven) days of delivery and are subject to assessment by our team.</p>
               <p>1.2 Complimentary alterations are available only where the garment has been produced to the measurements provided by the User at the time of Order. Where fit issues arise from inaccurate measurements provided by the User, alterations will be quoted as paid work.</p>
 
               <h3>2. Paid Alterations</h3>
@@ -336,10 +336,10 @@ export default function TermsAndConditionsPage() {
 
               <h3>4. Shipping for Alteration Returns</h3>
               <p>4.1 For remote alteration requests, the User is responsible for shipping the garment to us in its original or comparable packaging. We recommend insured, tracked shipping. We are not liable for loss or damage in transit to us.</p>
-              <p>4.2 Return shipping of the altered garment to the User will be arranged by Bora Honey&apos;s. The cost of return shipping will be communicated to the User before dispatch and is charged to the User for paid alteration services.</p>
+              <p>4.2 Return shipping of the altered garment to the User will be arranged by BORA HONEY&apos;S. The cost of return shipping will be communicated to the User before dispatch and is charged to the User for paid alteration services.</p>
 
               <h3>5. Third-Party Tailoring</h3>
-              <p>5.1 Bora Honey&apos;s accepts no responsibility or liability for any alteration, modification, or repair carried out by any third-party tailor or alteration service after delivery of the Product. Any alteration by a third party voids any remaining alteration entitlement from Bora Honey&apos;s and shall not constitute grounds for any claim.</p>
+              <p>5.1 BORA HONEY&apos;S accepts no responsibility or liability for any alteration, modification, or repair carried out by any third-party tailor or alteration service after delivery of the Product. Any alteration by a third party voids any remaining alteration entitlement from BORA HONEY&apos;S and shall not constitute grounds for any claim.</p>
 
               <h3>6. Post-Delivery Fit Adjustments</h3>
               <p>6.1 Any fit adjustment request made after delivery must be submitted in writing within 14 (fourteen) days. Requests submitted beyond this period will be assessed at our sole discretion and may be treated as paid alteration work.</p>
@@ -359,7 +359,7 @@ export default function TermsAndConditionsPage() {
               <p>1.1 Product photographs are captured under professional studio lighting. Colour, tone, and saturation may differ from the actual Product due to: monitor calibration and screen resolution differences across devices; studio lighting conditions; the light-absorbing or reflective properties of the fabric, thread, or embellishment; and post-production image editing. Such variations are not defects and do not constitute grounds for any claim.</p>
 
               <h3>2. Handcrafted and Artisanal Variation</h3>
-              <p>2.1 Bora Honey&apos;s Products are crafted using traditional Indian artisanal techniques including hand embroidery, zardozi, zari work, resham embroidery, sequin and bead application, mirror work, block printing, and handloom weaving. The following inherent variations are to be expected and are the hallmark of authentic handcrafted luxury couture:</p>
+              <p>2.1 BORA HONEY&apos;S Products are crafted using traditional Indian artisanal techniques including hand embroidery, zardozi, zari work, resham embroidery, sequin and bead application, mirror work, block printing, and handloom weaving. The following inherent variations are to be expected and are the hallmark of authentic handcrafted luxury couture:</p>
               <ul>
                 <li>Minor irregularities in embroidery stitch density, direction, or spacing.</li>
                 <li>Variation in placement or density of hand-applied embellishments including sequins, beads, mirrors, and pearls.</li>
@@ -374,7 +374,7 @@ export default function TermsAndConditionsPage() {
               <p>2.2 None of the above constitute manufacturing defects. They are inherent and celebrated characteristics of luxury handcrafted production.</p>
 
               <h3>3. Size and Fit</h3>
-              <p>3.1 Size guides are indicative references. Bora Honey&apos;s garments are designed with specific couture proportions that may differ from standard ready-to-wear sizing. Fit is influenced by individual body proportions that cannot be fully accounted for in a size guide.</p>
+              <p>3.1 Size guides are indicative references. BORA HONEY&apos;S garments are designed with specific couture proportions that may differ from standard ready-to-wear sizing. Fit is influenced by individual body proportions that cannot be fully accounted for in a size guide.</p>
               <p>3.2 Slight dimensional deviations of up to 1 to 2 centimetres are within standard tolerance for handcrafted production and are not defects.</p>
               <p>3.3 Pre-Order sizing consultations are available at orders@borahoneys.in. Incorrect size selection is the User&apos;s responsibility and does not constitute grounds for any return, exchange, or refund.</p>
 
@@ -382,7 +382,7 @@ export default function TermsAndConditionsPage() {
               <p>4.1 Luxury couture garments require careful storage. We recommend storing in breathable garment bags away from direct sunlight, humidity, and chemical exposure; avoiding prolonged compression or folding of heavily embellished garments; and keeping garments away from perfume, hairspray, and chemical solvents, which may damage embellishments, dyes, and delicate fabrics.</p>
 
               <h3>5. Bridal and Event Urgency</h3>
-              <p>5.1 Where a Product is intended for a specific event or occasion, the User assumes full responsibility for placing the Order sufficiently in advance to allow for production and delivery. Bora Honey&apos;s does not guarantee delivery by a specific date unless expressly confirmed in writing. We shall not be liable for any loss, inconvenience, or disappointment arising from an Order placed too close to the event date.</p>
+              <p>5.1 Where a Product is intended for a specific event or occasion, the User assumes full responsibility for placing the Order sufficiently in advance to allow for production and delivery. BORA HONEY&apos;S does not guarantee delivery by a specific date unless expressly confirmed in writing. We shall not be liable for any loss, inconvenience, or disappointment arising from an Order placed too close to the event date.</p>
 
               <h3>6. Care Label and Textile Compliance</h3>
               <p>6.1 All Products comply with the Textile (Consumer Protection) Regulations, 1988 and applicable BIS guidelines. Care labels will be affixed to each garment and care instructions will be displayed on the Product page. Please follow care instructions strictly. We bear no liability for damage resulting from improper care.</p>
@@ -423,7 +423,7 @@ export default function TermsAndConditionsPage() {
               <p>6.1 We take reasonable measures to keep the Website secure and free from malicious code. However, we cannot guarantee that the Website is completely virus-free or secure at all times. You are responsible for maintaining appropriate security software on your own device.</p>
 
               <h3>7. Limitation of Liability</h3>
-              <p>7.1 To the maximum extent permissible under applicable law, Bora Honey&apos;s shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of your access to or inability to access the Website or your reliance on any content published thereon. Nothing herein limits any liability that cannot be excluded under the Consumer Protection Act, 2019 or other applicable law.</p>
+              <p>7.1 To the maximum extent permissible under applicable law, BORA HONEY&apos;S shall not be liable for any indirect, incidental, consequential, or punitive damages arising out of your access to or inability to access the Website or your reliance on any content published thereon. Nothing herein limits any liability that cannot be excluded under the Consumer Protection Act, 2019 or other applicable law.</p>
             </div>
 
             <LegalFooter />

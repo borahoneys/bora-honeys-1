@@ -4,7 +4,7 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '404 — Page Not Found | BORA HONEY',
+  title: '404 — Page Not Found | BORA HONEY\'S',
 }
 
 export default function NotFound() {

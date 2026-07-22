@@ -6,9 +6,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Bespoke Couture | BORA HONEYS',
+  title: 'Bespoke Couture | BORA HONEY\'S',
   description:
-    'At Bora Honeys Couture, we believe that true luxury is deeply personal. Our Bespoke Couture service offers an exclusive design experience where every garment is imagined, designed, and handcrafted specifically for you.',
+    'At BORA HONEY\'S Couture, we believe that true luxury is deeply personal. Our Bespoke Couture service offers an exclusive design experience where every garment is imagined, designed, and handcrafted specifically for you.',
 }
 
 // const customisations = [
@@ -151,14 +151,14 @@ export default function BespokeCouturePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
         <div className="relative h-full flex items-center px-6 md:px-16 py-24">
           <div className="max-w-xl space-y-6">
-            <p className="text-primary text-xs tracking-[0.4em] uppercase">Bora Honeys Couture</p>
+            <p className="text-primary text-xs tracking-[0.4em] uppercase">BORA HONEY&apos;S Couture</p>
             <h1 className="text-4xl md:text-6xl font-light tracking-widest uppercase text-foreground">
               Bespoke Couture
             </h1>
             <p className="text-primary text-sm tracking-[0.35em] uppercase">Crafted Exclusively for You</p>
             <div className="space-y-5 text-sm font-light text-white/70 leading-relaxed">
               <p>
-                At Bora Honeys Couture, we believe that true luxury is deeply personal. Every woman is
+                At BORA HONEY&apos;S Couture, we believe that true luxury is deeply personal. Every woman is
                 unique, and her couture should be too.
               </p>
               <p>
@@ -202,7 +202,7 @@ export default function BespokeCouturePage() {
                 decision is thoughtfully guided to create a garment that is uniquely yours.
               </p>
               <p>
-                As each Bora Honeys Couture masterpiece is individually designed and meticulously
+                As each BORA HONEY&apos;S Couture masterpiece is individually designed and meticulously
                 handcrafted, we accept only a limited number of bespoke couture commissions each season.
                 This allows our designer and artisans to dedicate the highest level of craftsmanship,
                 attention, and care to every creation.
@@ -229,13 +229,13 @@ export default function BespokeCouturePage() {
             </h2>
             <div className="w-8 border-t border-primary/40" />
             <div className="space-y-5 text-sm font-light text-white/70 leading-relaxed">
-              <p>Every Bora Honeys Couture creation begins with your vision.</p>
+              <p>Every BORA HONEY&apos;S Couture creation begins with your vision.</p>
               <p>
                 We take the time to understand your personality, aesthetic, event, comfort, and aspirations
                 before transforming your ideas into a one-of-a-kind couture masterpiece.
               </p>
               <p>
-                No two women are alike, which is why no two Bora Honeys Couture creations are ever
+                No two women are alike, which is why no two BORA HONEY&apos;S Couture creations are ever
                 identical.
               </p>
               <p>Every garment is designed exclusively for its wearer and handcrafted with exceptional attention to detail.</p>
@@ -316,7 +316,7 @@ export default function BespokeCouturePage() {
             Couture Requires Time
           </h2>
           <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed text-left sm:text-center">
-            <p>Each Bora Honeys Couture creation is handcrafted exclusively for one woman.</p>
+            <p>Each BORA HONEY&apos;S Couture creation is handcrafted exclusively for one woman.</p>
             <p>
               Thousands of hand-placed embellishments, intricate embroidery, precision tailoring, and
               multiple fittings cannot be replicated through mass production.
@@ -331,7 +331,7 @@ export default function BespokeCouturePage() {
               secure their preferred delivery timeline.
             </p>
             <p>
-              At Bora Honeys Couture, every bespoke creation is meticulously handcrafted and individually
+              At BORA HONEY&apos;S Couture, every bespoke creation is meticulously handcrafted and individually
               developed from concept to completion.
             </p>
             <p>
@@ -377,7 +377,7 @@ export default function BespokeCouturePage() {
               <p className="text-primary text-[10px] tracking-[0.4em] uppercase">Our Promise</p>
               <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed">
                 <p>
-                  Every Bora Honeys Couture creation is handcrafted in limited quantities with exceptional
+                  Every BORA HONEY&apos;S Couture creation is handcrafted in limited quantities with exceptional
                   craftsmanship and meticulous attention to detail.
                 </p>
                 <p>We do not believe in mass production.</p>
@@ -424,7 +424,7 @@ export default function BespokeCouturePage() {
               detail, and the confidence of wearing something created exclusively for you.
             </p>
             <p>
-              Every Bora Honeys Couture masterpiece is handcrafted with passion, perfected through
+              Every BORA HONEY&apos;S Couture masterpiece is handcrafted with passion, perfected through
               artistry, and designed to become a timeless part of your legacy.
             </p>
           </div>
@@ -433,7 +433,7 @@ export default function BespokeCouturePage() {
             One Vision. One Woman. One Masterpiece.
           </p>
           <p className="text-foreground text-lg md:text-xl font-light tracking-[0.15em] uppercase">
-            Welcome to the World of Bora Honeys Couture.
+            Welcome to the World of BORA HONEY&apos;S Couture.
           </p>
         </div>
       </section>

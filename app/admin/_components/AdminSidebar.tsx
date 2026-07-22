@@ -36,14 +36,14 @@ export default function AdminSidebar() {
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.png"
-            alt="Bora Honeys"
+            alt="BORA HONEY'S"
             width={28}
             height={28}
             className="w-7 h-7 object-contain"
           />
           <div>
             <p className="text-[10px] font-light tracking-[0.25em] uppercase text-foreground group-hover:text-primary transition-colors">
-              Bora Honeys
+              BORA HONEY&apos;S
             </p>
             <p className="text-[8px] tracking-widest uppercase text-muted-foreground">Admin Panel</p>
           </div>

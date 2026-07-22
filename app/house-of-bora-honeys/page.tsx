@@ -5,9 +5,9 @@ import ComingSoonPlaceholder from '@/app/house-of-bora-honeys/_components/Coming
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'House of Bora Honeys | BORA HONEYS',
+  title: 'House of BORA HONEY\'S | BORA HONEY\'S',
   description:
-    'Step into the Bora Honeys Atelier, where craftsmanship, artistry, and couture come together. A space dedicated to creating bespoke masterpieces.',
+    'Step into the BORA HONEY\'S Atelier, where craftsmanship, artistry, and couture come together. A space dedicated to creating bespoke masterpieces.',
 }
 
 const experiences = [
@@ -34,12 +34,12 @@ const experiences = [
 ]
 
 const atelierInfo = {
-  name: 'BORA HONEYS COUTURE ATELIER',
+  name: 'BORA HONEY\'S COUTURE ATELIER',
   address: 'Coming Soon',
   phone: '+91 9138881112',
   email: 'info@borahoneys.com',
   hours: {
-    weekdays: '11:00 AM - 7:00 PM',
+    weekdays: '11:00 AM - 9:00 PM',
     sunday: 'Closed',
     note: 'By Appointment Only',
   },
@@ -57,7 +57,7 @@ export default function HouseOfBoraHoneysPage() {
         <div className="relative h-full flex items-center px-6 md:px-16 pb-24 pt-56">
           <div className="max-w-xl space-y-6">
             <h1 className="text-4xl md:text-6xl font-light tracking-widest uppercase text-foreground">
-              House of Bora Honey's
+              House of BORA HONEY&apos;S
             </h1>
             <p className="text-primary text-sm tracking-[0.35em] uppercase">Where Every Creation Begins.</p>
             <div className="space-y-4 text-sm font-light text-white/70 leading-relaxed">
@@ -88,7 +88,7 @@ export default function HouseOfBoraHoneysPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="space-y-5 text-sm font-light text-white/70 leading-relaxed">
             <p>
-              Nestled in an intimate couture space, Bora Honeys Atelier is where dreams are transformed into handcrafted masterpieces. Every appointment is a private experience designed around you, allowing our designers to understand your vision and create patterns that become treasured heirlooms.
+              Nestled in an intimate couture space, BORA HONEY&apos;S Atelier is where dreams are transformed into handcrafted masterpieces. Every appointment is a private experience designed around you, allowing our designers to understand your vision and create patterns that become treasured heirlooms.
             </p>
             <p>
               Every silhouette tells a story, and every embroidery tells a celebration of craft, culture, and the woman who wears it.
@@ -168,11 +168,11 @@ export default function HouseOfBoraHoneysPage() {
             <div className="flex flex-col justify-center p-10 md:p-14 space-y-6">
               <blockquote className="space-y-4">
                 <p className="text-lg md:text-xl font-light text-white/80 leading-relaxed italic">
-                  "Bora Honeys Couture was born from a vision that every woman deserves to wear something designed exclusively for her. Every silhouette, every embroidery tells a story, and every creation is handcrafted to celebrate the woman who wears it."
+                  "BORA HONEY&apos;S Couture was born from a vision that every woman deserves to wear something designed exclusively for her. Every silhouette, every embroidery tells a story, and every creation is handcrafted to celebrate the woman who wears it."
                 </p>
               </blockquote>
               <div className="space-y-1">
-                <p className="text-primary text-sm tracking-[0.2em] uppercase font-normal">Bora Honeys</p>
+                <p className="text-primary text-sm tracking-[0.2em] uppercase font-normal">BORA HONEY&apos;S</p>
                 <p className="text-xs text-muted-foreground tracking-[0.15em] uppercase">Founder & Creative Director</p>
               </div>
             </div>

@@ -17,7 +17,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Collections — Bora Honeys',
+  title: 'Collections — BORA HONEY\'S',
   description: 'Explore our curated collections.',
 }
 

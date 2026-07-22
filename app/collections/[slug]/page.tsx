@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
+import ComingSoonPlaceholder from '@/app/house-of-bora-honeys/_components/ComingSoonPlaceholder'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -50,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const collection = await getCollection(slug)
   if (!collection) return { title: 'Collection Not Found' }
   return {
-    title: `${collection.name} — Bora Honeys`,
+    title: `${collection.name} — BORA HONEY'S`,
     description: collection.description,
   }
 }
@@ -122,15 +123,21 @@ export default async function CollectionPage({ params }: PageProps) {
                 {collection.description}
               </p>
             )}
-            <p className="text-[10px] tracking-widest uppercase text-muted-foreground/40">
-              {products.length} {products.length === 1 ? 'piece' : 'pieces'}
-            </p>
+            {!collection.comingSoon && (
+              <p className="text-[10px] tracking-widest uppercase text-muted-foreground/40">
+                {products.length} {products.length === 1 ? 'piece' : 'pieces'}
+              </p>
+            )}
           </div>
         </section>
 
         {/* Product grid */}
         <div className="max-w-screen-xl mx-auto">
-          {products.length === 0 ? (
+          {collection.comingSoon ? (
+            <div className="py-16 px-6">
+              <ComingSoonPlaceholder className="mx-auto max-w-md aspect-square" />
+            </div>
+          ) : products.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-32 px-6 text-center">
               <p className="text-[11px] tracking-[0.35em] uppercase text-muted-foreground/40 mb-4">
                 No pieces in this collection yet

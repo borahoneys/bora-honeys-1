@@ -8,7 +8,7 @@ import type { Metadata } from 'next'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Bora Honeys | Luxury Indian Couture — New Collection 2026',
+  title: 'BORA HONEY\'S | Luxury Indian Couture — New Collection 2026',
   description:
     'Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.',
 }
@@ -93,7 +93,7 @@ export default async function HomePage() {
                       src={desktop!.url}
                       fill
                       className="object-cover object-top hidden md:block"
-                      alt="Bora Honeys luxury Indian couture — new collection 2026"
+                      alt="BORA HONEY'S luxury Indian couture — new collection 2026"
                       priority={idx === 0}
                       sizes="100vw"
                     />
@@ -101,7 +101,7 @@ export default async function HomePage() {
                       src={mobile!.url}
                       fill
                       className="object-cover object-top md:hidden"
-                      alt="Bora Honeys luxury Indian couture — new collection 2026"
+                      alt="BORA HONEY'S luxury Indian couture — new collection 2026"
                       priority={idx === 0}
                       sizes="100vw"
                     />
@@ -111,7 +111,7 @@ export default async function HomePage() {
                     src={(desktop ?? mobile)!.url}
                     fill
                     className="object-cover object-top"
-                    alt="Bora Honeys luxury Indian couture — new collection 2026"
+                    alt="BORA HONEY'S luxury Indian couture — new collection 2026"
                     priority={idx === 0}
                     sizes="100vw"
                   />

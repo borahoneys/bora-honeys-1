@@ -19,7 +19,7 @@ import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'All Pieces — Bora Honeys',
+  title: 'All Pieces — BORA HONEY\'S',
   description: 'Browse our complete collection of luxury couture pieces. Filter by category, price, and more.',
 }
 

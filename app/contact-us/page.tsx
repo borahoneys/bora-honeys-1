@@ -296,7 +296,7 @@ export default function ContactUsPage() {
                                     rel="noopener noreferrer"
                                     className="text-sm font-light text-white/70 hover:text-primary transition-colors"
                                 >
-                                    +91 85708 73934
+                                    +91 9138881112
                                 </a>
                             </div>
 
@@ -306,7 +306,7 @@ export default function ContactUsPage() {
                                 <p className="text-[10px] tracking-[0.4em] uppercase text-primary">Hours</p>
                                 <p className="text-sm font-light text-white/70 leading-relaxed">
                                     Monday – Saturday<br />
-                                    10:00 AM – 7:00 PM IST
+                                    11:00 AM – 8:00 PM IST
                                 </p>
                             </div>
                         </div>

@@ -20,7 +20,7 @@ const CheckoutHeader = () => {
           <Link href="/" className="absolute left-1/2 transform -translate-x-1/2">
             <img 
               src="/logo.png" 
-              alt="Bora Honey's" 
+              alt="BORA HONEY'S"
               className="h-6 w-auto"
             />
           </Link>

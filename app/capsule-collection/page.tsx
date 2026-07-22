@@ -40,7 +40,7 @@ async function getProducts(productIds: string[]) {
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getEditorialPage('capsule-collection')
   return {
-    title: `${data.title || 'Capsule Collection'} — Bora Honeys`,
+    title: `${data.title || 'Capsule Collection'} — BORA HONEY'S`,
     description: data.description,
   }
 }
@@ -86,11 +86,11 @@ export default async function CapsuleCollectionPage() {
               <section key={idx} className="relative w-screen h-screen overflow-hidden">
                 {hasBoth ? (
                   <>
-                    <Image src={desktop!.url} fill className="object-cover object-top hidden md:block" alt="Bora Honeys Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
-                    <Image src={mobile!.url} fill className="object-cover object-top md:hidden" alt="Bora Honeys Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
+                    <Image src={desktop!.url} fill className="object-cover object-top hidden md:block" alt="BORA HONEY'S Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
+                    <Image src={mobile!.url} fill className="object-cover object-top md:hidden" alt="BORA HONEY'S Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
                   </>
                 ) : (
-                  <Image src={(desktop ?? mobile)!.url} fill className="object-cover object-top" alt="Bora Honeys Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
+                  <Image src={(desktop ?? mobile)!.url} fill className="object-cover object-top" alt="BORA HONEY'S Capsule Collection — bespoke Indian couture" priority={idx === 0} sizes="100vw" />
                 )}
                 {section.button && (
                   <div className="absolute inset-0 flex items-end justify-center pb-20">
@@ -108,7 +108,7 @@ export default async function CapsuleCollectionPage() {
         {/* Page Header */}
         <section className="px-6 py-14 border-b border-border">
           <div className="max-w-4xl">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Bora Honeys</p>
+            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">BORA HONEY&apos;S</p>
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-3">
               {data.title || 'Capsule Collection'}
             </h1>

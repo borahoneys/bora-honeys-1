@@ -24,6 +24,7 @@ interface Collection {
   image?: MediaAsset
   video?: MediaAsset
   isActive: boolean
+  comingSoon: boolean
   products: ProductRef[]
 }
 
@@ -146,6 +147,7 @@ export default function CollectionsPage() {
   const [formDescription, setFormDescription] = useState('')
   const [formImage, setFormImage] = useState<MediaAsset | null>(null)
   const [formVideo, setFormVideo] = useState<MediaAsset | null>(null)
+  const [formComingSoon, setFormComingSoon] = useState(false)
   const [formError, setFormError] = useState('')
 
   // Product search in manage panel
@@ -167,6 +169,7 @@ export default function CollectionsPage() {
     setFormDescription('')
     setFormImage(null)
     setFormVideo(null)
+    setFormComingSoon(false)
     setFormError('')
     setPanel({ type: 'create' })
   }
@@ -177,6 +180,7 @@ export default function CollectionsPage() {
     setFormDescription(col.description ?? '')
     setFormImage(col.image ?? null)
     setFormVideo(col.video ?? null)
+    setFormComingSoon(col.comingSoon ?? false)
     setFormError('')
     setPanel({ type: 'edit', collection: col })
   }
@@ -206,6 +210,7 @@ export default function CollectionsPage() {
           description: formDescription.trim(),
           image: formImage,
           video: formVideo,
+          comingSoon: formComingSoon,
         }),
       })
       const data = await res.json()
@@ -340,7 +345,14 @@ export default function CollectionsPage() {
                       {/* Title row */}
                       <div className="flex items-start justify-between gap-3 mb-3">
                         <div className="min-w-0">
-                          <p className="text-sm font-light text-foreground truncate">{col.name}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="text-sm font-light text-foreground truncate">{col.name}</p>
+                            {col.comingSoon && (
+                              <span className="shrink-0 text-[8px] tracking-widest uppercase text-primary border border-primary/40 px-1.5 py-0.5">
+                                Coming Soon
+                              </span>
+                            )}
+                          </div>
                           <p className="text-[10px] text-muted-foreground/40 mt-0.5">/collection/{col.slug}</p>
                           {col.description && (
                             <p className="text-[11px] text-muted-foreground/70 mt-1.5 line-clamp-2">{col.description}</p>
@@ -473,6 +485,26 @@ export default function CollectionsPage() {
                   />
                 </div>
               </div>
+              <label className="flex items-center justify-between gap-3 py-1 cursor-pointer select-none">
+                <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
+                  Coming Soon
+                </span>
+                <span
+                  onClick={() => setFormComingSoon(v => !v)}
+                  className={`relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors ${
+                    formComingSoon ? 'bg-primary' : 'bg-muted'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-3.5 w-3.5 transform rounded-full bg-background transition-transform ${
+                      formComingSoon ? 'translate-x-[18px]' : 'translate-x-1'
+                    }`}
+                  />
+                </span>
+              </label>
+              <p className="text-[10px] text-muted-foreground/50 -mt-3">
+                When enabled, the collection page shows a "Coming Soon" placeholder instead of its products.
+              </p>
               {formError && (
                 <p className="text-[11px] text-destructive flex items-center gap-1.5">
                   <X className="w-3 h-3" /> {formError}

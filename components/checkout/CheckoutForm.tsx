@@ -78,7 +78,7 @@ export default function CheckoutForm({ userEmail, defaultAddress }: CheckoutForm
         key: createData.keyId,
         amount: createData.amount,
         currency: createData.currency,
-        name: "Bora Honeys",
+        name: "BORA HONEY'S",
         description: "Order Payment",
         order_id: createData.razorpayOrderId,
         prefill: {

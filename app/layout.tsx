@@ -20,13 +20,13 @@ const geomini = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.borahoneys.in"),
   title: {
-    default: "Bora Honeys | Luxury Indian Couture & Bespoke Bridal Wear",
-    template: "%s | Bora Honeys",
+    default: "BORA HONEY'S | Luxury Indian Couture & Bespoke Bridal Wear",
+    template: "%s | BORA HONEY'S",
   },
   description:
-    "Bora Honeys — Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.",
+    "BORA HONEY'S — Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.",
   keywords: [
-    "Bora Honeys",
+    "BORA HONEY'S",
     "luxury Indian couture",
     "bespoke couture",
     "hand embroidered lehenga",
@@ -37,17 +37,17 @@ export const metadata: Metadata = {
     "made in India fashion",
   ],
   openGraph: {
-    title: "Bora Honeys | Luxury Indian Couture & Bespoke Bridal Wear",
+    title: "BORA HONEY'S | Luxury Indian Couture & Bespoke Bridal Wear",
     description:
       "Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.",
     url: "https://www.borahoneys.in",
-    siteName: "Bora Honeys",
+    siteName: "BORA HONEY'S",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bora Honeys | Luxury Indian Couture & Bespoke Bridal Wear",
+    title: "BORA HONEY'S | Luxury Indian Couture & Bespoke Bridal Wear",
     description:
       "Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide.",
   },

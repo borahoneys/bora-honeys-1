@@ -4,15 +4,15 @@ import FounderCarousel from './_components/FounderCarousel'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | BORA HONEY',
-  description: 'Founded by Honey Nanda in 2022, BORA HONEY is a luxury fashion label proudly Made in India, creating couture for the modern woman and the modern Indian bride.',
+  title: 'About Us | BORA HONEY\'S',
+  description: 'Founded by Honey Nanda in 2022, BORA HONEY\'S is a luxury fashion label proudly Made in India, creating couture for the modern woman and the modern Indian bride.',
 }
 
 const pillars = [
   {
     number: '01',
     title: 'Your Design Philosophy',
-    body: 'At BORA HONEY, we believe couture should feel personal. Every silhouette is designed to enhance confidence, movement, and individuality, allowing women to express themselves through fashion while remaining elegant, powerful, and authentic.',
+    body: 'At BORA HONEY\'S, we believe couture should feel personal. Every silhouette is designed to enhance confidence, movement, and individuality, allowing women to express themselves through fashion while remaining elegant, powerful, and authentic.',
   },
   {
     number: '02',
@@ -22,17 +22,17 @@ const pillars = [
   {
     number: '03',
     title: 'Your Signature Aesthetic',
-    body: 'BORA HONEY is known for modern Indian silhouettes, sculpted tailoring, intricate hand embellishments, dramatic details, couture draping, and contemporary glamour that balances sophistication with statement-making design.',
+    body: 'BORA HONEY\'S is known for modern Indian silhouettes, sculpted tailoring, intricate hand embellishments, dramatic details, couture draping, and contemporary glamour that balances sophistication with statement-making design.',
   },
   {
     number: '04',
     title: 'Global Vision',
-    body: 'While proudly rooted in India, BORA HONEY is designed for a global woman. Our creations are worn by clients across different countries, cultures, and celebrations, reflecting the universal language of elegance and craftsmanship.',
+    body: 'While proudly rooted in India, BORA HONEY\'S is designed for a global woman. Our creations are worn by clients across different countries, cultures, and celebrations, reflecting the universal language of elegance and craftsmanship.',
   },
   {
     number: '05',
     title: 'Custom Couture Services',
-    body: 'Alongside seasonal collections, BORA HONEY offers personalized couture experiences, allowing clients to collaborate on silhouettes, colours, embellishments, and details tailored to their vision and occasion.',
+    body: 'Alongside seasonal collections, BORA HONEY\'S offers personalized couture experiences, allowing clients to collaborate on silhouettes, colours, embellishments, and details tailored to their vision and occasion.',
   },
   {
     number: '06',
@@ -59,7 +59,7 @@ export default function AboutUsPage() {
           About Us
         </h1>
         <p className="mt-5 text-sm text-white/50 font-light max-w-xl mx-auto leading-relaxed">
-          Founded by Honey Nanda in 2022, BORA HONEY is a luxury fashion label proudly Made in India,
+          Founded by Honey Nanda in 2022, BORA HONEY'S is a luxury fashion label proudly Made in India,
           creating couture for the modern woman and the modern Indian bride.
         </p>
       </div>
@@ -93,7 +93,7 @@ export default function AboutUsPage() {
                 bring each vision to life.
               </p>
               <p className="text-white/50 italic">
-                This philosophy remains at the heart of BORA HONEY today.
+                This philosophy remains at the heart of BORA HONEY'S today.
               </p>
             </div>
           </div>
@@ -115,23 +115,23 @@ export default function AboutUsPage() {
               bring each vision to life.
             </p>
             <p>
-              This philosophy remains at the heart of BORA HONEY today.
+              This philosophy remains at the heart of BORA HONEY'S today.
             </p>
             <p>
-              Built on a foundation of artistry, innovation, and respect for craftsmanship, BORA HONEY
+              Built on a foundation of artistry, innovation, and respect for craftsmanship, BORA HONEY'S
               specializes in bridal couture, reception wear, cocktail ensembles, sangeet outfits, evening
               wear, and luxury occasion wear. The brand is dedicated to creating pieces that embody timeless
               elegance, sophisticated style, and exceptional attention to detail.
             </p>
             <p>
-              Every BORA HONEY creation is thoughtfully crafted using premium fabrics, modern Indian
+              Every BORA HONEY'S creation is thoughtfully crafted using premium fabrics, modern Indian
               silhouettes, intricate hand embroidery, hand embellishments, and signature 3D couture embroidery
               techniques. We believe true luxury lies in detailed craftsmanship, where every stitch, crystal,
               bead, and embellishment is meticulously applied to create garments that are both distinctive
               and unforgettable.
             </p>
             <p>
-              While our roots are firmly grounded in Indian craftsmanship and heritage, BORA HONEY has grown
+              While our roots are firmly grounded in Indian craftsmanship and heritage, BORA HONEY'S has grown
               into a global couture brand, proudly serving clients around the world. Today, our creations are
               worn by women across continents who appreciate handcrafted luxury, refined aesthetics, and
               contemporary elegance. Our journey reflects a commitment to sharing the beauty of Indian artistry
@@ -144,13 +144,13 @@ export default function AboutUsPage() {
               designed to celebrate confidence, individuality, and personal style.
             </p>
             <p>
-              At BORA HONEY, we are committed to preserving and promoting the value of skilled craftsmanship
+              At BORA HONEY'S, we are committed to preserving and promoting the value of skilled craftsmanship
               while embracing innovation in design. Each collection reflects our dedication to couture, detailed
               artistry, and refined luxury, ensuring every piece becomes part of life&apos;s most meaningful
               celebrations.
             </p>
             <p>
-              Today, BORA HONEY continues to evolve as a luxury fashion house recognized for its handcrafted
+              Today, BORA HONEY'S continues to evolve as a luxury fashion house recognized for its handcrafted
               couture, modern Indian silhouettes, exceptional craftsmanship, and dedication to creating fashion
               that transcends borders.
             </p>
@@ -166,15 +166,15 @@ export default function AboutUsPage() {
 
           <div className="space-y-5 text-sm font-light text-white/75 leading-relaxed">
             <p>
-              At BORA HONEY, we believe in creating fashion that lasts beyond a single occasion. In a world
+              At BORA HONEY'S, we believe in creating fashion that lasts beyond a single occasion. In a world
               of fast-changing trends, we embrace a slow fashion approach, focusing on quality, craftsmanship,
               and timeless design. Our pieces are thoughtfully created to be worn, cherished, and revisited
-              for years to come. Many of our clients continue to wear and preserve their BORA HONEY creations
+              for years to come. Many of our clients continue to wear and preserve their BORA HONEY'S creations
               long after their special occasion, making each garment not just an outfit, but a lasting part
               of their personal journey and memories.
             </p>
             <p>
-              True luxury is timeless. Every BORA HONEY creation is designed with longevity in mind,
+              True luxury is timeless. Every BORA HONEY'S creation is designed with longevity in mind,
               combining exceptional craftsmanship with enduring elegance. Rather than following fleeting
               trends, we create couture that remains relevant and treasured for years. Our garments are often
               preserved as keepsakes and passed through life&apos;s most meaningful celebrations, reflecting our

@@ -20,7 +20,7 @@ export default function LoginForm() {
           Welcome Back
         </p>
         <h1 className="text-2xl font-light tracking-[0.15em] text-foreground uppercase">
-          Bora Honeys
+          BORA HONEY&apos;S
         </h1>
         <div className="mt-3 h-px w-16 mx-auto bg-primary/60" />
       </div>

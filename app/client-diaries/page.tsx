@@ -6,8 +6,8 @@ import { getClientDiaries } from '@/app/actions/client-diaries'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Client Diaries — Bora Honeys',
-  description: 'Stories and experiences from the Bora Honeys family.',
+  title: 'Client Diaries — BORA HONEY\'S',
+  description: 'Stories and experiences from the BORA HONEY\'S family.',
 }
 
 export default async function ClientDiariesPage() {
@@ -21,10 +21,10 @@ export default async function ClientDiariesPage() {
         {/* Page Header */}
         <section className="px-6 py-14 border-b border-border">
           <div className="max-w-4xl">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">Bora Honeys</p>
+            <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">BORA HONEY&apos;S</p>
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-3">Client Diaries</h1>
             <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed">
-              Stories and experiences from the Bora Honeys family — each piece of couture holds a story.
+              Stories and experiences from the BORA HONEY&apos;S family — each piece of couture holds a story.
             </p>
             {entries.length > 0 && (
               <p className="text-[10px] tracking-widest uppercase text-muted-foreground/40 mt-5">

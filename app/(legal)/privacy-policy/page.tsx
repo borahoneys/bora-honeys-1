@@ -3,8 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy & Cookies | Bora Honey\'s',
-  description: 'Privacy Policy and Cookie Policy for Bora Honey\'s — how we collect, store, and protect your personal data.',
+  title: 'Privacy & Cookies | BORA HONEY\'S',
+  description: 'Privacy Policy and Cookie Policy for BORA HONEY\'S — how we collect, store, and protect your personal data.',
 }
 
 const sections = [
@@ -14,7 +14,7 @@ const sections = [
 
 const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
-    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
+    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> BORA HONEY&apos;S</p>
     <p><span className="text-white/60">Registered Address:</span> Coming Soon</p>
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
           Privacy &amp; Cookies
         </h1>
         <p className="mt-5 text-sm text-white/50 font-light max-w-xl mx-auto leading-relaxed">
-          This page consolidates the Privacy Policy and Cookie Policy of Bora Honey&apos;s, describing
+          This page consolidates the Privacy Policy and Cookie Policy of BORA HONEY&apos;S, describing
           how we collect, store, process, use, disclose, and protect personal information, and how
           cookies are used on our Website. Last Updated: 18 June 2026.
         </p>
@@ -144,7 +144,7 @@ export default function PrivacyPolicyPage() {
               <p>7.1 We do not knowingly collect personal information from persons under 18. If we become aware of such collection without appropriate parental consent, we will delete the information promptly.</p>
 
               <h3>8. DPDP Act: Future Compliance and Data Principal Rights</h3>
-              <p>8.1 The Digital Personal Data Protection Act, 2023 (&ldquo;DPDP Act&rdquo;) has received Presidential assent. Its operative provisions and rules are expected to come into force in a phased manner. Once applicable, Bora Honey&apos;s will implement the following mechanisms as required:</p>
+              <p>8.1 The Digital Personal Data Protection Act, 2023 (&ldquo;DPDP Act&rdquo;) has received Presidential assent. Its operative provisions and rules are expected to come into force in a phased manner. Once applicable, BORA HONEY&apos;S will implement the following mechanisms as required:</p>
               <ul>
                 <li>A Consent Manager or equivalent mechanism enabling Data Principals to give, manage, review, and withdraw consent to data processing.</li>
                 <li>A formal Data Principal rights framework covering the right to access, correct, and erase personal data.</li>

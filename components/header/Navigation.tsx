@@ -79,7 +79,7 @@ const Navigation = () => {
       images: [],
     },
     {
-      name: "House of BORA HONEYS",
+      name: "House of BORA HONEY'S",
       href: "/house-of-bora-honeys",
       submenuItems: [],
       images: [],
@@ -100,7 +100,7 @@ const Navigation = () => {
       images: [],
     },
     {
-      name: "BESPOKE COUTURE BY BORA HONEYS",
+      name: "BESPOKE COUTURE BY BORA HONEY'S",
       href: "/bespoke-couture",
       submenuItems: [],
       images: [],
@@ -144,7 +144,7 @@ const Navigation = () => {
           <Link href="/" className="block">
             <img
               src="/logo.png"
-              alt="Bora Honey's"
+              alt="BORA HONEY'S"
               className="h-12 w-auto"
             />
           </Link>
@@ -192,7 +192,7 @@ const Navigation = () => {
           <Link href="/" className="block">
             <img
               src="/logo.png"
-              alt="Bora Honey's"
+              alt="BORA HONEY'S"
               className="h-12 w-auto"
             />
           </Link>

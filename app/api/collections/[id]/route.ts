@@ -23,9 +23,9 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
   await connectDB()
   const { id } = await params
   const body = await request.json()
-  const { name, subheading, description, image, video, isActive, products } = body
+  const { name, subheading, description, image, video, isActive, comingSoon, products } = body
 
-  const update: Record<string, unknown> = { name, subheading, description, image, video, isActive }
+  const update: Record<string, unknown> = { name, subheading, description, image, video, isActive, comingSoon }
   if (Array.isArray(products)) update.products = products
 
   const collection = await Collection.findByIdAndUpdate(id, update, {

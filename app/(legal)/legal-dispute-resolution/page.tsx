@@ -3,8 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Legal & Dispute Resolution | Bora Honey\'s',
-  description: 'Intellectual Property, Social Media, Dispute Resolution, Force Majeure, Care Instructions, and Checkout Consent policies for Bora Honey\'s.',
+  title: 'Legal & Dispute Resolution | BORA HONEY\'S',
+  description: 'Intellectual Property, Social Media, Dispute Resolution, Force Majeure, Care Instructions, and Checkout Consent policies for BORA HONEY\'S.',
 }
 
 const sections = [
@@ -18,7 +18,7 @@ const sections = [
 
 const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
-    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> Bora Honey&apos;s</p>
+    <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> BORA HONEY&apos;S</p>
     <p><span className="text-white/60">Registered Address:</span> Coming Soon</p>
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
@@ -94,23 +94,23 @@ export default function LegalDisputeResolutionPage() {
 
             <div className="prose-legal">
               <h3>1. Ownership</h3>
-              <p>1.1 All intellectual property subsisting in the Bora Honey&apos;s brand and Website is the exclusive property of SUPERLATIVE GROUP, protected under the Copyright Act, 1957, the Trade Marks Act, 1999, the Designs Act, 2000, and all other applicable intellectual property laws. This includes:</p>
+              <p>1.1 All intellectual property subsisting in the BORA HONEY&apos;S brand and Website is the exclusive property of SUPERLATIVE GROUP, protected under the Copyright Act, 1957, the Trade Marks Act, 1999, the Designs Act, 2000, and all other applicable intellectual property laws. This includes:</p>
               <ul>
-                <li>The brand name &ldquo;Bora Honey&apos;s&rdquo;, logo, monograms, wordmarks, and trade dress.</li>
+                <li>The brand name &ldquo;BORA HONEY&apos;S&rdquo;, logo, monograms, wordmarks, and trade dress.</li>
                 <li>All garment designs, pattern drawings, technical sketches, design files, toile references, and embroidery motifs.</li>
                 <li>All lookbook photographs, campaign imagery, editorial visuals, and styling content.</li>
                 <li>All Website content including text, graphics, Product descriptions, and User interface elements.</li>
-                <li>All social media content and marketing materials produced by or on behalf of Bora Honey&apos;s.</li>
+                <li>All social media content and marketing materials produced by or on behalf of BORA HONEY&apos;S.</li>
                 <li>All proprietary production techniques, embroidery specifications, and sourcing information.</li>
               </ul>
 
               <h3>2. Prohibited Uses</h3>
               <p>2.1 Without prior express written consent, no person may:</p>
               <ul>
-                <li>Reproduce, modify, distribute, publicly display, or create derivative works from any Bora Honey&apos;s content or material.</li>
-                <li>Use the Bora Honey&apos;s name, logo, or any confusingly similar mark in connection with any product or service.</li>
+                <li>Reproduce, modify, distribute, publicly display, or create derivative works from any BORA HONEY&apos;S content or material.</li>
+                <li>Use the BORA HONEY&apos;S name, logo, or any confusingly similar mark in connection with any product or service.</li>
                 <li>Use any Product image or design artwork for any commercial purpose, including advertising, resale listings, or monetised content.</li>
-                <li>Replicate, commercially imitate, or misrepresent any Bora Honey&apos;s design, embroidery motif, or signature aesthetic.</li>
+                <li>Replicate, commercially imitate, or misrepresent any BORA HONEY&apos;S design, embroidery motif, or signature aesthetic.</li>
                 <li>Use Product imagery to promote counterfeit, replica, or inspired-by products.</li>
                 <li>Scrape, crawl, or extract content from the Website using automated tools or bots.</li>
                 <li>Upload, submit, or make available any Website content, Product images, design materials, or campaign photography to any AI training dataset, generative AI image training system, large language model training corpus, or any other machine learning or artificial intelligence database.</li>
@@ -119,16 +119,16 @@ export default function LegalDisputeResolutionPage() {
               </ul>
 
               <h3>3. Influencer and Media Use</h3>
-              <p>3.1 Non-commercial sharing of Bora Honey&apos;s content by customers with proper attribution, for personal purposes without commercial gain, is permitted provided it does not disparage the brand.</p>
-              <p>3.2 Any commercial use of Bora Honey&apos;s content by influencers, stylists, media, or content creators requires a prior written licensing agreement. Commercial use without such authorisation constitutes infringement of our intellectual property rights, and Bora Honey&apos;s reserves all rights and remedies available under applicable law.</p>
+              <p>3.1 Non-commercial sharing of BORA HONEY&apos;S content by customers with proper attribution, for personal purposes without commercial gain, is permitted provided it does not disparage the brand.</p>
+              <p>3.2 Any commercial use of BORA HONEY&apos;S content by influencers, stylists, media, or content creators requires a prior written licensing agreement. Commercial use without such authorisation constitutes infringement of our intellectual property rights, and BORA HONEY&apos;S reserves all rights and remedies available under applicable law.</p>
 
               <h3>4. Media and Editorial Consent</h3>
-              <p>4.1 By sharing photographs, videos, testimonials, or styling content that features Bora Honey&apos;s Products with us directly or by tagging us on social media, you grant Bora Honey&apos;s a royalty-free, worldwide, perpetual, non-exclusive license to reproduce, publish, and distribute such content for promotional purposes, without additional compensation, unless you expressly object in writing to legal@borahoneys.in.</p>
+              <p>4.1 By sharing photographs, videos, testimonials, or styling content that features BORA HONEY&apos;S Products with us directly or by tagging us on social media, you grant BORA HONEY&apos;S a royalty-free, worldwide, perpetual, non-exclusive license to reproduce, publish, and distribute such content for promotional purposes, without additional compensation, unless you expressly object in writing to legal@borahoneys.in.</p>
               <p>4.2 You warrant that you own or hold the right to license all content submitted, and that it does not infringe the rights of any third party.</p>
               <p>4.3 Fitting photographs, bridal photoshoots, and event styling images shared with us in connection with an Order are covered by this consent unless you expressly opt out in writing.</p>
 
               <h3>5. Counterfeit Products</h3>
-              <p>5.1 The manufacture, sale, or promotion of counterfeit or imitation Bora Honey&apos;s products constitutes infringement of our intellectual property rights. Bora Honey&apos;s reserves all rights and remedies available under the Trade Marks Act, 1999, the Copyright Act, 1957, and all other applicable laws.</p>
+              <p>5.1 The manufacture, sale, or promotion of counterfeit or imitation BORA HONEY&apos;S products constitutes infringement of our intellectual property rights. BORA HONEY&apos;S reserves all rights and remedies available under the Trade Marks Act, 1999, the Copyright Act, 1957, and all other applicable laws.</p>
 
               <h3>6. Reporting Infringement</h3>
               <p>6.1 To report suspected infringement or to serve formal legal notices: notices@borahoneys.in. For general IP queries: legal@borahoneys.in. Please include details of the infringing content, the platform on which it appears, and any supporting evidence.</p>
@@ -145,15 +145,15 @@ export default function LegalDisputeResolutionPage() {
 
             <div className="prose-legal">
               <h3>1. Scope</h3>
-              <p>1.1 This Policy governs all interactions between Users and Bora Honey&apos;s across social media platforms including but not limited to Instagram, Pinterest, WhatsApp, and any other platform on which Bora Honey&apos;s maintains a presence.</p>
+              <p>1.1 This Policy governs all interactions between Users and BORA HONEY&apos;S across social media platforms including but not limited to Instagram, Pinterest, WhatsApp, and any other platform on which BORA HONEY&apos;S maintains a presence.</p>
 
               <h3>2. Tagging and Reposting</h3>
-              <p>2.1 Users who tag Bora Honey&apos;s in Posts featuring our Products grant Bora Honey&apos;s permission to repost, share, or feature such content across our social media channels and Website for promotional purposes, subject to appropriate attribution where feasible.</p>
+              <p>2.1 Users who tag BORA HONEY&apos;S in Posts featuring our Products grant BORA HONEY&apos;S permission to repost, share, or feature such content across our social media channels and Website for promotional purposes, subject to appropriate attribution where feasible.</p>
               <p>2.2 If you do not wish your content to be reposted, please notify us in writing at legal@borahoneys.in and we will remove the content promptly.</p>
 
               <h3>3. Influencer and Stylist Usage Rights</h3>
-              <p>3.1 Any commercial use of Bora Honey&apos;s Products, imagery, or brand name by influencers, content creators, or stylists for commercial gain requires a prior written licensing agreement with Bora Honey&apos;s. Organic, non-commercial tagging with proper attribution is permitted.</p>
-              <p>3.2 Influencers and content creators who receive Products from Bora Honey&apos;s in any capacity must comply with the ASCI Guidelines and applicable consumer protection advertising norms regarding sponsored, gifted, and paid promotional content.</p>
+              <p>3.1 Any commercial use of BORA HONEY&apos;S Products, imagery, or brand name by influencers, content creators, or stylists for commercial gain requires a prior written licensing agreement with BORA HONEY&apos;S. Organic, non-commercial tagging with proper attribution is permitted.</p>
+              <p>3.2 Influencers and content creators who receive Products from BORA HONEY&apos;S in any capacity must comply with the ASCI Guidelines and applicable consumer protection advertising norms regarding sponsored, gifted, and paid promotional content.</p>
 
               <h3>4. User Reviews and Testimonials</h3>
               <p>4.1 Reviews and testimonials submitted through the Website, social media, or direct communications may be published on the Website and social platforms for promotional purposes. By submitting a review or testimonial, you consent to its publication with or without attribution.</p>
@@ -161,14 +161,14 @@ export default function LegalDisputeResolutionPage() {
               <p>4.3 We do not manufacture, incentivise, or publish false reviews. All published reviews are genuine and unsolicited unless clearly marked as sponsored.</p>
 
               <h3>5. Contests and Giveaways</h3>
-              <p>5.1 Any contest, giveaway, or promotional event run by Bora Honey&apos;s on social media will be governed by separate terms published at the time of the promotion. All contests comply with applicable Indian laws, including the Prize Chits and Money Circulation Schemes (Banning) Act, 1978, to the extent applicable.</p>
+              <p>5.1 Any contest, giveaway, or promotional event run by BORA HONEY&apos;S on social media will be governed by separate terms published at the time of the promotion. All contests comply with applicable Indian laws, including the Prize Chits and Money Circulation Schemes (Banning) Act, 1978, to the extent applicable.</p>
 
               <h3>6. Prohibited Conduct</h3>
-              <p>6.1 Users must not: post or share defamatory, false, or misleading content about Bora Honey&apos;s or its Products; impersonate Bora Honey&apos;s on any platform; use the Bora Honey&apos;s name or logo without authorisation; harass, threaten, or intimidate our team or other customers; or engage in coordinated negative campaigns or inauthentic activity.</p>
-              <p>6.2 Bora Honey&apos;s reserves the right to restrict or remove access, report prohibited conduct to the relevant platform, and exercise all rights and remedies available under applicable law.</p>
+              <p>6.1 Users must not: post or share defamatory, false, or misleading content about BORA HONEY&apos;S or its Products; impersonate BORA HONEY&apos;S on any platform; use the BORA HONEY&apos;S name or logo without authorisation; harass, threaten, or intimidate our team or other customers; or engage in coordinated negative campaigns or inauthentic activity.</p>
+              <p>6.2 BORA HONEY&apos;S reserves the right to restrict or remove access, report prohibited conduct to the relevant platform, and exercise all rights and remedies available under applicable law.</p>
 
               <h3>7. Content Moderation and Takedown</h3>
-              <p>7.1 Bora Honey&apos;s reserves the right to delete, hide, or report any comment, post, or message on our owned channels that violates this Policy, applicable law, or platform community standards. We are not obligated to respond to every comment or message.</p>
+              <p>7.1 BORA HONEY&apos;S reserves the right to delete, hide, or report any comment, post, or message on our owned channels that violates this Policy, applicable law, or platform community standards. We are not obligated to respond to every comment or message.</p>
               <p>7.2 If you believe any content on our social media channels infringes your rights, please contact us at legal@borahoneys.in with relevant details.</p>
             </div>
 
@@ -215,7 +215,7 @@ export default function LegalDisputeResolutionPage() {
 
             <div className="prose-legal">
               <h3>1. Definition</h3>
-              <p>1.1 A Force Majeure Event means any event beyond the reasonable control of Bora Honey&apos;s that prevents or materially delays the performance of its obligations. Force Majeure Events include, without limitation:</p>
+              <p>1.1 A Force Majeure Event means any event beyond the reasonable control of BORA HONEY&apos;S that prevents or materially delays the performance of its obligations. Force Majeure Events include, without limitation:</p>
               <ul>
                 <li>Acts of God including earthquake, flood, cyclone, lightning, and fire.</li>
                 <li>Epidemic, pandemic, or public health emergency declared by any authority.</li>
@@ -234,7 +234,7 @@ export default function LegalDisputeResolutionPage() {
               <h3>2. Effect</h3>
               <p>2.1 We will notify you promptly of any Force Majeure Event and its anticipated effect on your Order. We will resume performance as soon as the event ceases.</p>
               <p>2.2 If a Force Majeure Event continues for more than 60 days, either Party may cancel the affected Order by written notice. Any payment received will be refunded within 14 business days of cancellation.</p>
-              <p>2.3 A Force Majeure Event does not include financial difficulty of Bora Honey&apos;s or any failure of a third-party supplier that could have been avoided through reasonable alternative arrangements.</p>
+              <p>2.3 A Force Majeure Event does not include financial difficulty of BORA HONEY&apos;S or any failure of a third-party supplier that could have been avoided through reasonable alternative arrangements.</p>
             </div>
 
             <LegalFooter />
@@ -263,10 +263,10 @@ export default function LegalDisputeResolutionPage() {
               </ul>
 
               <h3>3. Liability</h3>
-              <p>3.1 To the maximum extent permissible under applicable law, Bora Honey&apos;s bears no liability for damage, discolouration, shrinkage, beadwork loss, or deterioration resulting from failure to follow care instructions. Such damage does not constitute a defect and does not entitle the User to any return, exchange, or refund, subject always to applicable consumer protection rights.</p>
+              <p>3.1 To the maximum extent permissible under applicable law, BORA HONEY&apos;S bears no liability for damage, discolouration, shrinkage, beadwork loss, or deterioration resulting from failure to follow care instructions. Such damage does not constitute a defect and does not entitle the User to any return, exchange, or refund, subject always to applicable consumer protection rights.</p>
 
               <h3>4. Fibre Content and Country of Origin</h3>
-              <p>4.1 Fibre content and country of origin are disclosed on the care label and, where available, on the Product page. Bora Honey&apos;s Products are crafted in India using natural and blended fibres.</p>
+              <p>4.1 Fibre content and country of origin are disclosed on the care label and, where available, on the Product page. BORA HONEY&apos;S Products are crafted in India using natural and blended fibres.</p>
             </div>
 
             <LegalFooter />
@@ -309,20 +309,20 @@ export default function LegalDisputeResolutionPage() {
               <h3>4. High-Value Order Acknowledgement</h3>
               <p>To be displayed for all Orders exceeding INR 1,00,000:</p>
               <div className="mt-4 p-5 border border-primary/20 bg-card text-sm font-light text-white/70 italic leading-relaxed">
-                &#9634; I confirm that I am placing this Order for my personal use and not for commercial resale. I understand that Orders of this value may be subject to identity verification. I agree to cooperate with any reasonable verification request from Bora Honey&apos;s.
+                &#9634; I confirm that I am placing this Order for my personal use and not for commercial resale. I understand that Orders of this value may be subject to identity verification. I agree to cooperate with any reasonable verification request from BORA HONEY&apos;S.
               </div>
 
               <h3>5. Marketing Communications Consent</h3>
               <p>To be displayed at account registration and at checkout:</p>
               <div className="mt-4 p-5 border border-primary/20 bg-card text-sm font-light text-white/70 italic leading-relaxed">
-                &#9634; I would like to receive updates about new collections, exclusive previews, festive edits, and promotional offers from Bora Honey&apos;s by email, SMS, and WhatsApp. I understand that I may opt out at any time by clicking unsubscribe or writing to orders@borahoneys.in. (Optional)
+                &#9634; I would like to receive updates about new collections, exclusive previews, festive edits, and promotional offers from BORA HONEY&apos;S by email, SMS, and WhatsApp. I understand that I may opt out at any time by clicking unsubscribe or writing to orders@borahoneys.in. (Optional)
               </div>
               <p>5.1 This checkbox is optional and must not be pre-selected. Transactional communications do not require separate consent and will be sent regardless of whether this box is selected.</p>
 
               <h3>6. WhatsApp Communication Consent</h3>
               <p>To be displayed where WhatsApp is offered as a communication channel:</p>
               <div className="mt-4 p-5 border border-primary/20 bg-card text-sm font-light text-white/70 italic leading-relaxed">
-                &#9634; I consent to receiving Order updates, dispatch notifications, and delivery information from Bora Honey&apos;s via WhatsApp on the mobile number I have provided. I understand that transactional messages are necessary for Order fulfilment and that I may update my communication preferences by contacting orders@borahoneys.in.
+                &#9634; I consent to receiving Order updates, dispatch notifications, and delivery information from BORA HONEY&apos;S via WhatsApp on the mobile number I have provided. I understand that transactional messages are necessary for Order fulfilment and that I may update my communication preferences by contacting orders@borahoneys.in.
               </div>
               <p>6.1 This consent must be separately recorded and timestamped. Where WhatsApp is used to share Order-related communications, the User&apos;s consent record must be retained for a minimum of three years.</p>
 
@@ -347,7 +347,7 @@ export default function LegalDisputeResolutionPage() {
               <p>10.1 A dedicated Contact Us page must be maintained on the Website setting out the following details in full, in compliance with the Consumer Protection (E-Commerce) Rules, 2020:</p>
               <div className="mt-4 p-5 border border-primary/20 bg-card space-y-2 text-sm font-light text-white/70">
                 <p><span className="text-white/50">Legal Name:</span> SUPERLATIVE GROUP</p>
-                <p><span className="text-white/50">Trade Name:</span> Bora Honey&apos;s</p>
+                <p><span className="text-white/50">Trade Name:</span> BORA HONEY&apos;S</p>
                 <p><span className="text-white/50">Registered Address:</span> Coming Soon</p>
                 <p><span className="text-white/50">GSTIN:</span> 06AIOPN2893G1ZU</p>
                 <p><span className="text-white/50">Customer Support:</span> orders@borahoneys.in</p>

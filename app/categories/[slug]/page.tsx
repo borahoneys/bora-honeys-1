@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = await getCategoryWithProducts(slug)
   if (!data) return { title: 'Category Not Found' }
   return {
-    title: `${data.category.name} — Bora Honeys`,
+    title: `${data.category.name} — BORA HONEY'S`,
     description: data.category.description,
   }
 }
