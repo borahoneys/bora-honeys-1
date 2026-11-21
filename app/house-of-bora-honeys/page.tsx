@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail } from 'lucide-react'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
@@ -254,9 +255,15 @@ export default function HouseOfBoraHoneysPage() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="relative aspect-4/3 md:aspect-auto md:min-h-125 border border-primary/15">
-              <ComingSoonPlaceholder className="absolute inset-0" />
+            {/* Atelier Image */}
+            <div className="relative aspect-4/3 md:aspect-auto md:min-h-125 border border-primary/15 overflow-hidden">
+              <Image
+                src="/house-of-bora-honeys.png"
+                alt="BORA HONEY'S Couture Atelier"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

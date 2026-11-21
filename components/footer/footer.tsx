@@ -119,9 +119,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-border/40 pt-6 flex justify-center">
+        <div className="border-t border-border/40 pt-6 flex flex-col items-center gap-2">
           <p className="text-xs font-light text-white/80/70 tracking-widest uppercase">
             © {new Date().getFullYear()} · All Rights Reserved
+          </p>
+          <p className="text-xs font-light text-white/60 tracking-widest uppercase">
+            Website built by The Brand Berry
           </p>
         </div>
       </div>
