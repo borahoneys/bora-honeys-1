@@ -1,15 +1,16 @@
-import { v2 as cloudinary } from 'cloudinary'
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
+import { randomUUID } from 'crypto'
 import { auth } from '@/auth'
 
-console.log(process.env.CLOUDINARY_CLOUD_NAME)
-console.log(process.env.CLOUDINARY_API_KEY)
-console.log(process.env.CLOUDINARY_API_SECRET)
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+const s3 = new S3Client({
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+  },
 })
+
+const BUCKET = process.env.AWS_S3_BUCKET_NAME!
 
 export async function POST(request: Request) {
   const session = await auth()
@@ -21,7 +22,6 @@ export async function POST(request: Request) {
   const formData = await request.formData()
   const file = formData.get('file') as File | null
   const folder = (formData.get('folder') as string) || 'bora-honeys'
-  const resourceType = (formData.get('resourceType') as string) || 'image'
 
   if (!file) {
     return Response.json({ error: 'No file provided' }, { status: 400 })
@@ -29,23 +29,22 @@ export async function POST(request: Request) {
 
   const bytes = await file.arrayBuffer()
   const buffer = Buffer.from(bytes)
+  const key = `${folder}/${randomUUID()}-${file.name}`
 
   try {
-    const result = await new Promise<{ secure_url: string; public_id: string }>((resolve, reject) => {
-      cloudinary.uploader
-        .upload_stream(
-          { folder, resource_type: resourceType as 'image' | 'video' | 'raw' | 'auto' },
-          (error, result) => {
-            if (error || !result) reject(error)
-            else resolve(result as { secure_url: string; public_id: string })
-          }
-        )
-        .end(buffer)
-    })
+    await s3.send(
+      new PutObjectCommand({
+        Bucket: BUCKET,
+        Key: key,
+        Body: buffer,
+        ContentType: file.type,
+      })
+    )
 
-    return Response.json({ url: result.secure_url, publicId: result.public_id })
+    const url = `https://${BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`
+    return Response.json({ url, publicId: key })
   } catch (err) {
-    console.error('Cloudinary upload error:', err)
+    console.error('S3 upload error:', err)
     return Response.json({ error: 'Upload failed' }, { status: 500 })
   }
 }

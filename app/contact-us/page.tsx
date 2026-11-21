@@ -262,7 +262,7 @@ export default function ContactUsPage() {
                             <div className="space-y-4">
                                 <p className="text-[10px] tracking-[0.4em] uppercase text-primary">Studio</p>
                                 <p className="text-sm font-light text-white/70 leading-relaxed">
-                                    Coming Soon
+                                    Second Floor, Ramnath House, 4, Sri Aurobindo Marg, Qila Rai Pithora, New Delhi, Delhi 110030
                                 </p>
                             </div>
 

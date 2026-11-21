@@ -36,7 +36,7 @@ const experiences = [
 
 const atelierInfo = {
   name: 'BORA HONEY\'S COUTURE ATELIER',
-  address: 'Coming Soon',
+  address: 'Second Floor, Ramnath House, 4, Sri Aurobindo Marg, Qila Rai Pithora, New Delhi, Delhi 110030',
   phone: '+91 9138881112',
   email: 'info@borahoneys.com',
   hours: {

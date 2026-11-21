@@ -19,7 +19,7 @@ const sections = [
 const LegalFooter = () => (
   <div className="mt-10 pt-6 border-t border-primary/20 text-xs text-white/40 leading-relaxed space-y-1">
     <p><span className="text-white/60">Legal Name:</span> SUPERLATIVE GROUP &nbsp;|&nbsp; <span className="text-white/60">Trade Name:</span> BORA HONEY&apos;S</p>
-    <p><span className="text-white/60">Registered Address:</span> Coming Soon</p>
+    <p><span className="text-white/60">Registered Address:</span> Second Floor, Ramnath House, 4, Sri Aurobindo Marg, Qila Rai Pithora, New Delhi, Delhi 110030</p>
     <p><span className="text-white/60">GSTIN:</span> 06AIOPN2893G1ZU &nbsp;|&nbsp; <span className="text-white/60">Website:</span> www.borahoneys.in</p>
     <p>
       <span className="text-white/60">Email:</span> orders@borahoneys.in &nbsp;|&nbsp;
@@ -348,7 +348,7 @@ export default function LegalDisputeResolutionPage() {
               <div className="mt-4 p-5 border border-primary/20 bg-card space-y-2 text-sm font-light text-white/70">
                 <p><span className="text-white/50">Legal Name:</span> SUPERLATIVE GROUP</p>
                 <p><span className="text-white/50">Trade Name:</span> BORA HONEY&apos;S</p>
-                <p><span className="text-white/50">Registered Address:</span> Coming Soon</p>
+                <p><span className="text-white/50">Registered Address:</span> Second Floor, Ramnath House, 4, Sri Aurobindo Marg, Qila Rai Pithora, New Delhi, Delhi 110030</p>
                 <p><span className="text-white/50">GSTIN:</span> 06AIOPN2893G1ZU</p>
                 <p><span className="text-white/50">Customer Support:</span> orders@borahoneys.in</p>
                 <p><span className="text-white/50">Grievance Officer:</span> Honey Nanda &nbsp;·&nbsp; info@borahoneys.in</p>

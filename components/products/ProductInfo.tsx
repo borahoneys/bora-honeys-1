@@ -96,7 +96,7 @@ const ProductInfo = ({ productId, name, price, color, styleCode, numberOfPieces,
           <h1 className="text-2xl md:text-3xl font-light text-foreground">{name}</h1>
         </div>
         <div className="pt-2 flex items-baseline gap-3">
-          {price != null ? (
+          {price != null && price > 0 ? (
             <p className="text-lg font-light text-foreground">₹{price.toLocaleString('en-IN')}</p>
           ) : (
             <p className="text-lg font-light text-muted-foreground">Price on Request</p>

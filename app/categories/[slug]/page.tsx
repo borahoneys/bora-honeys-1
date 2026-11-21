@@ -149,7 +149,7 @@ export default async function CategoryPage({ params }: PageProps) {
                       </h3>
                       <div className="flex items-baseline gap-2 mt-2">
                         <span className="text-sm font-light text-foreground">
-                          ₹{product.price.toLocaleString('en-IN')}
+                          {product.price > 0 ? `₹${product.price.toLocaleString('en-IN')}` : 'Price on Request'}
                         </span>
                       </div>
                     </div>

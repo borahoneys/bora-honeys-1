@@ -40,7 +40,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm font-light text-white/80 leading-relaxed">
-                  Coming Soon
+                  Second Floor, Ramnath House, 4, Sri Aurobindo Marg, Qila Rai Pithora, New Delhi, Delhi 110030
                 </span>
               </li>
               <li className="flex items-center gap-3">
