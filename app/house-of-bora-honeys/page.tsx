@@ -258,7 +258,7 @@ export default function HouseOfBoraHoneysPage() {
             {/* Atelier Image */}
             <div className="relative aspect-4/3 md:aspect-auto md:min-h-125 border border-primary/15 overflow-hidden">
               <Image
-                src="/house-of-bora-honeys.png"
+                src="/house-of-bora-honeys.webp"
                 alt="BORA HONEY'S Couture Atelier"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
