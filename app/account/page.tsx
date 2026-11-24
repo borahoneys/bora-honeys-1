@@ -9,6 +9,7 @@ import Footer from "@/components/footer/footer";
 import SignOutButton from "@/components/auth/SignOutButton";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "My Account",
 };
 

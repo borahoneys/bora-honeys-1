@@ -9,6 +9,7 @@ import Footer from "@/components/footer/footer";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "Order Confirmation",
 };
 

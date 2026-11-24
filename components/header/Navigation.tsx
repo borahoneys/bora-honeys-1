@@ -1,4 +1,5 @@
 "use client"
+import SmartImage from '@/components/ui/SmartImage'
 import { ArrowRight, X, Plus, User } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
@@ -297,10 +298,12 @@ const Navigation = () => {
                       href={image.href}
                       className="w-96 h-72 cursor-pointer group relative overflow-hidden block"
                     >
-                      <img
+                      <SmartImage
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover transition-opacity duration-200 group-hover:opacity-90"
+                        fill
+                        sizes="384px"
+                        className="object-cover group-hover:opacity-90"
                       />
                       <div className="absolute bottom-2 left-2 text-white text-xs font-light flex items-center gap-1">
                         <span>{image.label}</span>

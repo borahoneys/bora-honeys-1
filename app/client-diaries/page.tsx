@@ -1,12 +1,14 @@
 export const dynamic = 'force-dynamic'
 
+import SmartImage from '@/components/ui/SmartImage'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
 import { getClientDiaries } from '@/app/actions/client-diaries'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Client Diaries — BORA HONEY\'S',
+  alternates: { canonical: '/client-diaries' },
+  title: 'Client Diaries',
   description: 'Stories and experiences from the BORA HONEY\'S family.',
 }
 
@@ -49,12 +51,15 @@ export default async function ClientDiariesPage() {
                 <article key={entry._id} className="flex flex-col gap-5">
                   {/* Client photo */}
                   {entry.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={entry.image.url}
-                      alt={entry.clientName}
-                      className="w-full aspect-[4/5] object-cover rounded-sm"
-                    />
+                    <div className="relative w-full aspect-[4/5] overflow-hidden rounded-sm">
+                      <SmartImage
+                        src={entry.image.url}
+                        alt={entry.clientName}
+                        fill
+                        sizes="(max-width:768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
                   ) : (
                     <div className="w-full aspect-[4/5] bg-muted/20 rounded-sm flex items-center justify-center">
                       <span className="text-4xl font-light text-muted-foreground/20">

@@ -3,7 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | BORA HONEY\'S',
+  alternates: { canonical: '/terms-and-conditions' },
+  title: 'Terms & Conditions',
   description: 'Terms of Use, Terms of Sale, Made-to-Order Policy, Pre-Order Policy, Alteration Policy, Product Disclaimer and Website Disclaimer for BORA HONEY\'S.',
 }
 

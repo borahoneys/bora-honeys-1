@@ -1,6 +1,7 @@
 "use client"
 import { useState, useRef } from "react";
 import ImageZoom from "./ImageZoom";
+import SmartImage from "@/components/ui/SmartImage";
 
 interface Props {
   images: string[]
@@ -41,13 +42,16 @@ const ProductImageGallery = ({ images, altText }: Props) => {
           {displayImages.map((image, index) => (
             <div
               key={index}
-              className="w-full aspect-square overflow-hidden cursor-pointer group"
+              className="relative w-full aspect-square overflow-hidden cursor-pointer group"
               onClick={() => handleImageClick(index)}
             >
-              <img
+              <SmartImage
                 src={image}
+                fill
+                sizes="50vw"
+                priority={index === 0}
                 alt={altText ? `${altText} — view ${index + 1}` : `Product view ${index + 1}`}
-                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                className="object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           ))}
@@ -58,16 +62,20 @@ const ProductImageGallery = ({ images, altText }: Props) => {
       <div className="lg:hidden">
         <div className="relative">
           <div
-            className="w-full h-[80vh] overflow-hidden cursor-pointer group touch-pan-y"
+            className="relative w-full h-[80vh] overflow-hidden cursor-pointer group touch-pan-y"
             onClick={() => handleImageClick(currentImageIndex)}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
-            <img
+            <SmartImage
+              key={currentImageIndex}
               src={displayImages[currentImageIndex]}
+              fill
+              sizes="100vw"
+              priority={currentImageIndex === 0}
               alt={altText ? `${altText} — view ${currentImageIndex + 1}` : `Product view ${currentImageIndex + 1}`}
-              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 select-none"
+              className="object-contain transition-transform duration-300 group-hover:scale-105 select-none"
             />
           </div>
           <div className="flex justify-center mt-4 gap-2">

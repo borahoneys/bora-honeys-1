@@ -7,7 +7,8 @@ import ComingSoonPlaceholder from '@/app/house-of-bora-honeys/_components/Coming
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'House of BORA HONEY\'S | BORA HONEY\'S',
+  alternates: { canonical: '/house-of-bora-honeys' },
+  title: 'House of BORA HONEY\'S — The Atelier',
   description:
     'Step into the BORA HONEY\'S Atelier, where craftsmanship, artistry, and couture come together. A space dedicated to creating bespoke masterpieces.',
 }

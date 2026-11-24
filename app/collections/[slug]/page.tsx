@@ -1,3 +1,4 @@
+import { clip } from '@/lib/seo'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -51,8 +52,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const collection = await getCollection(slug)
   if (!collection) return { title: 'Collection Not Found' }
   return {
-    title: `${collection.name} — BORA HONEY'S`,
-    description: collection.description,
+    title: collection.name,
+    description: clip(collection.description) ?? `Explore the ${collection.name} collection by BORA HONEY'S — luxury Indian couture, hand-embroidered and shipped worldwide.`,
+    alternates: { canonical: `/collections/${slug}` },
+    openGraph: { title: collection.name, url: `/collections/${slug}`, images: collection.image?.url ? [collection.image.url] : undefined },
   }
 }
 

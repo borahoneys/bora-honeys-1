@@ -1,4 +1,9 @@
+import { Suspense, cache } from 'react'
 import { notFound } from 'next/navigation'
+import { connectDB } from '@/lib/db/mongoose'
+import Product from '@/lib/models/Product'
+import Category from '@/lib/models/Category'
+import { ProductSkeleton } from '@/components/ui/PageSkeleton'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,30 +19,48 @@ import ProductImageGallery from "@/components/products/ProductImageGallery"
 import ProductInfo from "@/components/products/ProductInfo"
 import ProductDescription from "@/components/products/ProductDescription"
 import type { Metadata } from 'next'
+import JsonLd from '@/components/seo/JsonLd'
+import { SITE_URL, SITE_NAME, absoluteUrl, clip } from '@/lib/seo'
 
 interface PageProps {
   params: Promise<{ id: string }>
 }
 
-async function getProduct(slug: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? `http://localhost:${process.env.PORT ?? 3000}`
-  const res = await fetch(`${baseUrl}/api/products/slug/${slug}`, { cache: 'no-store' })
-  if (!res.ok) return null
-  return res.json()
-}
+// Query the DB directly (no HTTP hop to our own API) and dedupe between
+// generateMetadata and the page render within one request.
+const getProduct = cache(async (slug: string) => {
+  await connectDB()
+  void Category.modelName
+  const product = await Product.findOne({ slug }).populate('categories', 'name slug').lean()
+  return product ? JSON.parse(JSON.stringify(product)) : null
+})
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params
   const product = await getProduct(id)
   if (!product) return { title: 'Product Not Found' }
+  const title = product.seo?.title ?? `${product.name} — Luxury Indian Couture`
+  const description =
+    clip(product.seo?.description ?? product.description) ??
+    `${product.name} by BORA HONEY'S — hand-embroidered Indian couture, made in India and shipped worldwide.`
+  const image = product.images?.[0]?.url
   return {
-    title: product.seo?.title ?? product.name,
-    description: product.seo?.description ?? product.description,
+    title: { absolute: `${title} | ${SITE_NAME}` },
+    description,
     keywords: product.searchKeywords?.length ? product.searchKeywords : undefined,
+    alternates: { canonical: `/products/${id}` },
+    openGraph: { title, description, url: `/products/${id}`, type: 'website', images: image ? [{ url: image, alt: product.imageAltText ?? product.name }] : undefined },
+    twitter: { card: 'summary_large_image', title, description, images: image ? [image] : undefined },
   }
 }
 
-const ProductDetail = async ({ params }: PageProps) => {
+const ProductDetail = ({ params }: PageProps) => (
+  <Suspense fallback={<ProductSkeleton />}>
+    <ProductContent params={params} />
+  </Suspense>
+)
+
+async function ProductContent({ params }: PageProps) {
   const { id } = await params
   const product = await getProduct(id)
 
@@ -50,9 +73,51 @@ const ProductDetail = async ({ params }: PageProps) => {
     slug: c.slug,
   }))
   const primaryCategory = categories[0]
+  const productUrl = absoluteUrl(`/products/${id}`)
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      '@id': `${productUrl}#product`,
+      name: product.name,
+      description: product.description ?? undefined,
+      image: images,
+      sku: product.sku ?? product.styleCode ?? undefined,
+      mpn: product.styleCode ?? undefined,
+      color: product.color ?? undefined,
+      material: product.composition ?? undefined,
+      category: primaryCategory?.name,
+      brand: { '@type': 'Brand', name: SITE_NAME },
+      url: productUrl,
+      ...(product.price > 0 && {
+        offers: {
+          '@type': 'Offer',
+          url: productUrl,
+          priceCurrency: 'INR',
+          price: product.price,
+          availability: product.stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/MadeToOrder',
+          itemCondition: 'https://schema.org/NewCondition',
+          seller: { '@id': `${SITE_URL}/#organization` },
+        },
+      }),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'All Pieces', item: absoluteUrl('/products') },
+        ...(primaryCategory
+          ? [{ '@type': 'ListItem', position: 3, name: primaryCategory.name, item: absoluteUrl(`/categories/${primaryCategory.slug}`) }]
+          : []),
+        { '@type': 'ListItem', position: primaryCategory ? 4 : 3, name: product.name, item: productUrl },
+      ],
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd data={jsonLd} />
       <Header />
 
       <main className="py-16 pt-20">
@@ -69,7 +134,7 @@ const ProductDetail = async ({ params }: PageProps) => {
                   <>
                     <BreadcrumbItem>
                       <BreadcrumbLink asChild>
-                        <Link href={`/category/${primaryCategory.slug}`}>{primaryCategory.name}</Link>
+                        <Link href={`/categories/${primaryCategory.slug}`}>{primaryCategory.name}</Link>
                       </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />

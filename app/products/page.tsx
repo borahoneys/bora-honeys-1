@@ -18,10 +18,6 @@ import {
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'All Pieces — BORA HONEY\'S',
-  description: 'Browse our complete collection of luxury couture pieces. Filter by category, price, and more.',
-}
 
 const LIMIT = 16
 
@@ -29,6 +25,19 @@ type SP = Promise<{ [key: string]: string | string[] | undefined }>
 
 function getString(val: string | string[] | undefined): string {
   return typeof val === 'string' ? val : ''
+}
+
+export async function generateMetadata({ searchParams }: { searchParams: SP }): Promise<Metadata> {
+  const sp = await searchParams
+  const filtered = ['q', 'cat', 'sort', 'min', 'max', 'featured'].some((k) => sp[k])
+  const page = Math.max(1, parseInt(getString(sp.page) || '1', 10))
+  return {
+    title: page > 1 ? `Shop All Pieces — Page ${page}` : 'Shop Luxury Indian Couture — Lehengas, Gowns & Bridal Wear',
+    description:
+      "Browse the complete BORA HONEY'S collection of hand-embroidered Indian couture: bridal lehengas, gowns and occasion wear. Made in India, shipped worldwide.",
+    alternates: { canonical: '/products' },
+    robots: filtered ? { index: false, follow: true } : undefined,
+  }
 }
 
 async function fetchPageData(sp: Awaited<SP>) {

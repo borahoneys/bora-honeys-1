@@ -1,3 +1,4 @@
+import { clip } from '@/lib/seo'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -52,8 +53,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = await getCategoryWithProducts(slug)
   if (!data) return { title: 'Category Not Found' }
   return {
-    title: `${data.category.name} — BORA HONEY'S`,
-    description: data.category.description,
+    title: data.category.name,
+    description: clip(data.category.description) ?? `Shop ${data.category.name} by BORA HONEY'S — luxury Indian couture, hand-embroidered and shipped worldwide.`,
+    alternates: { canonical: `/categories/${slug}` },
   }
 }
 

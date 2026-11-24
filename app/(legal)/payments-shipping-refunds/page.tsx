@@ -3,7 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Payments, Shipping & Refunds | BORA HONEY\'S',
+  alternates: { canonical: '/payments-shipping-refunds' },
+  title: 'Payments, Shipping & Refunds',
   description: 'Payment, Shipping, Cancellation, Refund, Return & Exchange, Fraud Prevention, and GST policies for BORA HONEY\'S.',
 }
 

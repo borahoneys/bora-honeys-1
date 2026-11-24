@@ -4,9 +4,11 @@ import Footer from '@/components/footer/footer'
 import PlaceholderImage from './_components/PlaceholderImage'
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import SmartImage from '@/components/ui/SmartImage'
 
 export const metadata: Metadata = {
-  title: 'Bespoke Couture | BORA HONEY\'S',
+  alternates: { canonical: '/bespoke-couture' },
+  title: 'Bespoke Couture — Custom Indian Bridal & Occasion Wear',
   description:
     'At BORA HONEY\'S Couture, we believe that true luxury is deeply personal. Our Bespoke Couture service offers an exclusive design experience where every garment is imagined, designed, and handcrafted specifically for you.',
 }
@@ -146,7 +148,7 @@ export default function BespokeCouturePage() {
 
       {/* Hero */}
       <section className="relative min-h-[70vh] md:min-h-[85vh] w-full overflow-hidden border-b border-primary/15">
-        <img src={"/bespoke-couture/6.jpg"} className="w-full h-full absolute object-cover object-right md:object-center inset-0" alt='appointments-only' />
+        <SmartImage src="/bespoke-couture/6.jpg" fill sizes="100vw" className="object-cover object-right md:object-center" alt="appointments-only" />
 
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
         <div className="relative h-full flex items-center px-6 md:px-16 py-24">
@@ -181,7 +183,7 @@ export default function BespokeCouturePage() {
       <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-0 border border-primary/15">
           <div className="relative min-h-[600px] md:aspect-auto md:min-h-[640px]">
-            <img src={"/bespoke-couture/2.jpeg"} className="w-full h-full absolute object-cover inset-0" alt='appointments-only' />
+            <SmartImage src="/bespoke-couture/2.jpeg" fill sizes="100vw" className="object-cover" alt="appointments-only" />
 
           </div>
           <div className="flex flex-col justify-center p-10 md:p-14 space-y-6 border-t border-primary/15 md:border-t-0 md:border-l md:border-primary/15">
@@ -242,7 +244,7 @@ export default function BespokeCouturePage() {
             </div>
           </div>
           <div className="relative min-h-[600px] md:aspect-auto md:min-h-[640px] order-1 md:order-2 border-b border-primary/15 md:border-b-0 md:border-l md:border-primary/15">
-            <img src={"/bespoke-couture/3.jpeg"} className="w-full h-full absolute object-top object-cover inset-0" alt='appointments-only' />
+            <SmartImage src="/bespoke-couture/3.jpeg" fill sizes="100vw" className="object-top object-cover" alt="appointments-only" />
 
           </div>
         </div>
@@ -290,7 +292,7 @@ export default function BespokeCouturePage() {
           {experienceSteps.map((s) => (
             <div key={s.step} className="space-y-4">
               <div className="relative aspect-[3/4]">
-                <img src={s.img} className="absolute object-cover inset-0" alt={s.title} />
+                <SmartImage src={s.img} fill sizes="(max-width:640px) 100vw, 20vw" className="object-cover" alt={s.title} />
               </div>
               <p className="text-primary text-[10px] tracking-[0.35em] uppercase">{s.step}</p>
               <h3 className="text-sm font-normal tracking-[0.15em] uppercase text-foreground">
@@ -412,7 +414,7 @@ export default function BespokeCouturePage() {
             </div>
           </div>
           <div className="relative aspect-[4/5] md:aspect-auto border-t border-primary/15 md:border-t-0 md:border-l md:border-primary/15">
-            <img src={"/bespoke-couture/5.jpg"} className="w-full h-full absolute object-cover inset-0" alt='appointments-only' />
+            <SmartImage src="/bespoke-couture/5.jpg" fill sizes="100vw" className="object-cover" alt="appointments-only" />
           </div>
         </div>
 

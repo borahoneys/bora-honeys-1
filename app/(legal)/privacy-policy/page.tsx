@@ -3,7 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy & Cookies | BORA HONEY\'S',
+  alternates: { canonical: '/privacy-policy' },
+  title: 'Privacy & Cookies',
   description: 'Privacy Policy and Cookie Policy for BORA HONEY\'S — how we collect, store, and protect your personal data.',
 }
 

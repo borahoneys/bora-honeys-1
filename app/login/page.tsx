@@ -5,6 +5,7 @@ import Footer from "@/components/footer/footer";
 import LoginForm from "@/components/auth/LoginForm";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "Sign In",
 };
 

@@ -6,6 +6,7 @@ import CheckoutHeader from "@/components/header/CheckoutHeader";
 import CheckoutForm from "@/components/checkout/CheckoutForm";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: "Checkout",
 };
 

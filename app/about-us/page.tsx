@@ -4,7 +4,8 @@ import FounderCarousel from './_components/FounderCarousel'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us | BORA HONEY\'S',
+  alternates: { canonical: '/about-us' },
+  title: 'About Us — Founder Honey Nanda & Our Story',
   description: 'Founded by Honey Nanda in 2022, BORA HONEY\'S is a luxury fashion label proudly Made in India, creating couture for the modern woman and the modern Indian bride.',
 }
 

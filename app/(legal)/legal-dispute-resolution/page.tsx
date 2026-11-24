@@ -3,7 +3,8 @@ import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Legal & Dispute Resolution | BORA HONEY\'S',
+  alternates: { canonical: '/legal-dispute-resolution' },
+  title: 'Legal & Dispute Resolution',
   description: 'Intellectual Property, Social Media, Dispute Resolution, Force Majeure, Care Instructions, and Checkout Consent policies for BORA HONEY\'S.',
 }
 

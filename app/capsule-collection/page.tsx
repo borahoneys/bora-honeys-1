@@ -1,3 +1,4 @@
+import { clip } from '@/lib/seo'
 export const dynamic = 'force-dynamic'
 
 import Image from 'next/image'
@@ -40,8 +41,9 @@ async function getProducts(productIds: string[]) {
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getEditorialPage('capsule-collection')
   return {
-    title: `${data.title || 'Capsule Collection'} — BORA HONEY'S`,
-    description: data.description,
+    title: data.title || 'Capsule Collection',
+    description: clip(data.description),
+    alternates: { canonical: '/capsule-collection' },
   }
 }
 
