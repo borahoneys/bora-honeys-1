@@ -111,14 +111,14 @@ async function HomeSections() {
                       priority={idx === 0}
                       sizes="100vw"
                     />
-                    <SmartImage
+                    {/* <SmartImage
                       src={mobile!.url}
                       fill
                       className="object-cover object-top md:hidden"
                       alt="BORA HONEY'S luxury Indian couture — new collection 2026"
                       priority={idx === 0}
                       sizes="100vw"
-                    />
+                    /> */}
                   </>
                 ) : (
                   <SmartImage
