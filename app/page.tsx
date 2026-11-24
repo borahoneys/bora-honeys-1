@@ -35,16 +35,6 @@ export default function HomePage() {
       <Suspense fallback={<div className="w-screen h-screen bg-muted/30 animate-pulse" />}>
         <HomeSections />
       </Suspense>
-      <section className="px-6 py-20 max-w-3xl mx-auto text-center space-y-5">
-        <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] uppercase">Luxury Indian Couture, Made for the World</h2>
-        <p className="text-sm font-light leading-relaxed text-muted-foreground">
-          Founded by Honey Nanda in New Delhi, BORA HONEY&apos;S creates hand-embroidered bridal lehengas, bespoke couture and
-          occasion wear, crafted in India and shipped worldwide to the USA, UK, Canada, Australia, UAE and beyond.
-          Explore our <Link href="/products" className="underline underline-offset-4">latest pieces</Link>,{' '}
-          <Link href="/collections" className="underline underline-offset-4">collections</Link> or book a{' '}
-          <Link href="/bespoke-couture" className="underline underline-offset-4">bespoke couture consultation</Link>.
-        </p>
-      </section>
       <Footer />
     </div>
   )
