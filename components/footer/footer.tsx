@@ -124,7 +124,15 @@ const Footer = () => {
             © {new Date().getFullYear()} · All Rights Reserved
           </p>
           <p className="text-xs font-light text-white/60 tracking-widest uppercase">
-            Website built by The Brand Berry
+            Website built by{' '}
+            <a
+              href="https://thebrandberry.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 hover:text-white transition-colors"
+            >
+              The Brand Berry
+            </a>
           </p>
         </div>
       </div>
