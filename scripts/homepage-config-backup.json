@@ -1,0 +1,94 @@
+{
+ "_id": "6a3512e56b1a07d5974725f0",
+ "__v": 0,
+ "createdAt": "2026-06-19T09:59:01.173Z",
+ "sections": [
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/rydx11zwcyhi3nvwmcgv.jpg",
+    "publicId": "bora-honeys/homepage/rydx11zwcyhi3nvwmcgv.jpg"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/cuv4lqd6fchoknkf4hww.webp",
+    "publicId": "bora-honeys/homepage/cuv4lqd6fchoknkf4hww.webp"
+   },
+   "isActive": true,
+   "order": 0,
+   "_id": "6a4bc4e61e33419fe929595f"
+  },
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qs5uetplrwr6kw7gfom6.jpg",
+    "publicId": "bora-honeys/homepage/qs5uetplrwr6kw7gfom6.jpg"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/luqqc13efrf8nkailycf.webp",
+    "publicId": "bora-honeys/homepage/luqqc13efrf8nkailycf.webp"
+   },
+   "isActive": true,
+   "order": 1,
+   "_id": "6a4bc4e61e33419fe9295960"
+  },
+  {
+   "type": "video",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/azw3uxpl39dx4mtu1dnl.mp4",
+    "publicId": "bora-honeys/homepage/azw3uxpl39dx4mtu1dnl.mp4"
+   },
+   "isActive": true,
+   "order": 2,
+   "_id": "6a4bc4e61e33419fe9295961"
+  },
+  {
+   "type": "video",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/bf108x2umcytqufuwmuk.mp4",
+    "publicId": "bora-honeys/homepage/bf108x2umcytqufuwmuk.mp4"
+   },
+   "isActive": true,
+   "order": 3,
+   "_id": "6a4bc4e61e33419fe9295962"
+  },
+  {
+   "type": "video",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qxu7oj36picsrjuqcl1u.mp4",
+    "publicId": "bora-honeys/homepage/qxu7oj36picsrjuqcl1u.mp4"
+   },
+   "isActive": true,
+   "order": 4,
+   "_id": "6a4bc4e61e33419fe9295963"
+  },
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/lszrbrugv2m3oexmspdb.webp",
+    "publicId": "bora-honeys/homepage/lszrbrugv2m3oexmspdb.webp"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/usqhgfoa4zjnjjf7yfsk.jpg",
+    "publicId": "bora-honeys/homepage/usqhgfoa4zjnjjf7yfsk.jpg"
+   },
+   "isActive": true,
+   "order": 5,
+   "_id": "6a4bc4e61e33419fe9295964"
+  },
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/dlw1mtvxrr9vwxl7bmdw.jpg",
+    "publicId": "bora-honeys/homepage/dlw1mtvxrr9vwxl7bmdw.jpg"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qy5eem31irk4ounn1riz.jpg",
+    "publicId": "bora-honeys/homepage/qy5eem31irk4ounn1riz.jpg"
+   },
+   "isActive": true,
+   "order": 6,
+   "_id": "6a4bc4e61e33419fe9295965"
+  }
+ ],
+ "updatedAt": "2026-07-06T15:08:22.023Z"
+}
