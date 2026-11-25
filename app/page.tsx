@@ -97,39 +97,18 @@ async function HomeSections() {
             const desktop = section.desktopImage
             const mobile = section.mobileImage
             if (!desktop && !mobile) return null
-            const hasBoth = desktop && mobile
-
+            // The desktop image is shown on every screen size; the separate
+            // mobile variant is only used when no desktop image exists.
             return (
               <section key={idx} className="relative w-screen h-screen overflow-hidden">
-                {hasBoth ? (
-                  <>
-                    <SmartImage
-                      src={desktop!.url}
-                      fill
-                      className="object-cover object-top hidden md:block"
-                      alt="BORA HONEY'S luxury Indian couture — new collection 2026"
-                      priority={idx === 0}
-                      sizes="100vw"
-                    />
-                    {/* <SmartImage
-                      src={mobile!.url}
-                      fill
-                      className="object-cover object-top md:hidden"
-                      alt="BORA HONEY'S luxury Indian couture — new collection 2026"
-                      priority={idx === 0}
-                      sizes="100vw"
-                    /> */}
-                  </>
-                ) : (
-                  <SmartImage
-                    src={(desktop ?? mobile)!.url}
-                    fill
-                    className="object-cover object-top"
-                    alt="BORA HONEY'S luxury Indian couture — new collection 2026"
-                    priority={idx === 0}
-                    sizes="100vw"
-                  />
-                )}
+                <SmartImage
+                  src={(desktop ?? mobile)!.url}
+                  fill
+                  className="object-cover object-top"
+                  alt="BORA HONEY'S luxury Indian couture — new collection 2026"
+                  priority={idx === 0}
+                  sizes="100vw"
+                />
                 {section.button && (
                   <div className="absolute inset-0 flex items-end justify-center pb-20">
                     <Link
