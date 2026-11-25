@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/about-us' },
-  title: 'About Us — Founder Honey Nanda & Our Story',
+  title: 'About Us: Founder Honey Nanda & Our Story',
   description: 'Founded by Honey Nanda in 2022, BORA HONEY\'S is a luxury fashion label proudly Made in India, creating couture for the modern woman and the modern Indian bride.',
 }
 
@@ -84,8 +84,8 @@ export default function AboutUsPage() {
             <div className="space-y-5 text-sm font-light text-white/70 leading-relaxed">
               <p>
                 From an early age, Honey Nanda was deeply passionate about fashion, creativity, and design.
-                Growing up in India—a country renowned for its rich textile heritage, skilled artisans, and
-                labour-intensive craftsmanship—she developed a profound appreciation for the hands behind every
+                Growing up in India, a country renowned for its rich textile heritage, skilled artisans, and
+                labour-intensive craftsmanship, she developed a profound appreciation for the hands behind every
                 creation.
               </p>
               <p>
@@ -109,8 +109,8 @@ export default function AboutUsPage() {
           <div className="space-y-6 text-sm font-light text-white/75 leading-relaxed">
             <p>
               From an early age, Honey Nanda was deeply passionate about fashion, creativity, and design.
-              Growing up in India—a country renowned for its rich textile heritage, skilled artisans, and
-              labour-intensive craftsmanship—she developed a profound appreciation for the hands behind every
+              Growing up in India, a country renowned for its rich textile heritage, skilled artisans, and
+              labour-intensive craftsmanship, she developed a profound appreciation for the hands behind every
               creation. As an entrepreneur and designer, Honey understood that true luxury is not only defined
               by beautiful design but also by the dedication, skill, and craftsmanship of the artisans who
               bring each vision to life.

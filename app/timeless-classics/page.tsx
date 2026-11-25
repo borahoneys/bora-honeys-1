@@ -2,6 +2,8 @@ import { clip } from '@/lib/seo'
 export const dynamic = 'force-dynamic'
 
 import Image from 'next/image'
+import HeroImage from '@/components/home/HeroImage'
+import LazyVideo from '@/components/ui/LazyVideo'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Header from '@/components/header/Header'
@@ -11,7 +13,7 @@ import { connectDB } from '@/lib/db/mongoose'
 import Product from '@/lib/models/Product'
 import type { Metadata } from 'next'
 
-interface ImageAsset { url: string; publicId: string }
+interface ImageAsset { url: string; publicId: string; poster?: string }
 interface CTAButton { label: string; href: string }
 interface EditorialSection {
   type: 'image' | 'video'
@@ -67,8 +69,8 @@ export default async function TimelessClassicsPage() {
         {sections.map((section, idx) => {
           if (section.type === 'video' && section.video) {
             return (
-              <section key={idx} className="relative w-screen h-screen overflow-hidden">
-                <video src={section.video.url} autoPlay loop muted playsInline
+              <section key={idx} className="relative w-full h-svh overflow-hidden bg-background">
+                <LazyVideo src={section.video.url} poster={section.video.poster} eager={idx === 0}
                   className="absolute -translate-x-1/2 left-1/2 inset-0 w-auto h-full object-contain" />
                 {section.button && (
                   <div className="absolute inset-0 flex items-end justify-center pb-20">
@@ -83,17 +85,9 @@ export default async function TimelessClassicsPage() {
           if (section.type === 'image') {
             const desktop = section.desktopImage; const mobile = section.mobileImage
             if (!desktop && !mobile) return null
-            const hasBoth = desktop && mobile
             return (
-              <section key={idx} className="relative w-screen h-screen overflow-hidden">
-                {hasBoth ? (
-                  <>
-                    <Image src={desktop!.url} fill className="object-cover object-top hidden md:block" alt="BORA HONEY'S Timeless Classics — luxury Indian couture collection" priority={idx === 0} sizes="100vw" />
-                    <Image src={mobile!.url} fill className="object-cover object-top md:hidden" alt="BORA HONEY'S Timeless Classics — luxury Indian couture collection" priority={idx === 0} sizes="100vw" />
-                  </>
-                ) : (
-                  <Image src={(desktop ?? mobile)!.url} fill className="object-cover object-top" alt="BORA HONEY'S Timeless Classics — luxury Indian couture collection" priority={idx === 0} sizes="100vw" />
-                )}
+              <section key={idx} className="relative w-full h-svh overflow-hidden bg-background">
+                <HeroImage desktopSrc={desktop?.url} mobileSrc={mobile?.url} alt="BORA HONEY'S Timeless Classics, luxury Indian couture collection" priority={idx === 0} />
                 {section.button && (
                   <div className="absolute inset-0 flex items-end justify-center pb-20">
                     <Link href={section.button.href} className="bg-primary text-primary-foreground px-10 py-3.5 text-xs tracking-[0.3em] uppercase hover:opacity-90 transition-opacity">

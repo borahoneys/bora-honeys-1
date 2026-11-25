@@ -1,0 +1,241 @@
+{
+ "homepage": {
+  "_id": "6a3512e56b1a07d5974725f0",
+  "__v": 0,
+  "createdAt": "2026-06-19T09:59:01.173Z",
+  "sections": [
+   {
+    "type": "image",
+    "desktopImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/rydx11zwcyhi3nvwmcgv.jpg",
+     "publicId": "bora-honeys/homepage/rydx11zwcyhi3nvwmcgv.jpg"
+    },
+    "mobileImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/cuv4lqd6fchoknkf4hww.webp",
+     "publicId": "bora-honeys/homepage/cuv4lqd6fchoknkf4hww.webp"
+    },
+    "isActive": true,
+    "order": 0,
+    "_id": "6a4bc4e61e33419fe929595f"
+   },
+   {
+    "type": "image",
+    "desktopImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qs5uetplrwr6kw7gfom6.jpg",
+     "publicId": "bora-honeys/homepage/qs5uetplrwr6kw7gfom6.jpg"
+    },
+    "mobileImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/luqqc13efrf8nkailycf.webp",
+     "publicId": "bora-honeys/homepage/luqqc13efrf8nkailycf.webp"
+    },
+    "isActive": true,
+    "order": 1,
+    "_id": "6a4bc4e61e33419fe9295960"
+   },
+   {
+    "type": "video",
+    "video": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/57a45b4a-d6c2-46a1-b39e-30ac5b05d6ae.mp4",
+     "publicId": "bora-honeys/homepage/57a45b4a-d6c2-46a1-b39e-30ac5b05d6ae.mp4"
+    },
+    "isActive": true,
+    "order": 2,
+    "_id": "6a4bc4e61e33419fe9295961"
+   },
+   {
+    "type": "video",
+    "video": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/c493acdb-831c-48fb-a081-fbb9776796da.mp4",
+     "publicId": "bora-honeys/homepage/c493acdb-831c-48fb-a081-fbb9776796da.mp4"
+    },
+    "isActive": true,
+    "order": 3,
+    "_id": "6a4bc4e61e33419fe9295962"
+   },
+   {
+    "type": "video",
+    "video": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/7c986b1d-2e0d-477b-b112-931620c9540b.mp4",
+     "publicId": "bora-honeys/homepage/7c986b1d-2e0d-477b-b112-931620c9540b.mp4"
+    },
+    "isActive": true,
+    "order": 4,
+    "_id": "6a4bc4e61e33419fe9295963"
+   },
+   {
+    "type": "image",
+    "desktopImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/lszrbrugv2m3oexmspdb.webp",
+     "publicId": "bora-honeys/homepage/lszrbrugv2m3oexmspdb.webp"
+    },
+    "mobileImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/73bcc0ba-d9b2-41e5-8348-fc92664147db.jpg",
+     "publicId": "bora-honeys/homepage/73bcc0ba-d9b2-41e5-8348-fc92664147db.jpg"
+    },
+    "isActive": true,
+    "order": 5,
+    "_id": "6a4bc4e61e33419fe9295964"
+   },
+   {
+    "type": "image",
+    "desktopImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/dlw1mtvxrr9vwxl7bmdw.jpg",
+     "publicId": "bora-honeys/homepage/dlw1mtvxrr9vwxl7bmdw.jpg"
+    },
+    "mobileImage": {
+     "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qy5eem31irk4ounn1riz.jpg",
+     "publicId": "bora-honeys/homepage/qy5eem31irk4ounn1riz.jpg"
+    },
+    "isActive": true,
+    "order": 6,
+    "_id": "6a4bc4e61e33419fe9295965"
+   }
+  ],
+  "updatedAt": "2026-11-25T08:27:14.408Z"
+ },
+ "collections": [
+  {
+   "_id": "6a45d60a676b2ab47df225c4",
+   "name": "BORA HONEY'S COLLECTION 2023 - “COLLECTION OF LINE ART”",
+   "slug": "collection-2023",
+   "description": "Fashion, like art, begins with a single line.\n\nCollection of Line Art was inspired by the purity of the first sketch: the quiet moment when an idea first comes to life. Every silhouette in this collection reflects the belief that simplicity can be deeply expressive, and that even the smallest detail has the power to tell a story. Through delicate hand embroidery, sculpted forms, and refined craftsmanship, the collection transforms minimalist expression into couture.\n\nFor me, this collection was far more than a creative project. It represented a defining chapter in my life as a designer. Every piece carried the excitement of new beginnings, the uncertainty that comes with pursuing a dream, and the determination to create something meaningful. There were countless hours of sketching, sampling, refining, and starting over, yet every challenge strengthened my belief in the vision behind BORA HONEYS.\n\nThe year 2023 became one of the most memorable milestones in our journey. Alongside the launch of Collection of Line Art, BORA HONEYS proudly opened its very first store in Delhi. Walking into a space that carried our name, our creations, and our identity was an emotional moment. A dream that had lived on paper for years had finally found a home.\n\nLooking back, I see this collection as the foundation of everything that followed. It taught me that every great journey starts with a single step, every masterpiece with a single line, and every dream with the courage to believe in it before anyone else does.\n\nCollection of Line Art will always remain close to my heart. It is a reminder of where BORA HONEYS began, not just as a brand, but as a dream built with passion, perseverance, and the hands of talented artisans who brought every design to life. I hope that every woman who wears a piece from this collection feels the same confidence, strength, and quiet elegance that inspired me while creating it.\n\nHoney Nanda\nFounder & Creative Director, BORA HONEYS",
+   "products": [
+    "6a36516e7cf935485d972b0c",
+    "6a351c9e95812b953b433e93",
+    "6a351b4195812b953b433e91",
+    "6a3650787cf935485d972b0b",
+    "6a364fb97cf935485d972b0a",
+    "6a396b54e1df104553b1892d",
+    "6a396bf4e1df104553b1892e",
+    "6a3521f195812b953b433e9b",
+    "6a351db695812b953b433e96",
+    "6a3981717bdef6282654805e",
+    "6a39825fdd108cc446c7da77",
+    "6a351f8095812b953b433e99",
+    "6a397bc76ba0e3c5f493b52b",
+    "6a48aea154f988220749100f",
+    "6a397b064c485467a4309207",
+    "6a39778c41039ccdbd802324",
+    "6a47ff276bc9d48bf571c996",
+    "6a39727c41039ccdbd802321"
+   ],
+   "isActive": true,
+   "createdAt": "2026-07-02T03:07:54.539Z",
+   "updatedAt": "2026-07-22T09:09:09.999Z",
+   "__v": 0,
+   "image": null,
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/collections/p34hgsleulqg6d7hw20r.mp4",
+    "publicId": "bora-honeys/collections/p34hgsleulqg6d7hw20r.mp4"
+   },
+   "subheading": "BORA HONEYS | 2023"
+  },
+  {
+   "_id": "6a45d610676b2ab47df225c5",
+   "name": "BORA HONEY'S COLLECTION 2024 -“EEXPANSION\"",
+   "slug": "collection-2024",
+   "description": "Following our successful journey in Delhi, Expansion marks an important milestone in the story of BORA HONEYS. As our second year in the capital unfolded, we were embraced with immense love, trust, and appreciation from our Delhi clientele. Their unwavering support inspired us to dream bigger, create bolder, and take the next step in our evolution.\n\nThis collection represents the expansion of not only our creative vision but also our growing community of women who believe in timeless couture. Every silhouette, every handcrafted embellishment, and every carefully chosen fabric reflects our commitment to pushing the boundaries of craftsmanship while remaining true to our identity.\n\nExpansion is a celebration of growth: of a brand finding its place, of relationships built through trust, and of artistry that continues to evolve with every creation. It honours the confidence of the women who chose BORA HONEYS and became part of our journey.\n\nMore than a couture collection, Expansion is our expression of gratitude to Delhi. It is dedicated to every client who believed in us, wore our creations with pride, and encouraged us to transform a dream into a growing couture house.\n\nExpansion is where our vision grew, our family expanded, and our journey truly began.",
+   "products": [
+    "6a351e9695812b953b433e97",
+    "6a3984709c9685ace1fe9792",
+    "6a50acd0890ab49f108f853a",
+    "6a50ae62890ab49f108f853b",
+    "6a50af5a890ab49f108f853c",
+    "6a364d267cf935485d972b09",
+    "6a50b148890ab49f108f853d",
+    "6a50b26e890ab49f108f853e",
+    "6a50e66d5b63386a02a7919f",
+    "6a39884c6c3be9297aa8c9b4",
+    "6a364c4f7cf935485d972b08",
+    "6a3985116ec6160f1aebddfd",
+    "6a398560f7f74bcb33ee79dd",
+    "6a50ea115b63386a02a791a0",
+    "6a50ebd45b63386a02a791a1",
+    "6a50ed9c5b63386a02a791a2"
+   ],
+   "isActive": true,
+   "createdAt": "2026-07-02T03:08:00.705Z",
+   "updatedAt": "2026-07-22T09:09:14.915Z",
+   "__v": 0,
+   "image": null,
+   "subheading": "",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/collections/kcoqbmdaw0ylnykbbcld.mp4",
+    "publicId": "bora-honeys/collections/kcoqbmdaw0ylnykbbcld.mp4"
+   }
+  },
+  {
+   "_id": "6a45d624676b2ab47df225c6",
+   "name": "BORA HONEY'S COLLECTION 2025 -“GARTH OF FLOWERS\"",
+   "slug": "collection-2025",
+   "description": "Garth of Flowers is a tribute to resilience, hope, and the extraordinary strength of women. Inspired by the image of flowers blooming from barren land, the collection tells a story of beauty emerging where it is least expected, a reminder that even the harshest environments cannot suppress the power to grow.\n\nJust as a barren landscape transforms with patience, resilience, and time, every woman possesses the ability to rise above adversity, nurture her dreams, and bloom in her own unique way. This collection celebrates that quiet strength, the courage to flourish despite limitations and to create beauty through perseverance.\n\nEvery couture piece reflects this journey through delicate hand embroidery, intricate floral motifs, luminous embellishments, and graceful silhouettes. Each handcrafted detail represents a flower in bloom, symbolizing hope, renewal, and the elegance found in resilience.\n\nGarth of Flowers is more than a couture collection; it is a celebration of women who continue to inspire through their determination, compassion, and unwavering spirit. It honours those who transform challenges into opportunities and prove that true beauty is not defined by circumstance, but by the strength to keep growing.\n\nAt BORA HONEYS, we believe that every woman is like a flower, capable of blooming even in the most barren of landscapes. Garth of Flowers is our tribute to that remarkable journey of growth, courage, and timeless elegance.",
+   "products": [
+    "6a4f94ef299a999885fbdbc6",
+    "6a4f9470299a999885fbdbc5",
+    "6a4f956c299a999885fbdbc7",
+    "6a4f95d2299a999885fbdbc8",
+    "6a4f9688299a999885fbdbc9",
+    "6a4fb87af55fbec59af06d36",
+    "6a509e4d890ab49f108f8537",
+    "6a509f3c890ab49f108f8538",
+    "6a3646a77cf935485d972b04",
+    "6a398379a48772608d1a6d25",
+    "6a364b297cf935485d972b07",
+    "6a3645067cf935485d972b02",
+    "6a50a18f890ab49f108f8539",
+    "6a605f7b8e12edb5efeb3d60"
+   ],
+   "isActive": true,
+   "createdAt": "2026-07-02T03:08:20.310Z",
+   "updatedAt": "2026-07-22T09:09:27.458Z",
+   "__v": 0,
+   "image": null,
+   "subheading": "",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/collections/sfyvormve6kjpctcmdau.mp4",
+    "publicId": "bora-honeys/collections/sfyvormve6kjpctcmdau.mp4"
+   }
+  },
+  {
+   "_id": "6a6089a36dd593270a654e93",
+   "name": "BORA HONEY'S COLLECTION 2026 -“REBIRTH\"",
+   "slug": "collection-2026",
+   "subheading": "",
+   "description": "Every ending carries the quiet promise of a beginning.\n\nREBIRTH is a collection about becoming, about shedding what was and stepping forward as someone stronger, softer and more certain. Inspired by transformation, it explores the moment a woman reinvents herself without losing the essence that has always been hers: strength, grace and timeless femininity.\n\nThe palette follows that journey from dusk to dawn. Moon Gold, Moonlight Silver and Moonlight Blue glow like first light, while Antique Gold, Honey Gold, Gold Bronze and Light Gold carry the warmth of a new day. Rosaline, Lilac Ash, Ozore and Persian Night bring depth, romance and quiet drama to the story.\n\nEach look reimagines the couture silhouette. Sculpted corsets and embellished bralettes meet fish-cut skirts, A-line lehengas and architectural overskirts. Structured blazers, open-front capes, hand-embellished tassels, feather stoles and sheer veils add movement and a sense of ceremony. Every piece is shaped by hand: embroidered, embellished and finished by our artisans with the precision that defines BORA HONEYS.\n\nREBIRTH is our belief that a woman can begin again as often as she chooses, and that every new chapter deserves to be worn with confidence.\n\nRise. Renew. Reign.",
+   "image": null,
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/collections/rebirth-2026-preview.mp4",
+    "publicId": "bora-honeys/collections/rebirth-2026-preview.mp4"
+   },
+   "products": [
+    "6a49175d3c16d7028f7d6e89",
+    "6a49171c3c16d7028f7d6e88",
+    "6b06a06fcb7152ced015d908",
+    "6a4916d63c16d7028f7d6e86",
+    "6a4916bb3c16d7028f7d6e85",
+    "6a4916463c16d7028f7d6e83",
+    "6a49161b3c16d7028f7d6e82",
+    "6b06a06bcb7152ced015d907",
+    "6a4915383c16d7028f7d6e81",
+    "6a4915013c16d7028f7d6e80",
+    "6b06a06bcb7152ced015d906",
+    "6a4914d23c16d7028f7d6e7f",
+    "6a4914953c16d7028f7d6e7e",
+    "6a4914493c16d7028f7d6e7d",
+    "6b0579d8c16c26f03454b641",
+    "6b0579d8c16c26f03454b642",
+    "6b0579dbc16c26f03454b643",
+    "6b0579ddc16c26f03454b644",
+    "6b0579e0c16c26f03454b645",
+    "6b0579e5c16c26f03454b646",
+    "6b0579e7c16c26f03454b647",
+    "6b0579e9c16c26f03454b648"
+   ],
+   "isActive": true,
+   "createdAt": "2026-07-22T09:13:07.626Z",
+   "updatedAt": "2026-11-25T08:46:39.485Z",
+   "__v": 0,
+   "comingSoon": false
+  }
+ ]
+}

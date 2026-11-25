@@ -1,7 +1,8 @@
 import Header from '@/components/header/Header'
 import { getHomepageConfig } from '@/app/actions/homepage'
 import { Suspense } from 'react'
-import SmartImage from '@/components/ui/SmartImage'
+import HeroImage from '@/components/home/HeroImage'
+import LazyVideo from '@/components/ui/LazyVideo'
 import Link from 'next/link'
 import Footer from '@/components/footer/footer'
 import type { Metadata } from 'next'
@@ -10,12 +11,12 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
-  title: 'BORA HONEY\'S | Luxury Indian Couture — New Collection 2026',
+  title: 'BORA HONEY\'S | Luxury Indian Couture | New Collection 2026',
   description:
     'Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.',
 }
 
-interface ImageAsset { url: string; publicId: string }
+interface ImageAsset { url: string; publicId: string; poster?: string }
 interface CTAButton { label: string; href: string }
 interface HomepageSection {
   type: 'image' | 'video'
@@ -31,8 +32,8 @@ export default function HomePage() {
   return (
     <div>
       <Header />
-      <h1 className="sr-only">BORA HONEY&apos;S — Luxury Indian Couture, Bespoke Bridal Wear &amp; Designer Lehengas, Shipped Worldwide</h1>
-      <Suspense fallback={<div className="w-screen h-screen bg-muted/30 animate-pulse" />}>
+      <h1 className="sr-only">BORA HONEY&apos;S: Luxury Indian Couture, Bespoke Bridal Wear &amp; Designer Lehengas, Shipped Worldwide</h1>
+      <Suspense fallback={<div className="w-full h-svh bg-muted/30 animate-pulse" />}>
         <HomeSections />
       </Suspense>
       <Footer />
@@ -61,22 +62,11 @@ async function HomeSections() {
         sections.map((section, idx) => {
           if (section.type === 'video' && section.video) {
             return (
-              <section key={idx} className="relative w-screen h-screen overflow-hidden">
-                {/* <video
+              <section key={idx} className="relative w-full h-svh overflow-hidden bg-background">
+                <LazyVideo
                   src={section.video.url}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute opacity-20 blur-xl inset-0 w-full h-full object-cover"
-                /> */}
-                <video
-                  src={section.video.url}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                  poster={section.video.poster}
+                  eager={idx === 0}
                   className="absolute -translate-x-1/2 left-1/2 inset-0 w-auto h-full object-contain"
                 />
                 {section.button && (
@@ -97,17 +87,13 @@ async function HomeSections() {
             const desktop = section.desktopImage
             const mobile = section.mobileImage
             if (!desktop && !mobile) return null
-            // The desktop image is shown on every screen size; the separate
-            // mobile variant is only used when no desktop image exists.
             return (
-              <section key={idx} className="relative w-screen h-screen overflow-hidden">
-                <SmartImage
-                  src={(desktop ?? mobile)!.url}
-                  fill
-                  className="object-cover object-top"
-                  alt="BORA HONEY'S luxury Indian couture — new collection 2026"
+              <section key={idx} className="relative w-full h-svh overflow-hidden bg-background">
+                <HeroImage
+                  desktopSrc={desktop?.url}
+                  mobileSrc={mobile?.url}
+                  alt="BORA HONEY'S luxury Indian couture, new collection 2026"
                   priority={idx === 0}
-                  sizes="100vw"
                 />
                 {section.button && (
                   <div className="absolute inset-0 flex items-end justify-center pb-20">

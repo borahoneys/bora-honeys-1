@@ -26,7 +26,7 @@ export default async function ClientDiariesPage() {
             <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-3">BORA HONEY&apos;S</p>
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.08em] text-foreground mb-3">Client Diaries</h1>
             <p className="text-sm font-light text-muted-foreground max-w-xl leading-relaxed">
-              Stories and experiences from the BORA HONEY&apos;S family — each piece of couture holds a story.
+              Stories and experiences from the BORA HONEY&apos;S family. Each piece of couture holds a story.
             </p>
             {entries.length > 0 && (
               <p className="text-[10px] tracking-widest uppercase text-muted-foreground/40 mt-5">

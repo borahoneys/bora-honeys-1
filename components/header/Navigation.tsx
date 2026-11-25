@@ -2,6 +2,7 @@
 import SmartImage from '@/components/ui/SmartImage'
 import { ArrowRight, X, Plus, User } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import ShoppingBag from "./ShoppingBag";
 import { useCart } from "@/components/cart/CartProvider";
@@ -41,29 +42,25 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Preload dropdown images for faster display
-  useEffect(() => {
-    const imagesToPreload = [
-      "/rings-collection.png",
-      "/earrings-collection.png",
-      "/arcus-bracelet.png",
-      "/span-bracelet.png",
-      "/founders.png"
-    ];
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState("");
 
-    imagesToPreload.forEach(src => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
+  const runSearch = (term: string) => {
+    const q = term.trim();
+    if (!q) return;
+    setIsSearchOpen(false);
+    setSearchQuery("");
+    router.push(`/products?q=${encodeURIComponent(q)}`);
+  };
 
   const popularSearches = [
-    "Gold Rings",
-    "Silver Necklaces",
-    "Pearl Earrings",
-    "Designer Bracelets",
-    "Wedding Rings",
-    "Vintage Collection"
+    // Each of these returns results in the current catalogue.
+    "Lehenga",
+    "Bridal",
+    "Gowns",
+    "Mermaid",
+    "Feather",
+    "Blazer"
   ];
 
   const navItems = [
@@ -121,7 +118,14 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-40 transition-colors duration-300 ${isScrolled ? "bg-background/60 backdrop-blur-sm" : "bg-transparent"}`}>
+    <nav className="fixed top-0 left-0 w-full z-40">
+      {/* The blurred backdrop lives on its own layer: a backdrop-filter on the
+          <nav> itself would trap the fixed mobile menu overlay inside the
+          64px-tall bar once the page is scrolled. */}
+      <div
+        aria-hidden
+        className={`absolute inset-0 -z-10 transition-colors duration-300 ${isScrolled ? "bg-background/60 backdrop-blur-sm" : "bg-transparent"}`}
+      />
       {/* Mobile layout: absolute positioned elements */}
       <div className="lg:hidden flex items-center justify-between h-16 px-6 relative">
         {/* Mobile hamburger button */}
@@ -329,27 +333,40 @@ const Navigation = () => {
           <div className="px-6 py-8">
             <div className="max-w-2xl mx-auto">
               {/* Search input */}
-              <div className="relative mb-8">
+              <form
+                role="search"
+                className="relative mb-8"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  runSearch(searchQuery);
+                }}
+              >
                 <div className="flex items-center border-b border-border pb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-nav-foreground mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 text-foreground mr-3" aria-hidden>
                     <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                   </svg>
                   <input
-                    type="text"
-                    placeholder="Search for jewelry..."
-                    className="flex-1 bg-transparent text-nav-foreground placeholder:text-nav-foreground/60 outline-none text-lg"
+                    type="search"
+                    enterKeyHint="search"
+                    aria-label="Search the collection"
+                    placeholder="Search lehengas, gowns, bridal…"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="flex-1 min-w-0 bg-transparent text-foreground placeholder:text-foreground/50 outline-none text-lg"
                     autoFocus
                   />
                 </div>
-              </div>
+              </form>
 
               {/* Popular searches */}
               <div>
-                <h3 className="text-nav-foreground text-sm font-light mb-4">Popular Searches</h3>
+                <h3 className="text-foreground/70 text-sm font-light mb-4">Popular Searches</h3>
                 <div className="flex flex-wrap gap-3">
-                  {popularSearches.map((search, index) => (
+                  {popularSearches.map((search) => (
                     <button
-                      key={index}
+                      key={search}
+                      type="button"
+                      onClick={() => runSearch(search)}
                       className="text-foreground hover:text-primary text-sm font-light py-2 px-4 border border-border rounded-full transition-colors duration-200 hover:border-nav-hover"
                     >
                       {search}

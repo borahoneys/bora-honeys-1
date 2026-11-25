@@ -5,6 +5,11 @@ import { cn } from "@/lib/utils";
 import AppProviders from "@/components/providers/AppProviders";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL, SITE_NAME, ADDRESS, absoluteUrl, DEFAULT_OG_IMAGE } from "@/lib/seo";
+import { preconnect } from "react-dom";
+
+// Videos (and full-size media) are served straight from this S3 bucket; opening
+// the connection early saves the DNS + TLS round trips (~0.5s+ from India).
+const MEDIA_ORIGIN = "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com";
 
 const geomini = localFont({
   src: [
@@ -46,7 +51,7 @@ export const metadata: Metadata = {
     template: "%s | BORA HONEY'S",
   },
   description:
-    "BORA HONEY'S — Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.",
+    "BORA HONEY'S. Luxury Indian Couture. Hand-Embroidered, Custom Made in India, Shipping Worldwide. New Collection 2026, Bespoke Couture, Timeless Classics.",
   keywords: [
     "BORA HONEY'S",
     "luxury Indian couture",
@@ -93,6 +98,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  preconnect(MEDIA_ORIGIN);
   return (
     <html
       lang="en"

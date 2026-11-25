@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return { title: 'Category Not Found' }
   return {
     title: data.category.name,
-    description: clip(data.category.description) ?? `Shop ${data.category.name} by BORA HONEY'S — luxury Indian couture, hand-embroidered and shipped worldwide.`,
+    description: clip(data.category.description) ?? `Shop ${data.category.name} by BORA HONEY'S. Luxury Indian couture, hand-embroidered and shipped worldwide.`,
     alternates: { canonical: `/categories/${slug}` },
   }
 }

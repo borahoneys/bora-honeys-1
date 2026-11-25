@@ -2,10 +2,13 @@ import { auth } from '@/auth'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-// Set to false (and redeploy) to take the site out of "under construction".
-// While on, every public page shows /under-construction; the admin panel,
-// API routes and static files keep working.
-const UNDER_CONSTRUCTION = true
+// "Under construction" is on for the live site unless the UNDER_CONSTRUCTION
+// environment variable is "false" (e.g. in .env.local, or in Vercel and then
+// redeploy). Vercel preview deployments always show the full site so work can
+// be reviewed before it goes live. While on, every public page shows
+// /under-construction; the admin panel, API routes and static files keep working.
+const IS_VERCEL_PREVIEW = process.env.VERCEL_ENV === 'preview' || process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
+const UNDER_CONSTRUCTION = process.env.UNDER_CONSTRUCTION !== 'false' && !IS_VERCEL_PREVIEW
 const UNDER_CONSTRUCTION_PATH = '/under-construction'
 const underConstructionAllowed = ['/admin', UNDER_CONSTRUCTION_PATH, '/robots.txt', '/sitemap.xml', '/manifest.webmanifest']
 

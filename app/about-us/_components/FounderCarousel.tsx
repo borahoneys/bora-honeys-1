@@ -4,9 +4,9 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 const images = [
-  // { src: "/founder-1.jpeg", alt: "Honey Nanda — Founder of BORA HONEY'S" },
-  // { src: "/founder-2.jpeg", alt: "Honey Nanda — Founder of BORA HONEY'S" },
-  { src: "/founder-3.jpeg", alt: "Honey Nanda — Founder of BORA HONEY'S" },
+  // { src: "/founder-1.jpeg", alt: "Honey Nanda, Founder of BORA HONEY'S" },
+  // { src: "/founder-2.jpeg", alt: "Honey Nanda, Founder of BORA HONEY'S" },
+  { src: "/founder-3.jpeg", alt: "Honey Nanda, Founder of BORA HONEY'S" },
 ]
 
 const AUTOPLAY_MS = 3500

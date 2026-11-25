@@ -109,7 +109,7 @@ const Footer = () => {
                     href={href}
                     className="group inline-flex items-center gap-2 text-sm font-light text-white/80 hover:text-primary transition-all duration-300"
                   >
-                    <span className="text-primary/50 group-hover:text-primary transition-colors duration-300">—</span>
+                    <span aria-hidden className="inline-block h-px w-3 bg-primary/50 group-hover:bg-primary transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">{label}</span>
                   </Link>
                 </li>

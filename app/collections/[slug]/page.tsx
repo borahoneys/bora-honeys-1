@@ -2,6 +2,7 @@ import { clip } from '@/lib/seo'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+import LazyVideo from '@/components/ui/LazyVideo'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/footer'
 import ComingSoonPlaceholder from '@/app/house-of-bora-honeys/_components/ComingSoonPlaceholder'
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!collection) return { title: 'Collection Not Found' }
   return {
     title: collection.name,
-    description: clip(collection.description) ?? `Explore the ${collection.name} collection by BORA HONEY'S — luxury Indian couture, hand-embroidered and shipped worldwide.`,
+    description: clip(collection.description) ?? `Explore the ${collection.name} collection by BORA HONEY'S. Luxury Indian couture, hand-embroidered and shipped worldwide.`,
     alternates: { canonical: `/collections/${slug}` },
     openGraph: { title: collection.name, url: `/collections/${slug}`, images: collection.image?.url ? [collection.image.url] : undefined },
   }
@@ -86,9 +87,8 @@ export default async function CollectionPage({ params }: PageProps) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          {/* <h1 className="text-3xl px-6 md:text-4xl font-medium tracking-[0.08em] text-foreground mb-4">
-            {collection.name}
-          </h1> */}
+          {/* Visually hidden; gives search engines and screen readers the page title. */}
+          <h1 className="sr-only">{collection.name}</h1>
           {/* {collection.subheading && (
             <p className="text-base tracking-[0.15em] mb-3 uppercase px-6 text-muted-foreground mb-3">
               {collection.subheading}
@@ -96,12 +96,10 @@ export default async function CollectionPage({ params }: PageProps) {
           )} */}
           {collection.video?.url ? (
             <div className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden bg-muted/20">
-              <video
+              <LazyVideo
                 src={collection.video.url}
-                autoPlay
-                loop
-                muted
-                playsInline
+                poster={collection.video.poster}
+                eager
                 className="w-full h-full object-contain"
               />
             </div>
@@ -110,6 +108,7 @@ export default async function CollectionPage({ params }: PageProps) {
               <Image
                 src={collection.image.url}
                 alt={collection.name}
+                fill
                 sizes="100vw"
                 className="object-contain"
                 priority

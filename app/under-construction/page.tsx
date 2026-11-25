@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: { absolute: "BORA HONEY'S | Coming Soon" },
-  description: "BORA HONEY'S — Luxury Indian Couture. Our new website is on its way.",
+  description: "BORA HONEY'S. Luxury Indian Couture. Our new website is on its way.",
   robots: { index: false, follow: false },
 }
 

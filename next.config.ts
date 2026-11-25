@@ -4,7 +4,11 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   images: {
-    formats: ["image/avif", "image/webp"],
+    // WebP only: AVIF is slightly smaller but much slower to generate, which
+    // makes the first view of every photo (before it is cached) noticeably slow.
+    formats: ["image/webp"],
+    // 85 is used for the full-screen homepage photos.
+    qualities: [75, 85],
     minimumCacheTTL: 60 * 60 * 24 * 30,
     remotePatterns: [
       { protocol: 'https', hostname: '*.s3.amazonaws.com' },

@@ -18,7 +18,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/collections' },
-  title: 'Collections — Luxury Indian Couture',
+  title: 'Collections: Luxury Indian Couture',
   description: 'Explore our curated collections.',
 }
 

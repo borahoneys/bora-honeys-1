@@ -8,7 +8,7 @@ import SmartImage from '@/components/ui/SmartImage'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/bespoke-couture' },
-  title: 'Bespoke Couture — Custom Indian Bridal & Occasion Wear',
+  title: 'Bespoke Couture: Custom Indian Bridal & Occasion Wear',
   description:
     'At BORA HONEY\'S Couture, we believe that true luxury is deeply personal. Our Bespoke Couture service offers an exclusive design experience where every garment is imagined, designed, and handcrafted specifically for you.',
 }
@@ -93,7 +93,7 @@ const experienceSteps = [
     title: 'Couture Fittings',
     paragraphs: [
       'Multiple fittings ensure every seam, contour, and proportion sits beautifully on your body.',
-      'Our commitment is not simply creating a beautiful garment—but creating one that feels effortless to wear.',
+      'Our commitment is not simply creating a beautiful garment, but creating one that feels effortless to wear.',
     ],
     img: "/bespoke-couture/c.jpg"
   },
@@ -120,19 +120,19 @@ const journeyStages = [
     body: 'Our designers create exclusive sketches, embroidery concepts, fabric selections, colour palettes, and silhouette recommendations tailored specifically to you.',
   },
   {
-    when: '4–5 Months Before',
+    when: '4 to 5 Months Before',
     title: 'Embroidery & Craftsmanship',
     body: 'Our artisans begin the intricate process of hand embroidery, embellishment, and couture construction using traditional craftsmanship techniques.',
   },
   {
-    when: '2–3 Months Before',
+    when: '2 to 3 Months Before',
     title: 'First Couture Fitting',
     body: 'Your garment begins taking shape. During this stage, we perfect the structure, balance, silhouette, and overall fit.',
   },
   {
-    when: '4–8 Weeks Before',
+    when: '4 to 8 Weeks Before',
     title: 'Final Fittings & Refinements',
-    body: 'Every detail is refined—from hemlines and draping to embroidery placement and finishing touches—ensuring your garment feels as flawless as it looks.',
+    body: 'Every detail is refined, from hemlines and draping to embroidery placement and finishing touches, ensuring your garment feels as flawless as it looks.',
   },
   {
     when: '3-4 Weeks Before Delivery',
@@ -384,7 +384,7 @@ export default function BespokeCouturePage() {
                 </p>
                 <p>We do not believe in mass production.</p>
                 <p>
-                  We believe in creating heirloom couture—pieces designed to be treasured for years,
+                  We believe in creating heirloom couture: pieces designed to be treasured for years,
                   remembered for a lifetime, and passed on with stories of elegance and celebration.
                 </p>
               </div>

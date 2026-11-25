@@ -3,6 +3,8 @@ import mongoose, { Schema, Document, Model } from 'mongoose'
 export interface IImageAsset {
   url: string
   publicId: string
+  /** Still frame shown while a video loads (videos only). */
+  poster?: string
 }
 
 export interface ICTAButton {
@@ -33,7 +35,7 @@ export interface IEditorialPage extends Document {
 }
 
 const ImageAssetSchema = new Schema<IImageAsset>(
-  { url: { type: String, required: true }, publicId: { type: String, required: true } },
+  { url: { type: String, required: true }, publicId: { type: String, required: true }, poster: { type: String } },
   { _id: false }
 )
 

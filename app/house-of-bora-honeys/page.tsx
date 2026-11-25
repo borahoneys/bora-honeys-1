@@ -8,7 +8,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/house-of-bora-honeys' },
-  title: 'House of BORA HONEY\'S — The Atelier',
+  title: 'House of BORA HONEY\'S: The Atelier',
   description:
     'Step into the BORA HONEY\'S Atelier, where craftsmanship, artistry, and couture come together. A space dedicated to creating bespoke masterpieces.',
 }
@@ -245,7 +245,7 @@ export default function HouseOfBoraHoneysPage() {
                   <p className="text-xs text-muted-foreground tracking-[0.15em] uppercase">Opening Hours</p>
                   <div className="space-y-2 text-sm font-light text-white/70">
                     <div className="flex justify-between">
-                      <span>Monday – Sunday</span>
+                      <span>Monday to Sunday</span>
                       <span>{atelierInfo.hours.weekdays}</span>
                     </div>
                     <p className="text-xs text-primary italic tracking-wide pt-2">

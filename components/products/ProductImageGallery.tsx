@@ -50,7 +50,7 @@ const ProductImageGallery = ({ images, altText }: Props) => {
                 fill
                 sizes="50vw"
                 priority={index === 0}
-                alt={altText ? `${altText} — view ${index + 1}` : `Product view ${index + 1}`}
+                alt={altText ? `${altText}, view ${index + 1}` : `Product view ${index + 1}`}
                 className="object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -74,7 +74,7 @@ const ProductImageGallery = ({ images, altText }: Props) => {
               fill
               sizes="100vw"
               priority={currentImageIndex === 0}
-              alt={altText ? `${altText} — view ${currentImageIndex + 1}` : `Product view ${currentImageIndex + 1}`}
+              alt={altText ? `${altText}, view ${currentImageIndex + 1}` : `Product view ${currentImageIndex + 1}`}
               className="object-contain transition-transform duration-300 group-hover:scale-105 select-none"
             />
           </div>

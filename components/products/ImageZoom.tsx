@@ -2,6 +2,12 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getImageProps } from "next/image";
+
+// Resized, modern-format copy (about 2000px wide) instead of the multi-megabyte
+// original: plenty for zooming on any screen, and far quicker to open.
+const zoomSrc = (src: string) =>
+  getImageProps({ src, alt: "", width: 1000, height: 1500, quality: 85 }).props.src;
 
 interface ImageZoomProps {
   images: string[];
@@ -245,8 +251,10 @@ const ImageZoom = ({ images, initialIndex, isOpen, onClose }: ImageZoomProps) =>
         >
           {images.map((image, index) => (
             <div key={index} className="h-full w-full shrink-0 flex justify-center items-center px-4">
-              <img
-                src={image}
+              {/* Only the current photo and its neighbours are loaded. */}
+              {Math.abs(index - activeIndex) <= 1 && <img
+                src={zoomSrc(image)}
+                decoding="async"
                 alt={`Product view ${index + 1}`}
                 draggable={false}
                 onDoubleClick={handleDoubleClick}
@@ -258,7 +266,7 @@ const ImageZoom = ({ images, initialIndex, isOpen, onClose }: ImageZoomProps) =>
                     ? { transform: `scale(${scale}) translate(${position.x / scale}px, ${position.y / scale}px)` }
                     : undefined
                 }
-              />
+              />}
             </div>
           ))}
         </div>

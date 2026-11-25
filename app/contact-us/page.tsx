@@ -79,7 +79,7 @@ export default function ContactUsPage() {
 
             {/* Form + Info grid */}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-                <div className="grid lg:grid-cols-[1fr_380px] gap-0 border border-primary/15">
+                <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-0 border border-primary/15">
 
                     {/* Form */}
                     <div className="p-6 sm:p-10 md:p-14">
@@ -305,8 +305,8 @@ export default function ContactUsPage() {
                             <div className="space-y-4">
                                 <p className="text-[10px] tracking-[0.4em] uppercase text-primary">Hours</p>
                                 <p className="text-sm font-light text-white/70 leading-relaxed">
-                                    Monday – Sunday<br />
-                                    11:00 AM – 8:00 PM IST
+                                    Monday to Sunday<br />
+                                    11:00 AM to 8:00 PM IST
                                 </p>
                             </div>
                         </div>

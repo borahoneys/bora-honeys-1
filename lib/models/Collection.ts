@@ -6,7 +6,7 @@ export interface ICollection extends Document {
   subheading?: string
   description?: string
   image?: { url: string; publicId: string }
-  video?: { url: string; publicId: string }
+  video?: { url: string; publicId: string; poster?: string }
   products: mongoose.Types.ObjectId[]
   isActive: boolean
   comingSoon: boolean
@@ -27,6 +27,7 @@ const CollectionSchema = new Schema<ICollection>(
     video: {
       url: { type: String },
       publicId: { type: String },
+      poster: { type: String },
     },
     products: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
     isActive: { type: Boolean, default: true },

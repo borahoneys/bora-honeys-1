@@ -39,10 +39,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { id } = await params
   const product = await getProduct(id)
   if (!product) return { title: 'Product Not Found' }
-  const title = product.seo?.title ?? `${product.name} — Luxury Indian Couture`
+  const title = product.seo?.title ?? `${product.name} | Luxury Indian Couture`
   const description =
     clip(product.seo?.description ?? product.description) ??
-    `${product.name} by BORA HONEY'S — hand-embroidered Indian couture, made in India and shipped worldwide.`
+    `${product.name} by BORA HONEY'S. Hand-embroidered Indian couture, made in India and shipped worldwide.`
   const image = product.images?.[0]?.url
   return {
     title: { absolute: `${title} | ${SITE_NAME}` },

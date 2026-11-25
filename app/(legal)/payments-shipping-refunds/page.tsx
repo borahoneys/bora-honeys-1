@@ -45,7 +45,7 @@ export default function PaymentsShippingRefundsPage() {
           Payments, Shipping &amp; Refunds
         </h1>
         <p className="mt-5 text-sm text-white/50 font-light max-w-xl mx-auto leading-relaxed">
-          This page consolidates all policies governing the financial and logistical lifecycle of an Order —
+          This page consolidates all policies governing the financial and logistical lifecycle of an Order:
           from payment through shipping, delivery, cancellation, refunds, and returns. Last Updated: 18 June 2026.
         </p>
       </div>

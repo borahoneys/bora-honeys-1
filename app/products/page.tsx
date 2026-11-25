@@ -32,7 +32,7 @@ export async function generateMetadata({ searchParams }: { searchParams: SP }): 
   const filtered = ['q', 'cat', 'sort', 'min', 'max', 'featured'].some((k) => sp[k])
   const page = Math.max(1, parseInt(getString(sp.page) || '1', 10))
   return {
-    title: page > 1 ? `Shop All Pieces — Page ${page}` : 'Shop Luxury Indian Couture — Lehengas, Gowns & Bridal Wear',
+    title: page > 1 ? `Shop All Pieces | Page ${page}` : 'Shop Luxury Indian Couture: Lehengas, Gowns & Bridal Wear',
     description:
       "Browse the complete BORA HONEY'S collection of hand-embroidered Indian couture: bridal lehengas, gowns and occasion wear. Made in India, shipped worldwide.",
     alternates: { canonical: '/products' },

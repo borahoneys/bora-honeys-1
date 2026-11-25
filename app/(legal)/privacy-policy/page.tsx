@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   alternates: { canonical: '/privacy-policy' },
   title: 'Privacy & Cookies',
-  description: 'Privacy Policy and Cookie Policy for BORA HONEY\'S — how we collect, store, and protect your personal data.',
+  description: 'Privacy Policy and Cookie Policy for BORA HONEY\'S: how we collect, store, and protect your personal data.',
 }
 
 const sections = [
