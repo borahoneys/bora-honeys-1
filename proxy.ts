@@ -2,6 +2,13 @@ import { auth } from '@/auth'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
+// Set to false (and redeploy) to take the site out of "under construction".
+// While on, every public page shows /under-construction; the admin panel,
+// API routes and static files keep working.
+const UNDER_CONSTRUCTION = true
+const UNDER_CONSTRUCTION_PATH = '/under-construction'
+const underConstructionAllowed = ['/admin', UNDER_CONSTRUCTION_PATH, '/robots.txt', '/sitemap.xml', '/manifest.webmanifest']
+
 const adminPublicRoutes = ['/admin/login', '/admin/signup']
 const adminProtectedPrefix = '/admin'
 
@@ -10,6 +17,18 @@ const customerProtectedPrefixes = ['/account', '/checkout', '/orders']
 
 export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  if (UNDER_CONSTRUCTION) {
+    const allowed = underConstructionAllowed.some(
+      (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+    )
+    if (!allowed) {
+      return NextResponse.rewrite(new URL(UNDER_CONSTRUCTION_PATH, request.url))
+    }
+  } else if (pathname === UNDER_CONSTRUCTION_PATH) {
+    return NextResponse.redirect(new URL('/', request.url))
+  }
+
   const session = await auth()
   const user = session?.user as ({ role?: string } & NonNullable<typeof session>['user']) | undefined
 
