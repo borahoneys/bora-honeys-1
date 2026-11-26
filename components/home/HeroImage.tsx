@@ -22,6 +22,9 @@ interface HeroImageProps {
  */
 export default function HeroImage({ desktopSrc, mobileSrc, alt, priority = false }: HeroImageProps) {
   const [loaded, setLoaded] = useState(false)
+  // If the image optimizer fails (e.g. S3 is slow and Next's 7s fetch limit is
+  // hit), load the original photo straight from S3 instead.
+  const [optimizerFailed, setOptimizerFailed] = useState(false)
 
   // Handles a photo already in the browser cache before hydration.
   const ref = useCallback((img: HTMLImageElement | null) => {
@@ -31,7 +34,7 @@ export default function HeroImage({ desktopSrc, mobileSrc, alt, priority = false
   const fallbackSrc = desktopSrc ?? mobileSrc
   if (!fallbackSrc) return null
 
-  const common = { alt, fill: true, sizes: '100vw', quality: 85, priority }
+  const common = { alt, fill: true, sizes: '100vw', quality: 85, priority, unoptimized: optimizerFailed }
 
   const { props: { srcSet: mobileSrcSet } } = getImageProps({ ...common, src: mobileSrc ?? fallbackSrc })
   const { props: imgProps } = getImageProps({ ...common, src: fallbackSrc })
@@ -40,12 +43,13 @@ export default function HeroImage({ desktopSrc, mobileSrc, alt, priority = false
     <>
       {!loaded && <ImageSkeleton />}
       <picture>
-        {mobileSrc && desktopSrc && <source media={MOBILE_QUERY} srcSet={mobileSrcSet} />}
+        {mobileSrc && desktopSrc && <source media={MOBILE_QUERY} srcSet={mobileSrcSet ?? mobileSrc} />}
         <img
           {...imgProps}
           ref={ref}
           alt={alt}
           onLoad={() => setLoaded(true)}
+          onError={() => setOptimizerFailed(true)}
           className={cn(
             // Top-anchored so heads are never cropped on very wide or tall screens.
             'object-cover object-top transition-opacity duration-500',

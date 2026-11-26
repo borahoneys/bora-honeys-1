@@ -8,8 +8,11 @@ import { cn } from '@/lib/utils'
  * next/image with a pulsing skeleton shown until the image has loaded,
  * then a fade-in. Drop-in replacement for <Image> / <img>.
  */
-export default function SmartImage({ className, onLoad, alt, ...props }: ImageProps) {
+export default function SmartImage({ className, onLoad, onError, alt, unoptimized, ...props }: ImageProps) {
   const [loaded, setLoaded] = useState(false)
+  // If the image optimizer fails (e.g. S3 is slow and Next's 7s fetch limit is
+  // hit), load the original file straight from its source instead.
+  const [optimizerFailed, setOptimizerFailed] = useState(false)
 
   // Handles images already in the browser cache before hydration.
   const ref = useCallback((img: HTMLImageElement | null) => {
@@ -23,6 +26,11 @@ export default function SmartImage({ className, onLoad, alt, ...props }: ImagePr
       {...props}
       ref={ref}
       alt={alt}
+      unoptimized={unoptimized || optimizerFailed}
+      onError={(e) => {
+        if (!optimizerFailed && !unoptimized) setOptimizerFailed(true)
+        else onError?.(e)
+      }}
       onLoad={(e) => {
         setLoaded(true)
         onLoad?.(e)

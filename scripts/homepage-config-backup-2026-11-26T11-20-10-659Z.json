@@ -1,0 +1,97 @@
+{
+ "_id": "6a3512e56b1a07d5974725f0",
+ "__v": 0,
+ "createdAt": "2026-06-19T09:59:01.173Z",
+ "sections": [
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/rydx11zwcyhi3nvwmcgv.jpg",
+    "publicId": "bora-honeys/homepage/rydx11zwcyhi3nvwmcgv.jpg"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/cuv4lqd6fchoknkf4hww.webp",
+    "publicId": "bora-honeys/homepage/cuv4lqd6fchoknkf4hww.webp"
+   },
+   "isActive": true,
+   "order": 0,
+   "_id": "6a4bc4e61e33419fe929595f"
+  },
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qs5uetplrwr6kw7gfom6.jpg",
+    "publicId": "bora-honeys/homepage/qs5uetplrwr6kw7gfom6.jpg"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/luqqc13efrf8nkailycf.webp",
+    "publicId": "bora-honeys/homepage/luqqc13efrf8nkailycf.webp"
+   },
+   "isActive": true,
+   "order": 1,
+   "_id": "6a4bc4e61e33419fe9295960"
+  },
+  {
+   "type": "video",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/25ba3443-9c0e-4043-a7e9-985c3c4fc9a2.mp4",
+    "publicId": "bora-honeys/homepage/25ba3443-9c0e-4043-a7e9-985c3c4fc9a2.mp4",
+    "poster": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/2a6a887d-1da2-479e-a4d5-09fc2cf31232.jpg"
+   },
+   "isActive": true,
+   "order": 2,
+   "_id": "6a4bc4e61e33419fe9295961"
+  },
+  {
+   "type": "video",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/446a1b92-8fa1-4cf5-b258-d109b9cba796.mp4",
+    "publicId": "bora-honeys/homepage/446a1b92-8fa1-4cf5-b258-d109b9cba796.mp4",
+    "poster": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/e4458a0e-0287-407f-bfb9-4533c03cea06.jpg"
+   },
+   "isActive": true,
+   "order": 3,
+   "_id": "6a4bc4e61e33419fe9295962"
+  },
+  {
+   "type": "video",
+   "video": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/5fdf7f1a-b289-44e4-a910-3d5aadcf7eb0.mp4",
+    "publicId": "bora-honeys/homepage/5fdf7f1a-b289-44e4-a910-3d5aadcf7eb0.mp4",
+    "poster": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/e899d34e-ed4a-468f-8112-fe5e5b098787.jpg"
+   },
+   "isActive": true,
+   "order": 4,
+   "_id": "6a4bc4e61e33419fe9295963"
+  },
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/lszrbrugv2m3oexmspdb.webp",
+    "publicId": "bora-honeys/homepage/lszrbrugv2m3oexmspdb.webp"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/73bcc0ba-d9b2-41e5-8348-fc92664147db.jpg",
+    "publicId": "bora-honeys/homepage/73bcc0ba-d9b2-41e5-8348-fc92664147db.jpg"
+   },
+   "isActive": true,
+   "order": 5,
+   "_id": "6a4bc4e61e33419fe9295964"
+  },
+  {
+   "type": "image",
+   "desktopImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/dlw1mtvxrr9vwxl7bmdw.jpg",
+    "publicId": "bora-honeys/homepage/dlw1mtvxrr9vwxl7bmdw.jpg"
+   },
+   "mobileImage": {
+    "url": "https://bora-honey-bucket-737759272707-ap-southeast-2-an.s3.ap-southeast-2.amazonaws.com/bora-honeys/homepage/qy5eem31irk4ounn1riz.jpg",
+    "publicId": "bora-honeys/homepage/qy5eem31irk4ounn1riz.jpg"
+   },
+   "isActive": true,
+   "order": 6,
+   "_id": "6a4bc4e61e33419fe9295965"
+  }
+ ],
+ "updatedAt": "2026-11-25T09:00:51.143Z"
+}

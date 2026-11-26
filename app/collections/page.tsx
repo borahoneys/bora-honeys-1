@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/breadcrumb'
 import { connectDB } from '@/lib/db/mongoose'
 import Collection from '@/lib/models/Collection'
+import Product from '@/lib/models/Product'
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
@@ -33,8 +34,10 @@ interface PopulatedCollection {
 
 async function getCollections() {
   await connectDB()
+  // Registers the Product model so populate('products') works on a fresh server.
+  void Product.modelName
   const collections = await Collection.find({ isActive: true })
-    .populate('products', 'images')
+    .populate({ path: 'products', select: 'images', match: { isActive: true } })
     .sort({ name: 1 })
     .lean()
   return collections as unknown as PopulatedCollection[]
